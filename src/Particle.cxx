@@ -2,7 +2,7 @@
 
 Particle::Particle(double e, double px, double py, double pz):
 
-    momentum_(e,px,py,pz){ std::cout << e << std::endl;}
+    momentum_(e,px,py,pz){}
 
 double Particle::theta()
 {
