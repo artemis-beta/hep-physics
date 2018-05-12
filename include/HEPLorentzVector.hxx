@@ -8,6 +8,7 @@ class HEPLorentzVector {
     private:
         double x0=-9999, x1=-9999, x2=-9999, x3=-9999;
     public:
+	HEPLorentzVector(){};
         double& operator[] (size_t i);
         double operator[] (size_t i) const
         {
