@@ -6,22 +6,19 @@
 
 #include <string>
 #include "HEPLorentzVector.hxx"
-#include "DecayTable.hxx"
 
-class DecayTable;
 class Particle {
     std::string name_="X";
     std::string sign_="";
+    double mass_     = -1;
     double lifetime_ = -1;
     HEPLorentzVector momentum_;
-    DecayTable *_decays;
     public:
         Particle();
         Particle(std::string, std::string, double, double);
         Particle(double,double,double,double);
 	std::string getName() {return name_+sign_;}
-	void anti();
-	DecayTable * getDecays(){return _decays;}
+	Particle anti();
 	void Fire(double);
         double M() ;
         double phi() ;
@@ -30,10 +27,7 @@ class Particle {
         double theta() ;
         HEPLorentzVector momentum();
         double PT() ;
+        friend std::ostream &operator<<(std::ostream &, Particle  &);
 };
 
-inline std::ostream &operator<<(std::ostream &os, Particle  &p)
-{
-	return os << p.getName() << "(" << p.M() << ")";
-}
 #endif

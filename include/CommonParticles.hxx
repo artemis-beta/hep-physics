@@ -3,10 +3,8 @@
 
 #include "Particle.hxx"
 
-class Particle;
-
 //==============================================//
-//    Particles Obtained from the PDG Listing   //
+//    extern Particles Obtained from the PDG Listing   //
 //    https://pdg.lbl.gov                       //
 //                                              //
 //    Last updated for 2017                     //
@@ -14,26 +12,25 @@ class Particle;
 
 //================= Leptons ====================//
 
-Particle e();
+extern Particle e;
 
-Particle mu();
+extern Particle mu;
 
-Particle tau();
+extern Particle tau;
 
-Particle nu_e();
+extern Particle nu_e;
 
-Particle nu_mu();
+extern Particle nu_mu;
 
-Particle nu_tau();
-
-//=========== Light Unflavoured Mesons==========//
-
-Particle Piplus();
-
-Particle Pi0();
+extern Particle nu_tau;
 
 //=============== Strange Mesons================//
 
-Particle Kplus();
+extern Particle Kplus;
+
+//=========== Light Unflavoured Mesons==========//
+
+extern Particle Piplus;
+extern Particle Pi0;
 
 #endif

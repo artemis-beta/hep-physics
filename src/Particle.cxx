@@ -1,9 +1,16 @@
 #include "Particle.hxx"
 
+std::ostream &operator<<(std::ostream &os, Particle  &p)
+{
+	os << p.getName();// << "(" << p.M() << ")";
+	return os;
+}
+
 Particle::Particle(std::string _name, std::string _sign, double _mass, double _tau)
 {
 	name_ = _name;
 	sign_ = _sign;
+	mass_ = _mass;
 	momentum_ = HEPLorentzVector(_mass, 0, 0, 0);
 	lifetime_ = _tau;
 }
@@ -12,10 +19,14 @@ Particle::Particle(double e, double px, double py, double pz)
 {
     momentum_ = HEPLorentzVector(e,px,py,pz);
 }
-void Particle::anti()
+Particle Particle::anti()
 {
-	if(sign_ == "+"){sign_ = "-";}
-	if(sign_ == "0"){sign_ = "~0";}
+	Particle other = *this;
+	if(other.sign_ == "+"){other.sign_ = "-";}
+	else{other.sign_ = "+";}
+	if(other.sign_ == "0"){other.sign_ = "~0";}
+	else{other.sign_ = "0";}
+	return other;
 }
 
 double Particle::theta() 

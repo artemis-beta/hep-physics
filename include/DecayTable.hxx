@@ -2,6 +2,7 @@
 #define __DECAYTABLE_HXX__
 
 #include "CommonParticles.hxx"
+#include "Particle.hxx"
 #include <vector>
 #include <map>
 
@@ -18,6 +19,7 @@ class Decay
 		bool isValid(double);
 		double getBR(){return _prob;}
 		Particle* getMother(){return _mother;}
+		void setMother(Particle);
 		std::vector<Particle> getDaughters(){return _daughters;}
 
 };
@@ -25,10 +27,10 @@ class Decay
 inline std::ostream &operator<<(std::ostream &os, Decay  &d)
 {
 	std::vector<Particle> _temp = d.getDaughters();
-	os << d.getMother() << " -> ";
-	for(int i{0}; i<_temp.size(); ++i)
+	os << d.getMother()->getName() << " -> ";
+	for(int i{0}; i<_temp.size()-1; ++i)
 	{
-//	    os << _temp[i] << " ";
+	    os << _temp[i].getName() << " ";
 	}
 	return os;
 }
@@ -37,13 +39,17 @@ inline std::ostream &operator<<(std::ostream &os, Decay  &d)
 class DecayTable
 {
 	private:
+		std::vector<Decay*> _decays_list;
 		std::map<double, Decay*> _decays;
 		typedef std::map<double, Decay*>::iterator It;
+		Particle* _mother;
         public:
-	        DecayTable();
+	        DecayTable(Particle);
 		void addDecay(Decay);
-		std::map<double, Decay*> getDecays(){return _decays;}
+		std::map<double, Decay*> getDecaysMap(){return _decays;}
+		std::vector<Decay*> getDecays(){return _decays_list;}
 		Decay* getRandom(double);
+		void Print();
 };	
 
 #endif
