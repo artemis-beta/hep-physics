@@ -2,13 +2,22 @@
 
 std::ostream &operator<<(std::ostream &os, Particle  &p)
 {
-	os << p.getName();// << "(" << p.M() << ")";
+	os << p.getName();
 	return os;
+}
+
+Particle::Particle()
+{
+	name_ = "";
+	sign_ = "";
+	mass_ = -1;
+	momentum_ = HEPLorentzVector();
+	lifetime_ = -1;
 }
 
 Particle::Particle(std::string _name, std::string _sign, double _mass, double _tau)
 {
-	name_ = _name;
+        name_ = _name;
 	sign_ = _sign;
 	mass_ = _mass;
 	momentum_ = HEPLorentzVector(_mass, 0, 0, 0);
@@ -19,12 +28,23 @@ Particle::Particle(double e, double px, double py, double pz)
 {
     momentum_ = HEPLorentzVector(e,px,py,pz);
 }
+
+Particle::operator bool() const
+{
+	if(name_ == "" || mass_ == -1 || lifetime_ == -1)
+	{
+		return false;
+	}
+
+	return true;
+}
+
 Particle Particle::anti()
 {
 	Particle other = *this;
 	if(other.sign_ == "+"){other.sign_ = "-";}
-	else{other.sign_ = "+";}
-	if(other.sign_ == "0"){other.sign_ = "~0";}
+	else if(other.sign_ == "-"){other.sign_ = "+";}
+	else if(other.sign_ == "0"){other.sign_ = "~0";}
 	else{other.sign_ = "0";}
 	return other;
 }

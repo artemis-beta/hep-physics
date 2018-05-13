@@ -27,6 +27,7 @@ class Particle {
         double theta() ;
         HEPLorentzVector momentum();
         double PT() ;
+	operator bool() const;
         friend std::ostream &operator<<(std::ostream &, Particle  &);
 };
 
