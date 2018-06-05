@@ -5,6 +5,8 @@
 #include "Particle.hxx"
 #include <vector>
 #include <map>
+#include <stdlib.h>
+#include <time.h>
 
 class Particle;
 class Decay
@@ -12,39 +14,33 @@ class Decay
 	private:
 		double _prob;
 		std::vector<Particle> _daughters;
-		Particle * _mother;
+		Particle  _mother = Particle();
 	public:
-		Decay();
+		Decay(){};
 		std::string getDecStr();
 		Decay(std::vector<Particle>, double, Particle _mum=Particle());
 		bool isValid(double);
 		double getBR(){return _prob;}
-		Particle* getMother(){return _mother;}
+		Particle getMother(){return _mother;}
 		void setMother(Particle);
 		std::vector<Particle> getDaughters(){return _daughters;}
 
 };
 
-inline std::ostream &operator<<(std::ostream &os, Decay  &d)
-{
-	os << d.getDecStr();
-	return os;
-}
-
+std::ostream& operator<< (std::ostream& os, Decay& d);
 
 class DecayTable
 {
 	private:
-		std::vector<std::string> _decays_list;
-		std::map<double, Decay*> _decays;
-		typedef std::map<double, Decay*>::iterator It;
-		Particle* _mother;
+		std::vector<double> _brs;
+		std::vector<Decay> _decays;
+		std::vector<double> _cumul_brs;
+		Particle _mother = Particle();
         public:
 	        DecayTable(Particle);
 		void addDecay(Decay);
-		std::map<double, Decay*> getDecaysMap(){return _decays;}
-		std::vector<std::string> getDecays(){return _decays_list;}
-		Decay* getRandom(double);
+		std::vector<Decay> getDecays(){return _decays;}
+		Decay getRandom();
 		void Print();
 };	
 

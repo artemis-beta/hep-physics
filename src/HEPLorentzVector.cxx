@@ -26,5 +26,7 @@ std::ostream& operator<<(std::ostream& os, const HEPLorentzVector& lv)
     os << lv.x2 << ",";
     os << lv.x3 << ",";
     os << "HEPLorentzVector('double')>" << std::endl;
+
+    return os;
 }
 
