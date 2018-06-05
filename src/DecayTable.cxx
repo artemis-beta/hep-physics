@@ -34,6 +34,7 @@ void Decay::setMother(Particle _m)
 
 DecayTable::DecayTable(Particle _m)
 {
+	_cumul_brs.push_back(0);
 	_mother = _m;
 }
 
@@ -55,21 +56,16 @@ void DecayTable::addDecay(Decay _decay)
 
 Decay DecayTable::getRandom()
 {
+	
 	srand (time(NULL));
-        double rand_val = 9*rand()/1E10;
-	std::cout << "BR: " << rand_val << std::endl;
-
-
+        double rand_val = rand()*1E10/RAND_MAX;
+	rand_val /= 1E10;
 	for(unsigned int i=0; i<_cumul_brs.size()-1; ++i)
 	{
-		for(unsigned int j=1; j<_cumul_brs.size(); ++j)
-                {
-		    std::cout << _cumul_brs[i] << "\t" << _cumul_brs[j] << std::endl;
-		    if( rand_val > _cumul_brs[i] && rand_val < _cumul_brs[j] )
-		    {
-		    	return _decays[i];
-		    }
-	        }
+            if( rand_val > _cumul_brs[i] && rand_val < _cumul_brs[i+1] )
+            {
+		return _decays[i];
+            }
 	}
 
 	return Decay();
