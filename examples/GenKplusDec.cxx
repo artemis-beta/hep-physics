@@ -9,6 +9,11 @@ using namespace HEP;
 
 int main(void)
 {
-	std::cout << "Generating Random K+ Decay...\n" << std::endl;
-	std::cout << KplusDecays().getRandom().getDecStr() << std::endl;
+	srand (time(NULL));
+
+	for(int i{0}; i<10; ++i)
+	{
+		std::cout << "Generating Random K+ Decay...\n" << std::endl;
+		std::cout << KplusDecays().getRandom().getDecStr() << std::endl;
+	}
 }

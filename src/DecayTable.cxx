@@ -56,8 +56,6 @@ void DecayTable::addDecay(Decay _decay)
 
 Decay DecayTable::getRandom()
 {
-	
-	srand (time(NULL));
         double rand_val = rand()*1E10/RAND_MAX;
 	rand_val /= 1E10;
 	for(unsigned int i=0; i<_cumul_brs.size()-1; ++i)
