@@ -11,7 +11,7 @@ Decay::Decay(std::vector<Particle> daughters, double probability, Particle _m)
 	if(_m){_mother = _m;}
 }
 
-std::string Decay::getDecStr()
+const std::string Decay::getDecStr() const
 {
 	std::string out_str="";
 	out_str = _mother.getName();
@@ -56,7 +56,7 @@ void DecayTable::addDecay(Decay& _decay)
 	_decays.push_back(_decay);
 }
 
-Decay DecayTable::getRandom()
+const Decay DecayTable::getRandom() const
 {
         double rand_val = rand()*1E10/RAND_MAX;
 	rand_val /= 1E10;

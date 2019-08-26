@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xi0_97',['Xi0',['../namespace_h_e_p.html#a484e426473d284c440ecc578bb0367a2',1,'HEP']]],
-  ['ximinus_98',['Ximinus',['../namespace_h_e_p.html#a059b6ca130fb57f94ed37fdc84feeb90',1,'HEP']]]
+  ['xi0_129',['Xi0',['../namespace_h_e_p.html#a07e2677ebeb4c46d9699e6b8c3fc5882',1,'HEP']]],
+  ['ximinus_130',['Ximinus',['../namespace_h_e_p.html#a3f2f4308f703315232989a1ad2c80bf9',1,'HEP']]]
 ];

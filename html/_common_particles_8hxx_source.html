@@ -75,152 +75,151 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Particle.hxx&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_h_e_p.html">HEP</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//==============================================//</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//    Particles Obtained from the PDG Listing   //</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//    https://pdg.lbl.gov                       //</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//                                              //</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//    Last updated for 2017                     //</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//==============================================//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_h_e_p.html">HEP</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//=========== Gauge &amp; Higgs Bosons =============//</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#af477b7de2f2f200309343674003f9eba">gamma</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a8ac35d8cfa9b150bacb04db40b2ac318">g</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a2ac9153d90d59b5ec1394002f1cb784d">W</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a74e0e2b6c79e30d27962796a3ff008e9">Z</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a954db59ef527d51f6f3fbbaedfcfb6e9">H</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//================= Leptons ====================//</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a809de85bcc92055ae6ddc5f5872cf215">e</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a84080e2f206dd51a7aa51aea66f00635">mu</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a425af7dd4654d66cf32ea643a0cdd056">tau</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a9b97720b0f5215457a1a29dc58962b3f">nu_e</a>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a595934da6f197b42cdcb7a4307bc00d2">nu_mu</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a0f7ad3fba87b267a059f15f8ff58c803">nu_tau</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//=============== Strange Mesons================//</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a95425808a9df1cc76b6b226f611cbd66">Kplus</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a2259a7b66cc36e07571dbd9e8056b9de">phi_1020</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//=========== Light Unflavoured Mesons==========//</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a61428e032a7ad7ef4c5b3493ebe499c2">eta</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a1d9b11ef83dde69fc4ac4ec7c5729afb">Piplus</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a608908f78e58547d4c5e52125c416812">Pi0</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//=============== Charmed Mesons================//</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a3a78a3fef1dc63ff5b1704103e03eb8b">Dplus</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a683e9b60c6c8012c579a3bc037240bfe">D0</a>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//=========== Charmed Strange Mesons ===========//</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#ae9d2ccb26babbce032b879af4596ffc7">Ds</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//================ Bottom Mesons ===============//</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//==============================================//</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//    Particles Obtained from the PDG Listing   //</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//    https://pdg.lbl.gov                       //</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//                                              //</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//    Last updated for 2017                     //</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//==============================================//</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//=========== Gauge &amp; Higgs Bosons =============//</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a168e7216fc6df3ff916842b131e1e2e0">gamma</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a9af1eb62beb7aa5a68aec1bb2d84b5f9">g</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a531340d71f6b91fb5602b2d6475fbeb4">W</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a58ad87580908a04039aacac4864ef6fe">Z</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a2df2308728bf1f13ffa2c8dc872fc351">H</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//================= Leptons ====================//</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a9ff6160fd7a361d5f26e03760d7709b1">e</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a2524570a3d0989661c23fb0a8c0ae268">mu</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#abbe2fa28178ac0a490f3415c52ceb87b">tau</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a42ced6c1939bf4673f697cc56ed6ac63">nu_e</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a6f437507372820c9ff43542cf239285c">nu_mu</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#ac1ce1b9825772a157c84aa4dd722ab4e">nu_tau</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//=============== Strange Mesons================//</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#af66fe3d6747a69da718b7ef4f2ec9466">Kplus</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a4df2021317a0dcfcbe6c415da4c7d4fe">phi_1020</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//=========== Light Unflavoured Mesons==========//</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a760185ff141f985458c6364a6dd2e9fa">eta</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a682ef51c57efb9ce2e2d383a0aa2f783">Piplus</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#aeaab3be1090087b53d5ae51ed111996a">Pi0</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//=============== Charmed Mesons================//</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a81529ea47220d1476f31cb863eeb640c">Dplus</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#abe2c7dc037916a647e720502b4e3f40d">D0</a>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#ae13ba58eeff9131b2a6056a033d2f694">Bplus</a>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#aaaec64240efb72efa7c4b161ad75c7fd">B0</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//============= Bottom Strange Mesons ==========//</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#ae1795979452a1498420109e7adc5d1a5">Bs</a>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">//============= Charmed Bottom Mesons ==========//</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//=========== Charmed Strange Mesons ===========//</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a1137b719f5a51ed41e3247f38170f87a">Ds</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//================ Bottom Mesons ===============//</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#ae7956fca1f2677f1d6fdd64a0401cb00">Bplus</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#ab360dca5e490836128cc9ec47009b90c">B0</a>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a035ebefac823524e506ff1db75e49eb8">Bc</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">//================= N Baryons ==================//</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">//============= Bottom Strange Mesons ==========//</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a6664b6f8fabc8c70ac51c65a74b9a6e6">Bs</a>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a830cfe12f27c4e517f8dfe7eae573d7b">p</a>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#aaaec935f2afc09e6a2db7f8e918ca114">n</a>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">//============== Lambda Baryons ================//</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#aa524aaa1e525ab68aa6f76803ad0df7c">Lambda</a>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a7a2a78bde7b90d97629e4b267e4f5931">Lambdab0</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">//============= Charmed Bottom Mesons ==========//</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a1e8a1bcddb20e1c9ceb1ab32b776055e">Bc</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">//================= N Baryons ==================//</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a1fddb8b379bf61849cd33f9d97d53909">p</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a06877c0c9b47b2025062a541c6e61869">n</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">//============== Lambda Baryons ================//</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">//============== Sigma Baryons =================//</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#ac635b9112573c6dafeac8e82d9a331a7">Sigma</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a1327bfbcb75e961c8a6bc8d1428e69cc">Sigmaplus</a>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">//=============== Xi Barysons ==================//</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a484e426473d284c440ecc578bb0367a2">Xi0</a>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a059b6ca130fb57f94ed37fdc84feeb90">Ximinus</a>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">//============== Omega Baryons =================//</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#a50bda6aab4e7a89e9742074342849dbc">Omega</a>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">//============= Charmed Baryons ================//</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#adb3d03b344a194d4214fba515f81f841">Lambda</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#afe567ac6d0581fe28e93f2aed2df7993">Lambdab0</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">//============== Sigma Baryons =================//</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#aac3c64c500113d1ef0938ee2c511e5c5">Sigma</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a80a7c4666a10b5b276adfd37576b1bac">Sigmaplus</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//=============== Xi Barysons ==================//</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a07e2677ebeb4c46d9699e6b8c3fc5882">Xi0</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a3f2f4308f703315232989a1ad2c80bf9">Ximinus</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; <span class="keyword">extern</span> <a class="code" href="class_particle.html">Particle</a> <a class="code" href="namespace_h_e_p.html#ac7b133c0cd9e2495c90bd371aca1a52b">Lambdac</a>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;};</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">//============== Omega Baryons =================//</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#aee2aa39150e6560ea9bc2ec42195c425">Omega</a>;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">//============= Charmed Baryons ================//</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; <span class="keyword">extern</span> <span class="keyword">const</span> Particle <a class="code" href="namespace_h_e_p.html#a5d0d4eb719243f4b9249839eb764e93a">Lambdac</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespace_h_e_p_html_ae9d2ccb26babbce032b879af4596ffc7"><div class="ttname"><a href="namespace_h_e_p.html#ae9d2ccb26babbce032b879af4596ffc7">HEP::Ds</a></div><div class="ttdeci">Particle Ds</div><div class="ttdoc">Neutral D strange meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a954db59ef527d51f6f3fbbaedfcfb6e9"><div class="ttname"><a href="namespace_h_e_p.html#a954db59ef527d51f6f3fbbaedfcfb6e9">HEP::H</a></div><div class="ttdeci">Particle H</div><div class="ttdoc">Higgs Boson, .</div></div>
-<div class="ttc" id="aclass_particle_html"><div class="ttname"><a href="class_particle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> Particle.hxx:10</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a84080e2f206dd51a7aa51aea66f00635"><div class="ttname"><a href="namespace_h_e_p.html#a84080e2f206dd51a7aa51aea66f00635">HEP::mu</a></div><div class="ttdeci">Particle mu</div><div class="ttdoc">Muon, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:14</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_af477b7de2f2f200309343674003f9eba"><div class="ttname"><a href="namespace_h_e_p.html#af477b7de2f2f200309343674003f9eba">HEP::gamma</a></div><div class="ttdeci">Particle gamma</div><div class="ttdoc">Photon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a809de85bcc92055ae6ddc5f5872cf215"><div class="ttname"><a href="namespace_h_e_p.html#a809de85bcc92055ae6ddc5f5872cf215">HEP::e</a></div><div class="ttdeci">Particle e</div><div class="ttdoc">Electron, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:12</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_ae13ba58eeff9131b2a6056a033d2f694"><div class="ttname"><a href="namespace_h_e_p.html#ae13ba58eeff9131b2a6056a033d2f694">HEP::Bplus</a></div><div class="ttdeci">Particle Bplus</div><div class="ttdoc">Charge B meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a61428e032a7ad7ef4c5b3493ebe499c2"><div class="ttname"><a href="namespace_h_e_p.html#a61428e032a7ad7ef4c5b3493ebe499c2">HEP::eta</a></div><div class="ttdeci">Particle eta</div><div class="ttdoc">Eta meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a683e9b60c6c8012c579a3bc037240bfe"><div class="ttname"><a href="namespace_h_e_p.html#a683e9b60c6c8012c579a3bc037240bfe">HEP::D0</a></div><div class="ttdeci">Particle D0</div><div class="ttdoc">Neutral D meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a595934da6f197b42cdcb7a4307bc00d2"><div class="ttname"><a href="namespace_h_e_p.html#a595934da6f197b42cdcb7a4307bc00d2">HEP::nu_mu</a></div><div class="ttdeci">Particle nu_mu</div><div class="ttdoc">Muon Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:20</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_aa524aaa1e525ab68aa6f76803ad0df7c"><div class="ttname"><a href="namespace_h_e_p.html#aa524aaa1e525ab68aa6f76803ad0df7c">HEP::Lambda</a></div><div class="ttdeci">Particle Lambda</div><div class="ttdoc">Lambda baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a9b97720b0f5215457a1a29dc58962b3f"><div class="ttname"><a href="namespace_h_e_p.html#a9b97720b0f5215457a1a29dc58962b3f">HEP::nu_e</a></div><div class="ttdeci">Particle nu_e</div><div class="ttdoc">Electron Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:18</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a95425808a9df1cc76b6b226f611cbd66"><div class="ttname"><a href="namespace_h_e_p.html#a95425808a9df1cc76b6b226f611cbd66">HEP::Kplus</a></div><div class="ttdeci">Particle Kplus</div><div class="ttdoc">Charged Kaon, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:26</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_aaaec64240efb72efa7c4b161ad75c7fd"><div class="ttname"><a href="namespace_h_e_p.html#aaaec64240efb72efa7c4b161ad75c7fd">HEP::B0</a></div><div class="ttdeci">Particle B0</div><div class="ttdoc">Neutral B meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a484e426473d284c440ecc578bb0367a2"><div class="ttname"><a href="namespace_h_e_p.html#a484e426473d284c440ecc578bb0367a2">HEP::Xi0</a></div><div class="ttdeci">Particle Xi0</div><div class="ttdoc">Neutral Xi baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_ac635b9112573c6dafeac8e82d9a331a7"><div class="ttname"><a href="namespace_h_e_p.html#ac635b9112573c6dafeac8e82d9a331a7">HEP::Sigma</a></div><div class="ttdeci">Particle Sigma</div><div class="ttdoc">Neutral Sigma baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a035ebefac823524e506ff1db75e49eb8"><div class="ttname"><a href="namespace_h_e_p.html#a035ebefac823524e506ff1db75e49eb8">HEP::Bc</a></div><div class="ttdeci">Particle Bc</div><div class="ttdoc">Charmed B meson, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:38</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a50bda6aab4e7a89e9742074342849dbc"><div class="ttname"><a href="namespace_h_e_p.html#a50bda6aab4e7a89e9742074342849dbc">HEP::Omega</a></div><div class="ttdeci">Particle Omega</div><div class="ttdoc">Omega baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a0f7ad3fba87b267a059f15f8ff58c803"><div class="ttname"><a href="namespace_h_e_p.html#a0f7ad3fba87b267a059f15f8ff58c803">HEP::nu_tau</a></div><div class="ttdeci">Particle nu_tau</div><div class="ttdoc">Tau Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:22</div></div>
-<div class="ttc" id="anamespace_h_e_p_html"><div class="ttname"><a href="namespace_h_e_p.html">HEP</a></div></div>
-<div class="ttc" id="anamespace_h_e_p_html_aaaec935f2afc09e6a2db7f8e918ca114"><div class="ttname"><a href="namespace_h_e_p.html#aaaec935f2afc09e6a2db7f8e918ca114">HEP::n</a></div><div class="ttdeci">Particle n</div><div class="ttdoc">Neutron, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a7a2a78bde7b90d97629e4b267e4f5931"><div class="ttname"><a href="namespace_h_e_p.html#a7a2a78bde7b90d97629e4b267e4f5931">HEP::Lambdab0</a></div><div class="ttdeci">Particle Lambdab0</div><div class="ttdoc">Lambda b baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a8ac35d8cfa9b150bacb04db40b2ac318"><div class="ttname"><a href="namespace_h_e_p.html#a8ac35d8cfa9b150bacb04db40b2ac318">HEP::g</a></div><div class="ttdeci">Particle g</div><div class="ttdoc">Gluon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a608908f78e58547d4c5e52125c416812"><div class="ttname"><a href="namespace_h_e_p.html#a608908f78e58547d4c5e52125c416812">HEP::Pi0</a></div><div class="ttdeci">Particle Pi0</div><div class="ttdoc">Neutral Pion, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:34</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a1327bfbcb75e961c8a6bc8d1428e69cc"><div class="ttname"><a href="namespace_h_e_p.html#a1327bfbcb75e961c8a6bc8d1428e69cc">HEP::Sigmaplus</a></div><div class="ttdeci">Particle Sigmaplus</div><div class="ttdoc">Charged Sigma baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a3a78a3fef1dc63ff5b1704103e03eb8b"><div class="ttname"><a href="namespace_h_e_p.html#a3a78a3fef1dc63ff5b1704103e03eb8b">HEP::Dplus</a></div><div class="ttdeci">Particle Dplus</div><div class="ttdoc">Charged D meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a2ac9153d90d59b5ec1394002f1cb784d"><div class="ttname"><a href="namespace_h_e_p.html#a2ac9153d90d59b5ec1394002f1cb784d">HEP::W</a></div><div class="ttdeci">Particle W</div><div class="ttdoc">W Boson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a830cfe12f27c4e517f8dfe7eae573d7b"><div class="ttname"><a href="namespace_h_e_p.html#a830cfe12f27c4e517f8dfe7eae573d7b">HEP::p</a></div><div class="ttdeci">Particle p</div><div class="ttdoc">Proton, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a425af7dd4654d66cf32ea643a0cdd056"><div class="ttname"><a href="namespace_h_e_p.html#a425af7dd4654d66cf32ea643a0cdd056">HEP::tau</a></div><div class="ttdeci">Particle tau</div><div class="ttdoc">Tau, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:16</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a1d9b11ef83dde69fc4ac4ec7c5729afb"><div class="ttname"><a href="namespace_h_e_p.html#a1d9b11ef83dde69fc4ac4ec7c5729afb">HEP::Piplus</a></div><div class="ttdeci">Particle Piplus</div><div class="ttdoc">Charged Pion, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:32</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_ac7b133c0cd9e2495c90bd371aca1a52b"><div class="ttname"><a href="namespace_h_e_p.html#ac7b133c0cd9e2495c90bd371aca1a52b">HEP::Lambdac</a></div><div class="ttdeci">Particle Lambdac</div><div class="ttdoc">Lambda c baryon, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_ae1795979452a1498420109e7adc5d1a5"><div class="ttname"><a href="namespace_h_e_p.html#ae1795979452a1498420109e7adc5d1a5">HEP::Bs</a></div><div class="ttdeci">Particle Bs</div><div class="ttdoc">Neutral B strange meson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a74e0e2b6c79e30d27962796a3ff008e9"><div class="ttname"><a href="namespace_h_e_p.html#a74e0e2b6c79e30d27962796a3ff008e9">HEP::Z</a></div><div class="ttdeci">Particle Z</div><div class="ttdoc">Z Boson, .</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a2259a7b66cc36e07571dbd9e8056b9de"><div class="ttname"><a href="namespace_h_e_p.html#a2259a7b66cc36e07571dbd9e8056b9de">HEP::phi_1020</a></div><div class="ttdeci">Particle phi_1020</div><div class="ttdoc">Phi 1020, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:28</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a059b6ca130fb57f94ed37fdc84feeb90"><div class="ttname"><a href="namespace_h_e_p.html#a059b6ca130fb57f94ed37fdc84feeb90">HEP::Ximinus</a></div><div class="ttdeci">Particle Ximinus</div><div class="ttdoc">Charged Xi baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a682ef51c57efb9ce2e2d383a0aa2f783"><div class="ttname"><a href="namespace_h_e_p.html#a682ef51c57efb9ce2e2d383a0aa2f783">HEP::Piplus</a></div><div class="ttdeci">const Particle Piplus</div><div class="ttdoc">Charged Pion, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:34</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a168e7216fc6df3ff916842b131e1e2e0"><div class="ttname"><a href="namespace_h_e_p.html#a168e7216fc6df3ff916842b131e1e2e0">HEP::gamma</a></div><div class="ttdeci">const Particle gamma</div><div class="ttdoc">Photon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a1137b719f5a51ed41e3247f38170f87a"><div class="ttname"><a href="namespace_h_e_p.html#a1137b719f5a51ed41e3247f38170f87a">HEP::Ds</a></div><div class="ttdeci">const Particle Ds</div><div class="ttdoc">Neutral D strange meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a80a7c4666a10b5b276adfd37576b1bac"><div class="ttname"><a href="namespace_h_e_p.html#a80a7c4666a10b5b276adfd37576b1bac">HEP::Sigmaplus</a></div><div class="ttdeci">const Particle Sigmaplus</div><div class="ttdoc">Charged Sigma baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_abe2c7dc037916a647e720502b4e3f40d"><div class="ttname"><a href="namespace_h_e_p.html#abe2c7dc037916a647e720502b4e3f40d">HEP::D0</a></div><div class="ttdeci">const Particle D0</div><div class="ttdoc">Neutral D meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a3f2f4308f703315232989a1ad2c80bf9"><div class="ttname"><a href="namespace_h_e_p.html#a3f2f4308f703315232989a1ad2c80bf9">HEP::Ximinus</a></div><div class="ttdeci">const Particle Ximinus</div><div class="ttdoc">Charged Xi baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_adb3d03b344a194d4214fba515f81f841"><div class="ttname"><a href="namespace_h_e_p.html#adb3d03b344a194d4214fba515f81f841">HEP::Lambda</a></div><div class="ttdeci">const Particle Lambda</div><div class="ttdoc">Lambda baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a6f437507372820c9ff43542cf239285c"><div class="ttname"><a href="namespace_h_e_p.html#a6f437507372820c9ff43542cf239285c">HEP::nu_mu</a></div><div class="ttdeci">const Particle nu_mu</div><div class="ttdoc">Muon Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:22</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a9af1eb62beb7aa5a68aec1bb2d84b5f9"><div class="ttname"><a href="namespace_h_e_p.html#a9af1eb62beb7aa5a68aec1bb2d84b5f9">HEP::g</a></div><div class="ttdeci">const Particle g</div><div class="ttdoc">Gluon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html"><div class="ttname"><a href="namespace_h_e_p.html">HEP</a></div><div class="ttdef"><b>Definition:</b> BcDecTable.hxx:24</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a9ff6160fd7a361d5f26e03760d7709b1"><div class="ttname"><a href="namespace_h_e_p.html#a9ff6160fd7a361d5f26e03760d7709b1">HEP::e</a></div><div class="ttdeci">const Particle e</div><div class="ttdoc">Electron, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:14</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_ae7956fca1f2677f1d6fdd64a0401cb00"><div class="ttname"><a href="namespace_h_e_p.html#ae7956fca1f2677f1d6fdd64a0401cb00">HEP::Bplus</a></div><div class="ttdeci">const Particle Bplus</div><div class="ttdoc">Charge B meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a760185ff141f985458c6364a6dd2e9fa"><div class="ttname"><a href="namespace_h_e_p.html#a760185ff141f985458c6364a6dd2e9fa">HEP::eta</a></div><div class="ttdeci">const Particle eta</div><div class="ttdoc">Eta meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_abbe2fa28178ac0a490f3415c52ceb87b"><div class="ttname"><a href="namespace_h_e_p.html#abbe2fa28178ac0a490f3415c52ceb87b">HEP::tau</a></div><div class="ttdeci">const Particle tau</div><div class="ttdoc">Tau, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:18</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a4df2021317a0dcfcbe6c415da4c7d4fe"><div class="ttname"><a href="namespace_h_e_p.html#a4df2021317a0dcfcbe6c415da4c7d4fe">HEP::phi_1020</a></div><div class="ttdeci">const Particle phi_1020</div><div class="ttdoc">Phi 1020, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:30</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a6664b6f8fabc8c70ac51c65a74b9a6e6"><div class="ttname"><a href="namespace_h_e_p.html#a6664b6f8fabc8c70ac51c65a74b9a6e6">HEP::Bs</a></div><div class="ttdeci">const Particle Bs</div><div class="ttdoc">Neutral B strange meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a531340d71f6b91fb5602b2d6475fbeb4"><div class="ttname"><a href="namespace_h_e_p.html#a531340d71f6b91fb5602b2d6475fbeb4">HEP::W</a></div><div class="ttdeci">const Particle W</div><div class="ttdoc">W Boson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a81529ea47220d1476f31cb863eeb640c"><div class="ttname"><a href="namespace_h_e_p.html#a81529ea47220d1476f31cb863eeb640c">HEP::Dplus</a></div><div class="ttdeci">const Particle Dplus</div><div class="ttdoc">Charged D meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a1fddb8b379bf61849cd33f9d97d53909"><div class="ttname"><a href="namespace_h_e_p.html#a1fddb8b379bf61849cd33f9d97d53909">HEP::p</a></div><div class="ttdeci">const Particle p</div><div class="ttdoc">Proton, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a1e8a1bcddb20e1c9ceb1ab32b776055e"><div class="ttname"><a href="namespace_h_e_p.html#a1e8a1bcddb20e1c9ceb1ab32b776055e">HEP::Bc</a></div><div class="ttdeci">const Particle Bc</div><div class="ttdoc">Charmed B meson, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:40</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_aee2aa39150e6560ea9bc2ec42195c425"><div class="ttname"><a href="namespace_h_e_p.html#aee2aa39150e6560ea9bc2ec42195c425">HEP::Omega</a></div><div class="ttdeci">const Particle Omega</div><div class="ttdoc">Omega baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a07e2677ebeb4c46d9699e6b8c3fc5882"><div class="ttname"><a href="namespace_h_e_p.html#a07e2677ebeb4c46d9699e6b8c3fc5882">HEP::Xi0</a></div><div class="ttdeci">const Particle Xi0</div><div class="ttdoc">Neutral Xi baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_afe567ac6d0581fe28e93f2aed2df7993"><div class="ttname"><a href="namespace_h_e_p.html#afe567ac6d0581fe28e93f2aed2df7993">HEP::Lambdab0</a></div><div class="ttdeci">const Particle Lambdab0</div><div class="ttdoc">Lambda b baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a2524570a3d0989661c23fb0a8c0ae268"><div class="ttname"><a href="namespace_h_e_p.html#a2524570a3d0989661c23fb0a8c0ae268">HEP::mu</a></div><div class="ttdeci">const Particle mu</div><div class="ttdoc">Muon, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:16</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a2df2308728bf1f13ffa2c8dc872fc351"><div class="ttname"><a href="namespace_h_e_p.html#a2df2308728bf1f13ffa2c8dc872fc351">HEP::H</a></div><div class="ttdeci">const Particle H</div><div class="ttdoc">Higgs Boson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_ab360dca5e490836128cc9ec47009b90c"><div class="ttname"><a href="namespace_h_e_p.html#ab360dca5e490836128cc9ec47009b90c">HEP::B0</a></div><div class="ttdeci">const Particle B0</div><div class="ttdoc">Neutral B meson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_ac1ce1b9825772a157c84aa4dd722ab4e"><div class="ttname"><a href="namespace_h_e_p.html#ac1ce1b9825772a157c84aa4dd722ab4e">HEP::nu_tau</a></div><div class="ttdeci">const Particle nu_tau</div><div class="ttdoc">Tau Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:24</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a42ced6c1939bf4673f697cc56ed6ac63"><div class="ttname"><a href="namespace_h_e_p.html#a42ced6c1939bf4673f697cc56ed6ac63">HEP::nu_e</a></div><div class="ttdeci">const Particle nu_e</div><div class="ttdoc">Electron Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:20</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a58ad87580908a04039aacac4864ef6fe"><div class="ttname"><a href="namespace_h_e_p.html#a58ad87580908a04039aacac4864ef6fe">HEP::Z</a></div><div class="ttdeci">const Particle Z</div><div class="ttdoc">Z Boson, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a06877c0c9b47b2025062a541c6e61869"><div class="ttname"><a href="namespace_h_e_p.html#a06877c0c9b47b2025062a541c6e61869">HEP::n</a></div><div class="ttdeci">const Particle n</div><div class="ttdoc">Neutron, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_aac3c64c500113d1ef0938ee2c511e5c5"><div class="ttname"><a href="namespace_h_e_p.html#aac3c64c500113d1ef0938ee2c511e5c5">HEP::Sigma</a></div><div class="ttdeci">const Particle Sigma</div><div class="ttdoc">Neutral Sigma baryon, .</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_aeaab3be1090087b53d5ae51ed111996a"><div class="ttname"><a href="namespace_h_e_p.html#aeaab3be1090087b53d5ae51ed111996a">HEP::Pi0</a></div><div class="ttdeci">const Particle Pi0</div><div class="ttdoc">Neutral Pion, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:36</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_af66fe3d6747a69da718b7ef4f2ec9466"><div class="ttname"><a href="namespace_h_e_p.html#af66fe3d6747a69da718b7ef4f2ec9466">HEP::Kplus</a></div><div class="ttdeci">const Particle Kplus</div><div class="ttdoc">Charged Kaon, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:28</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a5d0d4eb719243f4b9249839eb764e93a"><div class="ttname"><a href="namespace_h_e_p.html#a5d0d4eb719243f4b9249839eb764e93a">HEP::Lambdac</a></div><div class="ttdeci">const Particle Lambdac</div><div class="ttdoc">Lambda c baryon, .</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

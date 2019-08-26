@@ -1,0 +1,85 @@
+\hypertarget{class_h_e_p_1_1_particle}{}\doxysection{H\+EP\+::Particle Class Reference}
+\label{class_h_e_p_1_1_particle}\index{HEP::Particle@{HEP::Particle}}
+
+
+\mbox{\hyperlink{class_h_e_p_1_1_particle}{Particle}} Class.  
+
+
+
+
+{\ttfamily \#include $<$Particle.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a40f4c7e248029d72e7714b7802d5e5e1}\label{class_h_e_p_1_1_particle_a40f4c7e248029d72e7714b7802d5e5e1}} 
+\mbox{\hyperlink{class_h_e_p_1_1_particle_a40f4c7e248029d72e7714b7802d5e5e1}{Particle}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor with properties set to -\/1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a9b6948ca03247e4c8b1fb834415f55f8}\label{class_h_e_p_1_1_particle_a9b6948ca03247e4c8b1fb834415f55f8}} 
+\mbox{\hyperlink{class_h_e_p_1_1_particle_a9b6948ca03247e4c8b1fb834415f55f8}{Particle}} (std\+::string, std\+::string, double, double)
+\begin{DoxyCompactList}\small\item\em Construct a particle with a given name, sign, mass and lifetime. The energy will be taken to be the rest mass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a1fd06a63c5b2e998d0a8aeb44c307a87}\label{class_h_e_p_1_1_particle_a1fd06a63c5b2e998d0a8aeb44c307a87}} 
+\mbox{\hyperlink{class_h_e_p_1_1_particle_a1fd06a63c5b2e998d0a8aeb44c307a87}{Particle}} (double, double, double, double)
+\begin{DoxyCompactList}\small\item\em Construct a particle giving only the four momentum components. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a7b617e152067285937a588a5d2f084a6}\label{class_h_e_p_1_1_particle_a7b617e152067285937a588a5d2f084a6}} 
+const std\+::string \mbox{\hyperlink{class_h_e_p_1_1_particle_a7b617e152067285937a588a5d2f084a6}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns as a string the particle name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}\label{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}} 
+const \mbox{\hyperlink{class_h_e_p_1_1_particle}{Particle}} \mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}} () const
+\begin{DoxyCompactList}\small\item\em Get the antiparticle partner of the current particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_acf986ad8345fda8775fe045cfb376363}\label{class_h_e_p_1_1_particle_acf986ad8345fda8775fe045cfb376363}} 
+void \mbox{\hyperlink{class_h_e_p_1_1_particle_acf986ad8345fda8775fe045cfb376363}{Fire}} (double)
+\begin{DoxyCompactList}\small\item\em Fire the particle at a given energy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a988ac47ae4c07f4cf239b84eed8dc4e3}\label{class_h_e_p_1_1_particle_a988ac47ae4c07f4cf239b84eed8dc4e3}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_particle_a988ac47ae4c07f4cf239b84eed8dc4e3}{M}} () const
+\begin{DoxyCompactList}\small\item\em Get the mass of the particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_af9a6c71175dca6ecbd8c6e916747e5c9}\label{class_h_e_p_1_1_particle_af9a6c71175dca6ecbd8c6e916747e5c9}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_particle_af9a6c71175dca6ecbd8c6e916747e5c9}{phi}} () const
+\begin{DoxyCompactList}\small\item\em Get the azimuthal angle $ \phi $ of the particle trajectory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a31ec12ebb3cc5de55a300bdce245aa4a}\label{class_h_e_p_1_1_particle_a31ec12ebb3cc5de55a300bdce245aa4a}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_particle_a31ec12ebb3cc5de55a300bdce245aa4a}{y}} () const
+\begin{DoxyCompactList}\small\item\em Get the rapidity $ y = \frac{1}{2}\log{\left(\frac{E+p_z}{E-p_z}\right)} $ of the particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a799f408f873aeb4ef42c106b469c12f9}\label{class_h_e_p_1_1_particle_a799f408f873aeb4ef42c106b469c12f9}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_particle_a799f408f873aeb4ef42c106b469c12f9}{eta}} () const
+\begin{DoxyCompactList}\small\item\em Get the pseudorapidity $ \eta = -\log{\left(\tan\frac{\theta}{2}\right)} $ of the particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a891b05e8064bd482f23576270e84886d}\label{class_h_e_p_1_1_particle_a891b05e8064bd482f23576270e84886d}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_particle_a891b05e8064bd482f23576270e84886d}{theta}} () const
+\begin{DoxyCompactList}\small\item\em Get the angle $\theta $ of the particle trajectory in the $x-z $ plane. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a2dc228e26645a61a6c3652fbdad2a9d7}\label{class_h_e_p_1_1_particle_a2dc228e26645a61a6c3652fbdad2a9d7}} 
+const \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{H\+E\+P\+::\+Lorentz\+Vector}} \mbox{\hyperlink{class_h_e_p_1_1_particle_a2dc228e26645a61a6c3652fbdad2a9d7}{momentum}} () const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} of the given particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a5f8c06c8813f150302611c71ccfe1db1}\label{class_h_e_p_1_1_particle_a5f8c06c8813f150302611c71ccfe1db1}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_particle_a5f8c06c8813f150302611c71ccfe1db1}{PT}} () const
+\begin{DoxyCompactList}\small\item\em Get the transverse momentum $p_T $ of the particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a2fdf064c3c530c4f0edb40443b6a81d4}\label{class_h_e_p_1_1_particle_a2fdf064c3c530c4f0edb40443b6a81d4}} 
+\mbox{\hyperlink{class_h_e_p_1_1_particle_a2fdf064c3c530c4f0edb40443b6a81d4}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the particle has been initialised (does not have default blank values) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_particle_a9e8d44514741aa9208549130e2112fab}\label{class_h_e_p_1_1_particle_a9e8d44514741aa9208549130e2112fab}} 
+std\+::ostream \& \mbox{\hyperlink{class_h_e_p_1_1_particle_a9e8d44514741aa9208549130e2112fab}{operator$<$$<$}} (std\+::ostream \&, \mbox{\hyperlink{class_h_e_p_1_1_particle}{Particle}} \&)
+\begin{DoxyCompactList}\small\item\em Output the particle properties to the ostream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_h_e_p_1_1_particle}{Particle}} Class. 
+
+Class representing a single particle with information on mass and lifetime \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/26 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Particle.\+hxx\item 
+src/Particle.\+cxx\end{DoxyCompactItemize}

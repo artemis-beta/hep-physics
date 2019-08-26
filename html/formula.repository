@@ -36,3 +36,13 @@
 \form#35:$ \Xi^{+} $
 \form#36:$ \Omega $
 \form#37:$ \Lambda_c $
+\form#38:$ K^{\pm} $
+\form#39:$(x_0, x_1, x_2, x_3)$
+\form#40:$ r = \sqrt{x_0^2-x_1^2-x_2^2-x_3^2} $
+\form#41:$ \phi $
+\form#42:$ y = \frac{1}{2}\log{\left(\frac{E+p_z}{E-p_z}\right)} $
+\form#43:$ \eta = -\log{\left(\tan\left(\frac{\theta}{2}\right)\right)} $
+\form#44:$\theta $
+\form#45:$p_T $
+\form#46:$ \eta = -\log{\left(\tan\frac{\theta}{2}\right)} $
+\form#47:$x-z $

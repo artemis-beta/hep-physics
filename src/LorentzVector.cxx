@@ -10,7 +10,7 @@ LorentzVector::LorentzVector(double x0_, double x1_, double x2_, double x3_)
     x3 = x3_;
 }
 
-double& LorentzVector::operator[] (size_t i)
+const double& LorentzVector::operator[] (size_t i)
 {  
     switch (i)
     {
@@ -23,10 +23,10 @@ double& LorentzVector::operator[] (size_t i)
 
 std::ostream& operator<<(std::ostream& os, const LorentzVector& lv)
 {
-    os << "<" << lv.x0 << ",";
-    os << lv.x1 << ",";
-    os << lv.x2 << ",";
-    os << lv.x3 << ",";
+    os << "<" << lv[0] << ",";
+    os << lv[1] << ",";
+    os << lv[2] << ",";
+    os << lv[3] << ",";
     os << "LorentzVector('double')>" << std::endl;
 
     return os;

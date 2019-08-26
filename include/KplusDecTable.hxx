@@ -6,7 +6,7 @@
 
 using namespace HEP;
 
-DecayTable KplusDecays()
+const DecayTable gen_KplusDecays()
 {
 	DecayTable _tmp(Kplus);
 	
@@ -84,6 +84,12 @@ DecayTable KplusDecays()
 
 
 	return _tmp;
+}
+
+namespace HEP
+{
+	//! DecayTable of all decays of the @f$ K^{\pm} @f$ meson. The @c gen_KplusDecay function generates all the relevant channels
+	extern const DecayTable KplusDecays = gen_KplusDecays();
 }
 
 #endif

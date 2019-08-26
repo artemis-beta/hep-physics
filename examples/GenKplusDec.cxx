@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 
 	for(int i{0}; i<nEvts; ++i)
 	{
-		std::string _tmp =  KplusDecays().getRandom().getDecStr();
+		const std::string _tmp =  KplusDecays.getRandom().getDecStr();
 		if(_hist.find(_tmp) == _hist.end())
 		{
 			_hist[_tmp] = 1;

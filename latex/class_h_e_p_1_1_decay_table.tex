@@ -1,0 +1,55 @@
+\hypertarget{class_h_e_p_1_1_decay_table}{}\doxysection{H\+EP\+::Decay\+Table Class Reference}
+\label{class_h_e_p_1_1_decay_table}\index{HEP::DecayTable@{HEP::DecayTable}}
+
+
+\mbox{\hyperlink{class_h_e_p_1_1_decay}{Decay}} Table Class.  
+
+
+
+
+{\ttfamily \#include $<$Decay\+Table.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_decay_table_a7365839f9034f58c66d368f34318a1f4}\label{class_h_e_p_1_1_decay_table_a7365839f9034f58c66d368f34318a1f4}} 
+\mbox{\hyperlink{class_h_e_p_1_1_decay_table_a7365839f9034f58c66d368f34318a1f4}{Decay\+Table}} (const \mbox{\hyperlink{class_h_e_p_1_1_particle}{Particle}} \&mother)
+\begin{DoxyCompactList}\small\item\em Construct a decay table for a given mother particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_decay_table_aadb3298caa972ce2b2480cff04d62002}\label{class_h_e_p_1_1_decay_table_aadb3298caa972ce2b2480cff04d62002}} 
+void \mbox{\hyperlink{class_h_e_p_1_1_decay_table_aadb3298caa972ce2b2480cff04d62002}{add\+Decay}} (\mbox{\hyperlink{class_h_e_p_1_1_decay}{Decay}} \&decay)
+\begin{DoxyCompactList}\small\item\em Add a new decay to the decay table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_decay_table_acdacfed4b85fcf6c7078894e9119ac48}\label{class_h_e_p_1_1_decay_table_acdacfed4b85fcf6c7078894e9119ac48}} 
+std\+::vector$<$ \mbox{\hyperlink{class_h_e_p_1_1_decay}{Decay}} $>$ \mbox{\hyperlink{class_h_e_p_1_1_decay_table_acdacfed4b85fcf6c7078894e9119ac48}{get\+Decays}} ()
+\begin{DoxyCompactList}\small\item\em Get the decays in decay tablea as a vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_decay_table_a944215aec078315d7b2f5c321032ebb8}\label{class_h_e_p_1_1_decay_table_a944215aec078315d7b2f5c321032ebb8}} 
+const \mbox{\hyperlink{class_h_e_p_1_1_decay}{Decay}} \mbox{\hyperlink{class_h_e_p_1_1_decay_table_a944215aec078315d7b2f5c321032ebb8}{get\+Random}} () const
+\begin{DoxyCompactList}\small\item\em Get a decay at random based on the branching ratios. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_decay_table_ac1b1b145bf4443ad69253dad9df85bcd}\label{class_h_e_p_1_1_decay_table_ac1b1b145bf4443ad69253dad9df85bcd}} 
+void \mbox{\hyperlink{class_h_e_p_1_1_decay_table_ac1b1b145bf4443ad69253dad9df85bcd}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Print the decay table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_h_e_p_1_1_decay}{Decay}} Table Class. 
+
+Class containing all decay channels for a given mother particle this is used to generate a decay at random \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/26 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_kplus_dec_table_8hxx-example}{Kplus\+Dec\+Table.\+hxx}}.\end{Desc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Decay\+Table.\+hxx\item 
+src/Decay\+Table.\+cxx\end{DoxyCompactItemize}

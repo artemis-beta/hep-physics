@@ -7,7 +7,7 @@
 using namespace HEP;
 
 
-DecayTable BcDecays()
+const DecayTable gen_BcDecays()
 {
     DecayTable _tmp(Bc);
 
@@ -19,6 +19,12 @@ DecayTable BcDecays()
 
     return _tmp;
 
-}    
+} 
+
+namespace HEP
+{
+    //! DecayTable of all decays of the @f$ B_c @f$ meson. The @c gen_BcDecays function generates all the relevant channels
+    extern const DecayTable BcDecays = gen_BcDecays();
+}
 
 #endif

@@ -7,29 +7,32 @@ Lorentz Vector Class.
 
 
 
-{\ttfamily \#include $<$H\+E\+P\+Lorentz\+Vector.\+hxx$>$}
+{\ttfamily \#include $<$Lorentz\+Vector.\+hxx$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_a902cef0aeee63129891788b3c2c92b79}\label{class_h_e_p_1_1_lorentz_vector_a902cef0aeee63129891788b3c2c92b79}} 
-double \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i)
-\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_a771668e91cb52469fe10a1661173344b}\label{class_h_e_p_1_1_lorentz_vector_a771668e91cb52469fe10a1661173344b}} 
+\mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector_a771668e91cb52469fe10a1661173344b}{Lorentz\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Create a blank \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} with the default values of -\/9999. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_a45c221e4911d5d597687856c857664df}\label{class_h_e_p_1_1_lorentz_vector_a45c221e4911d5d597687856c857664df}} 
+const double \& \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector_a45c221e4911d5d597687856c857664df}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Specify a component of the \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} by index \mbox{[}0, 3\mbox{]} for $(x_0, x_1, x_2, x_3)$. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_a86685c6fad5b12685c987b9edd9d4299}\label{class_h_e_p_1_1_lorentz_vector_a86685c6fad5b12685c987b9edd9d4299}} 
-double {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i) const
-\item 
-\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_aaf0c95661426bb16dbbab611b643c5f7}\label{class_h_e_p_1_1_lorentz_vector_aaf0c95661426bb16dbbab611b643c5f7}} 
-{\bfseries Lorentz\+Vector} (double x0, double x1, double x2, double x3)
-\item 
-\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_a955748fbc0e21a2da45c1c4976b83834}\label{class_h_e_p_1_1_lorentz_vector_a955748fbc0e21a2da45c1c4976b83834}} 
-double {\bfseries magnitude} ()
-\end{DoxyCompactItemize}
+double \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector_a86685c6fad5b12685c987b9edd9d4299}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em Specify a component of the \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} by index \mbox{[}0, 3\mbox{]} for $(x_0, x_1, x_2, x_3)$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_ac2c78b37f7d7cb794e20bdfbbebcb599}\label{class_h_e_p_1_1_lorentz_vector_ac2c78b37f7d7cb794e20bdfbbebcb599}} 
+\mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector_ac2c78b37f7d7cb794e20bdfbbebcb599}{Lorentz\+Vector}} (double x0, double x1, double x2, double x3)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} by giving the four values $(x_0, x_1, x_2, x_3)$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_af7652e5ff223ab3f6ed594e1ec8b6d0b}\label{class_h_e_p_1_1_lorentz_vector_af7652e5ff223ab3f6ed594e1ec8b6d0b}} 
+const double \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector_af7652e5ff223ab3f6ed594e1ec8b6d0b}{magnitude}} () const
+\begin{DoxyCompactList}\small\item\em Returns the magnitude of the vector as $ r = \sqrt{x_0^2-x_1^2-x_2^2-x_3^2} $. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_h_e_p_1_1_lorentz_vector_ac463a8d62d02242d472fac0d02f57f2c}\label{class_h_e_p_1_1_lorentz_vector_ac463a8d62d02242d472fac0d02f57f2c}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} \&lv)
-\end{DoxyCompactItemize}
+std\+::ostream \& \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector_ac463a8d62d02242d472fac0d02f57f2c}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} \&lv)
+\begin{DoxyCompactList}\small\item\em Output the components of the \mbox{\hyperlink{class_h_e_p_1_1_lorentz_vector}{Lorentz\+Vector}} to the ostream when printing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -42,13 +45,14 @@ Class to represent Lorentz vectors of the form e.\+g. four momenta \begin{DoxyVe
 Kristian Zarebski 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-last modified 2019-\/08-\/25 
+last modified 2019-\/08-\/26 
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
 M\+IT License 
 \end{DoxyCopyright}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/H\+E\+P\+Lorentz\+Vector.\+hxx\end{DoxyCompactItemize}
+include/Lorentz\+Vector.\+hxx\item 
+src/Lorentz\+Vector.\+cxx\end{DoxyCompactItemize}

@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['print_65',['Print',['../class_decay_table.html#ac1b1b145bf4443ad69253dad9df85bcd',1,'DecayTable']]]
+  ['getbr_76',['getBR',['../class_h_e_p_1_1_decay.html#ad484bad2d456a23cd96b02e957da913b',1,'HEP::Decay']]],
+  ['getdaughters_77',['getDaughters',['../class_h_e_p_1_1_decay.html#add522d926b5b1105f56397ad73a5aa80',1,'HEP::Decay']]],
+  ['getdecays_78',['getDecays',['../class_h_e_p_1_1_decay_table.html#acdacfed4b85fcf6c7078894e9119ac48',1,'HEP::DecayTable']]],
+  ['getdecstr_79',['getDecStr',['../class_h_e_p_1_1_decay.html#a159e0a2ca6ea7e0a562611008adb252a',1,'HEP::Decay']]],
+  ['getmother_80',['getMother',['../class_h_e_p_1_1_decay.html#ad46ba88dae94efb7c0769c321e569118',1,'HEP::Decay']]],
+  ['getname_81',['getName',['../class_h_e_p_1_1_particle.html#a7b617e152067285937a588a5d2f084a6',1,'HEP::Particle']]],
+  ['getrandom_82',['getRandom',['../class_h_e_p_1_1_decay_table.html#a944215aec078315d7b2f5c321032ebb8',1,'HEP::DecayTable']]]
 ];

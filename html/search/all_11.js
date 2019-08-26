@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['z_49',['Z',['../namespace_h_e_p.html#a74e0e2b6c79e30d27962796a3ff008e9',1,'HEP']]]
+  ['xi0_61',['Xi0',['../namespace_h_e_p.html#a07e2677ebeb4c46d9699e6b8c3fc5882',1,'HEP']]],
+  ['ximinus_62',['Ximinus',['../namespace_h_e_p.html#a3f2f4308f703315232989a1ad2c80bf9',1,'HEP']]]
 ];
