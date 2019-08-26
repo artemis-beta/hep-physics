@@ -1,5 +1,7 @@
 #include "DecayTable.hxx"
 
+using namespace HEP;
+
 Decay::Decay(std::vector<Particle> daughters, double probability, Particle _m)
 {
 	_prob      = probability;
@@ -27,12 +29,12 @@ bool Decay::isValid(double num)
 	return num < _prob;
 }
 
-void Decay::setMother(Particle _m)
+void Decay::setMother(Particle& _m)
 {
 	_mother = _m;
 }
 
-DecayTable::DecayTable(Particle _m)
+DecayTable::DecayTable(Particle& _m)
 {
 	_cumul_brs.push_back(0);
 	_mother = _m;
@@ -45,7 +47,7 @@ std::ostream& operator<< (std::ostream& os, Decay& d)
 	return os;
 }
 
-void DecayTable::addDecay(Decay _decay)
+void DecayTable::addDecay(Decay& _decay)
 {
 	_decay.setMother(_mother);
 	_brs.push_back(_decay.getBR());

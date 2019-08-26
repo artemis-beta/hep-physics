@@ -1,11 +1,13 @@
-#include "CommonParticles.hxx"
-
 //==============================================//
 //    Particles Obtained from the PDG Listing   //
 //    https://pdg.lbl.gov                       //
 //                                              //
 //    Last updated for 2017                     //
 //==============================================//
+
+#include "CommonParticles.hxx"
+
+using namespace HEP;
 
 //================= Leptons ====================//
 
@@ -25,7 +27,7 @@
 
  Particle HEP::Kplus = Particle("K", "+", 493.677, 1.2380E-8);
 
- Particle HEP::phi = Particle("phi", "", 999, 999);
+ Particle HEP::phi_1020 = Particle("phi", "", 999, 999);
 
 //=========== Light Unflavoured Mesons==========//
 
