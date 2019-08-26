@@ -1,5 +1,5 @@
 //==============================================//
-//    const Particles Obtained from the PDG Listing   //
+//    Particles Obtained from the PDG Listing   //
 //    https://pdg.lbl.gov                       //
 //                                              //
 //    Last updated for 2017                     //
@@ -7,34 +7,32 @@
 
 #include "CommonParticles.hxx"
 
-using namespace HEP;
-
 //================= Leptons ====================//
 
- const Particle HEP::e = Particle("e", "-", 0.5109989461, 3E36);
+ const HEP::Particle HEP::Particles::e = HEP::Particle("e", "-", 0.5109989461*HEP::Units::MeV, 3E36*HEP::Units::sec);
 
- const Particle HEP::mu = Particle("mu", "-", 105.6583745, 2.1969811E-6);
+ const HEP::Particle HEP::Particles::mu = HEP::Particle("mu", "-", 105.6583745*HEP::Units::MeV, 2.1969811E-6*HEP::Units::sec);
 
- const Particle HEP::tau = Particle("tau", "-", 1776.82, 2.90610E-13);
+ const HEP::Particle HEP::Particles::tau = HEP::Particle("tau", "-", 1776.82*HEP::Units::MeV, 2.90610E-13*HEP::Units::sec);
 
- const Particle HEP::nu_e = Particle("nu_e", "", 1E-6, -1);
+ const HEP::Particle HEP::Particles::nu_e = HEP::Particle("nu_e", "", 1E-6*HEP::Units::MeV, -1);
 
- const Particle HEP::nu_mu = Particle("nu_mu", "", 1E-6, -1);
+ const HEP::Particle HEP::Particles::nu_mu = HEP::Particle("nu_mu", "", 1E-6*HEP::Units::MeV, -1);
 
- const Particle HEP::nu_tau = Particle("nu_tau", "", 1E-6, -1);
+ const HEP::Particle HEP::Particles::nu_tau = HEP::Particle("nu_tau", "", 1E-6*HEP::Units::MeV, -1);
 
 //=============== Strange Mesons================//
 
- const Particle HEP::Kplus = Particle("K", "+", 493.677, 1.2380E-8);
+ const HEP::Particle HEP::Particles::Kplus = HEP::Particle("K", "+", 493.677*HEP::Units::MeV, 1.2380E-8);
 
- const Particle HEP::phi_1020 = Particle("phi", "", 999, 999);
+ const HEP::Particle HEP::Particles::phi_1020 = HEP::Particle("phi", "", 999, 999);
 
 //=========== Light Unflavoured Mesons==========//
 
- const Particle HEP::Piplus = Particle("pi", "+", 139.57061, 2.6033E-8);
+ const HEP::Particle HEP::Particles::Piplus = HEP::Particle("pi", "+", 139.57061*HEP::Units::MeV, 2.6033E-8*HEP::Units::sec);
 
- const Particle HEP::Pi0 = Particle("pi", "0", 134.9770, 8.52E-17);
+ const HEP::Particle HEP::Particles::Pi0 = HEP::Particle("pi", "0", 134.9770*HEP::Units::MeV, 8.52E-17*HEP::Units::sec);
 
 //================ B hadrons ===================//
 
- const Particle HEP::Bc = Particle("Bc", "+", 999, 999);
+ const HEP::Particle HEP::Particles::Bc = HEP::Particle("Bc", "+", 999, 999);

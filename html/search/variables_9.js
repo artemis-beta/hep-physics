@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['omega_120',['Omega',['../namespace_h_e_p.html#aee2aa39150e6560ea9bc2ec42195c425',1,'HEP']]]
+  ['omega_124',['Omega',['../namespace_h_e_p_1_1_particles.html#a485b90abecd9c738f970b40bf30a5e7b',1,'HEP::Particles']]]
 ];

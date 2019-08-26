@@ -1,37 +1,35 @@
 #include "Particle.hxx"
 
-using namespace HEP;
-
-std::ostream &operator<<(std::ostream &os, Particle  &p)
+std::ostream &operator<<(std::ostream &os, HEP::Particle  &p)
 {
 	os << p.getName();
 	return os;
 }
 
-Particle::Particle()
+HEP::Particle::Particle()
 {
 	name_ = "";
 	sign_ = "";
 	mass_ = -1;
-	momentum_ = LorentzVector();
+	momentum_ = HEP::LorentzVector();
 	lifetime_ = -1;
 }
 
-Particle::Particle(std::string _name, std::string _sign, double _mass, double _tau)
+HEP::Particle::Particle(std::string _name, std::string _sign, double _mass, double _tau)
 {
     name_ = _name;
 	sign_ = _sign;
 	mass_ = _mass;
-	momentum_ = LorentzVector(_mass, 0, 0, 0);
+	momentum_ = HEP::LorentzVector(_mass, 0, 0, 0);
 	lifetime_ = _tau;
 }
 
-Particle::Particle(double e, double px, double py, double pz)
+HEP::Particle::Particle(double e, double px, double py, double pz)
 {
-    momentum_ = LorentzVector(e,px,py,pz);
+    momentum_ = HEP::LorentzVector(e,px,py,pz);
 }
 
-Particle::operator bool() const
+HEP::Particle::operator bool() const
 {
 	if(name_ == "" || mass_ == -1 || lifetime_ == -1)
 	{
@@ -41,9 +39,9 @@ Particle::operator bool() const
 	return true;
 }
 
-const Particle Particle::anti() const
+const HEP::Particle HEP::Particle::anti() const
 {
-	Particle other = *this;
+	HEP::Particle other = *this;
 	if(other.sign_ == "+"){other.sign_ = "-";}
 	else if(other.sign_ == "-"){other.sign_ = "+";}
 	else if(other.sign_ == "0"){other.sign_ = "~0";}
@@ -51,43 +49,43 @@ const Particle Particle::anti() const
 	return other;
 }
 
-const double Particle::theta() const
+const double HEP::Particle::theta() const
 {
     return atan(this->PT()/this->momentum()[3]);
 }
 
-void Particle::Fire(double energy)
+void HEP::Particle::Fire(double energy)
 {
 	double e_ = pow(this->M()*this->M()+energy*energy, 0.5);
-	momentum_  = LorentzVector(e_, 0, 0, energy);
+	momentum_  = HEP::LorentzVector(e_, 0, 0, energy);
 }	
 
-const double Particle::phi() const
+const double HEP::Particle::phi() const
 {
     return atan(this->momentum()[1]/this->momentum()[2]);
 }
 
-const double Particle::PT() const
+const double HEP::Particle::PT() const
 {
     return pow(pow(this->momentum()[1],2)+pow(this->momentum()[2],2), 0.5);
 }
 
-const double Particle::eta() const
+const double HEP::Particle::eta() const
 {
     return -log(tan(this->theta()/2.));
 }
 
-const double Particle::y() const
+const double HEP::Particle::y() const
 {
 	return 0.5*log((this->momentum()[0]+this->momentum()[3])/(this->momentum()[0]-this->momentum()[3]));
 }
 
-const double Particle::M() const
+const double HEP::Particle::M() const
 {
     return momentum_.magnitude();
 }
 
-const LorentzVector Particle::momentum() const
+const HEP::LorentzVector HEP::Particle::momentum() const
 {
     return momentum_;
 }

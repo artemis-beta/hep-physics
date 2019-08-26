@@ -2,162 +2,175 @@
 #define __COMMONPARTICLES__
 
 #include "Particle.hxx"
+#include "Units.hxx"
 
 /*! @namespace HEP
     The HEP namespace contains all currently accepted particles within the standard model
     and beyond. The masses and data are taken from the Particle Data Group listings @cite PDGlist.
     @warning It is recommend you do not use the namespace within the script as there is
-    a high probability of accidental overwriting. Instead use the particles as HEP::particle
-
-    @todo Finish all particle definitions
+    a high probability of accidental overwriting. Instead use the particles as HEP::Particles::particle
     
     @author K. Zarebski
 
-    @license MIT License
+    @copyright MIT License
 
     @date last modified 2019-08-26
 */
 
 namespace HEP
 {
+    /*! @namespace HEP::Particles
+    
+    Namespace containing all particles listed within the PDG
 
-//==============================================//
-//    Particles Obtained from the PDG Listing   //
-//    https://pdg.lbl.gov                       //
-//                                              //
-//    Last updated for 2017                     //
-//==============================================//
+    @todo Finish all particle definitions
+    
+    @author K. Zarebski
 
-//=========== Gauge & Higgs Bosons =============//
+    @copyright MIT License
 
-//! Photon, @f$\gamma@f$
-extern const Particle gamma;
+    @date last modified 2019-08-26
+    */
+    namespace Particles
+    {
+        //==============================================//
+        //    Particles Obtained from the PDG Listing   //
+        //    https://pdg.lbl.gov                       //
+        //                                              //
+        //    Last updated for 2017                     //
+        //==============================================//
 
-//! Gluon, @f$g@f$
-extern const Particle g;
+        //=========== Gauge & Higgs Bosons =============//
 
-//! W Boson, @f$W^{+}@f$
-extern const Particle W;
+        //! Photon, @f$\gamma@f$
+        extern const Particle gamma;
 
-//! Z Boson, @f$Z^0@f$
-extern const Particle Z;
+        //! Gluon, @f$g@f$
+        extern const Particle g;
 
-//! Higgs Boson, @f$H@f$
-extern const Particle H;
+        //! W Boson, @f$W^{+}@f$
+        extern const Particle W;
 
-//================= Leptons ====================//
+        //! Z Boson, @f$Z^0@f$
+        extern const Particle Z;
 
-//! Electron, @f$e^-@f$
- extern const Particle e;
+        //! Higgs Boson, @f$H@f$
+        extern const Particle H;
 
-//! Muon, @f$\mu^-@f$
- extern const Particle mu;
+        //================= Leptons ====================//
 
-//! Tau, @f$\tau^-@f$
- extern const Particle tau;
+        //! Electron, @f$e^-@f$
+        extern const Particle e;
 
-//! Electron Neutrino, @f$ \nu_{e} @f$
- extern const Particle nu_e;
+        //! Muon, @f$\mu^-@f$
+        extern const Particle mu;
 
-//! Muon Neutrino, @f$ \nu_{ \mu } @f$
- extern const Particle nu_mu;
+        //! Tau, @f$\tau^-@f$
+        extern const Particle tau;
 
-//! Tau Neutrino, @f$ \nu_{ \tau } @f$
- extern const Particle nu_tau;
+        //! Electron Neutrino, @f$ \nu_{e} @f$
+        extern const Particle nu_e;
 
-//=============== Strange Mesons================//
+        //! Muon Neutrino, @f$ \nu_{ \mu } @f$
+        extern const Particle nu_mu;
 
-//! Charged Kaon, @f$ K^{+} @f$
- extern const Particle Kplus;
+        //! Tau Neutrino, @f$ \nu_{ \tau } @f$
+        extern const Particle nu_tau;
 
-//! Phi 1020,  @f$ \phi(1020) @f$
- extern const Particle phi_1020;
+        //=============== Strange Mesons================//
 
-//=========== Light Unflavoured Mesons==========//
+        //! Charged Kaon, @f$ K^{+} @f$
+        extern const Particle Kplus;
 
-//! Eta meson, @f$ \eta @f$
- extern const Particle eta;
+        //! Phi 1020,  @f$ \phi(1020) @f$ @todo Correct properties
+        extern const Particle phi_1020;
 
-//! Charged Pion, @f$ \pi^{+} @f$
- extern const Particle Piplus;
+        //=========== Light Unflavoured Mesons==========//
 
-//! Neutral Pion, @f$ \pi^{0} @f$
- extern const Particle Pi0;
+        //! Eta meson, @f$ \eta @f$
+        extern const Particle eta;
 
-//=============== Charmed Mesons================//
+        //! Charged Pion, @f$ \pi^{+} @f$
+        extern const Particle Piplus;
 
-//! Charged D meson, @f$ D^{+} @f$
- extern const Particle Dplus;
+        //! Neutral Pion, @f$ \pi^{0} @f$
+        extern const Particle Pi0;
 
-//! Neutral D meson, @f$ D^{0} @f$
- extern const Particle D0;
+        //=============== Charmed Mesons================//
 
-//=========== Charmed Strange Mesons ===========//
- 
-//! Neutral D strange meson, @f$ D_s @f$
- extern const Particle Ds;
- 
-//================ Bottom Mesons ===============//
+        //! Charged D meson, @f$ D^{+} @f$
+        extern const Particle Dplus;
 
-//! Charge B meson, @f$ B^{+} @f$
- extern const Particle Bplus;
+        //! Neutral D meson, @f$ D^{0} @f$
+        extern const Particle D0;
 
-//! Neutral B meson, @f$ B^{0} @f$
- extern const Particle B0;
+        //=========== Charmed Strange Mesons ===========//
+        
+        //! Neutral D strange meson, @f$ D_s @f$
+        extern const Particle Ds;
+        
+        //================ Bottom Mesons ===============//
 
-//============= Bottom Strange Mesons ==========//
+        //! Charge B meson, @f$ B^{+} @f$
+        extern const Particle Bplus;
 
-//! Neutral B strange meson, @f$ B_s @f$
- extern const Particle Bs;
+        //! Neutral B meson, @f$ B^{0} @f$
+        extern const Particle B0;
 
-//============= Charmed Bottom Mesons ==========//
+        //============= Bottom Strange Mesons ==========//
 
-//! Charmed B meson, @f$ B_c @f$
- extern const Particle Bc;
+        //! Neutral B strange meson, @f$ B_s @f$
+        extern const Particle Bs;
 
-//================= N Baryons ==================//
+        //============= Charmed Bottom Mesons ==========//
 
-//! Proton, @f$ p @f$
- extern const Particle p;
+        //! Charmed B meson, @f$ B_c @f$ @todo Correct properties
+        extern const Particle Bc;
 
-//! Neutron, @f$ n @f$
- extern const Particle n;
+        //================= N Baryons ==================//
 
-//============== Lambda Baryons ================//
+        //! Proton, @f$ p @f$
+        extern const Particle p;
+
+        //! Neutron, @f$ n @f$
+        extern const Particle n;
+
+        //============== Lambda Baryons ================//
 
 
-//! Lambda baryon, @f$ \Lambda @f$
- extern const Particle Lambda;
+        //! Lambda baryon, @f$ \Lambda @f$
+        extern const Particle Lambda;
 
-//! Lambda b baryon, @f$ \Lambda_{b}^{0} @f$
- extern const Particle Lambdab0;
+        //! Lambda b baryon, @f$ \Lambda_{b}^{0} @f$
+        extern const Particle Lambdab0;
 
-//============== Sigma Baryons =================//
+        //============== Sigma Baryons =================//
 
-//! Neutral Sigma baryon, @f$ \Sigma^{0} @f$
- extern const Particle Sigma;
+        //! Neutral Sigma baryon, @f$ \Sigma^{0} @f$
+        extern const Particle Sigma;
 
-//! Charged Sigma baryon, @f$ \Sigma^{+} @f$
- extern const Particle Sigmaplus;
+        //! Charged Sigma baryon, @f$ \Sigma^{+} @f$
+        extern const Particle Sigmaplus;
 
-//=============== Xi Barysons ==================//
+        //=============== Xi Barysons ==================//
 
-//! Neutral Xi baryon, @f$ \Xi^{0} @f$
- extern const Particle Xi0;
+        //! Neutral Xi baryon, @f$ \Xi^{0} @f$
+        extern const Particle Xi0;
 
-//! Charged Xi baryon, @f$ \Xi^{+} @f$
- extern const Particle Ximinus;
+        //! Charged Xi baryon, @f$ \Xi^{+} @f$
+        extern const Particle Ximinus;
 
-//============== Omega Baryons =================//
+        //============== Omega Baryons =================//
 
-//! Omega baryon, @f$ \Omega @f$
- extern const Particle Omega;
+        //! Omega baryon, @f$ \Omega @f$
+        extern const Particle Omega;
 
-//============= Charmed Baryons ================//
+        //============= Charmed Baryons ================//
 
-//! Lambda c baryon, @f$ \Lambda_c @f$
- extern const Particle Lambdac;
+        //! Lambda c baryon, @f$ \Lambda_c @f$
+        extern const Particle Lambdac;
 
-};
+    }
+}
 
 #endif

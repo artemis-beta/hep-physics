@@ -1,8 +1,6 @@
 #include "LorentzVector.hxx"
 
-using namespace HEP;
-
-LorentzVector::LorentzVector(double x0_, double x1_, double x2_, double x3_)
+HEP::LorentzVector::LorentzVector(double x0_, double x1_, double x2_, double x3_)
 {
     x0 = x0_;
     x1 = x1_;
@@ -10,7 +8,7 @@ LorentzVector::LorentzVector(double x0_, double x1_, double x2_, double x3_)
     x3 = x3_;
 }
 
-const double& LorentzVector::operator[] (size_t i)
+const double& HEP::LorentzVector::operator[] (size_t i)
 {  
     switch (i)
     {
@@ -21,7 +19,7 @@ const double& LorentzVector::operator[] (size_t i)
     }
 }
 
-std::ostream& operator<<(std::ostream& os, const LorentzVector& lv)
+std::ostream& operator<<(std::ostream& os, const HEP::LorentzVector& lv)
 {
     os << "<" << lv[0] << ",";
     os << lv[1] << ",";

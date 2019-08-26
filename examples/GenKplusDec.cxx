@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 {
 	int nEvts = 100;
 
-	if(argc > 0){nEvts = atoi(argv[1]);}
+	if(argc > 1){nEvts = atoi(argv[1]);}
 
 	std::cout << "Generating " << nEvts << " K+ Decays..." << std::endl;
 

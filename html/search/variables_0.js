@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['b0_97',['B0',['../namespace_h_e_p.html#ab360dca5e490836128cc9ec47009b90c',1,'HEP']]],
-  ['bc_98',['Bc',['../namespace_h_e_p.html#a1e8a1bcddb20e1c9ceb1ab32b776055e',1,'HEP']]],
-  ['bcdecays_99',['BcDecays',['../namespace_h_e_p.html#ab1c3bfde5a19d4a90abc4e2608c46cab',1,'HEP']]],
-  ['bplus_100',['Bplus',['../namespace_h_e_p.html#ae7956fca1f2677f1d6fdd64a0401cb00',1,'HEP']]],
-  ['bs_101',['Bs',['../namespace_h_e_p.html#a6664b6f8fabc8c70ac51c65a74b9a6e6',1,'HEP']]]
+  ['b0_101',['B0',['../namespace_h_e_p_1_1_particles.html#a2dd0f95ca138e250384f8d2f0ba7ce53',1,'HEP::Particles']]],
+  ['bc_102',['Bc',['../namespace_h_e_p_1_1_particles.html#a0f6da7f0972e84056985f82cbf0f60aa',1,'HEP::Particles']]],
+  ['bcdecays_103',['BcDecays',['../namespace_h_e_p.html#ab1c3bfde5a19d4a90abc4e2608c46cab',1,'HEP']]],
+  ['bplus_104',['Bplus',['../namespace_h_e_p_1_1_particles.html#a0e55797b2dcc0e1be84405add673a764',1,'HEP::Particles']]],
+  ['bs_105',['Bs',['../namespace_h_e_p_1_1_particles.html#aaf81300eaf30326f17be14dee4d73379',1,'HEP::Particles']]]
 ];

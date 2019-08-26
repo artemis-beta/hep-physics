@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lambda_112',['Lambda',['../namespace_h_e_p.html#adb3d03b344a194d4214fba515f81f841',1,'HEP']]],
-  ['lambdab0_113',['Lambdab0',['../namespace_h_e_p.html#afe567ac6d0581fe28e93f2aed2df7993',1,'HEP']]],
-  ['lambdac_114',['Lambdac',['../namespace_h_e_p.html#a5d0d4eb719243f4b9249839eb764e93a',1,'HEP']]]
+  ['lambda_116',['Lambda',['../namespace_h_e_p_1_1_particles.html#a9f9c2984481f0e417357394aab2d2097',1,'HEP::Particles']]],
+  ['lambdab0_117',['Lambdab0',['../namespace_h_e_p_1_1_particles.html#a24e01b5dae61cc0b597bb7646ef3ec91',1,'HEP::Particles']]],
+  ['lambdac_118',['Lambdac',['../namespace_h_e_p_1_1_particles.html#a58ebec631c4c4c28e106cc48148f258b',1,'HEP::Particles']]]
 ];

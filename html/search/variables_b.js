@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sigma_125',['Sigma',['../namespace_h_e_p.html#aac3c64c500113d1ef0938ee2c511e5c5',1,'HEP']]],
-  ['sigmaplus_126',['Sigmaplus',['../namespace_h_e_p.html#a80a7c4666a10b5b276adfd37576b1bac',1,'HEP']]]
+  ['sigma_129',['Sigma',['../namespace_h_e_p_1_1_particles.html#a98741003919d9d1180028308c626fe90',1,'HEP::Particles']]],
+  ['sigmaplus_130',['Sigmaplus',['../namespace_h_e_p_1_1_particles.html#abff66315f2940bebb780eb2bf092d5a0',1,'HEP::Particles']]]
 ];

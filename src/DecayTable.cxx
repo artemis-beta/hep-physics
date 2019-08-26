@@ -1,8 +1,6 @@
 #include "DecayTable.hxx"
 
-using namespace HEP;
-
-Decay::Decay(std::vector<Particle> daughters, double probability, Particle _m)
+HEP::Decay::Decay(std::vector<Particle> daughters, double probability, Particle _m)
 {
 	_prob      = probability;
 
@@ -11,7 +9,7 @@ Decay::Decay(std::vector<Particle> daughters, double probability, Particle _m)
 	if(_m){_mother = _m;}
 }
 
-const std::string Decay::getDecStr() const
+const std::string HEP::Decay::getDecStr() const
 {
 	std::string out_str="";
 	out_str = _mother.getName();
@@ -24,30 +22,30 @@ const std::string Decay::getDecStr() const
 	return out_str;
 }
 
-bool Decay::isValid(double num)
+bool HEP::Decay::isValid(double num)
 {
 	return num < _prob;
 }
 
-void Decay::setMother(Particle& _m)
+void HEP::Decay::setMother(Particle& _m)
 {
 	_mother = _m;
 }
 
-DecayTable::DecayTable(Particle& _m)
+HEP::DecayTable::DecayTable(const Particle& _m)
 {
 	_cumul_brs.push_back(0);
 	_mother = _m;
 }
 
-std::ostream& operator<< (std::ostream& os, Decay& d)
+std::ostream& operator<< (std::ostream& os, HEP::Decay& d)
 {
 	os << d.getDecStr();
 	
 	return os;
 }
 
-void DecayTable::addDecay(Decay& _decay)
+void HEP::DecayTable::addDecay(Decay& _decay)
 {
 	_decay.setMother(_mother);
 	_brs.push_back(_decay.getBR());
@@ -56,7 +54,7 @@ void DecayTable::addDecay(Decay& _decay)
 	_decays.push_back(_decay);
 }
 
-const Decay DecayTable::getRandom() const
+const HEP::Decay HEP::DecayTable::getRandom() const
 {
         double rand_val = rand()*1E10/RAND_MAX;
 	rand_val /= 1E10;
@@ -71,7 +69,7 @@ const Decay DecayTable::getRandom() const
 	return Decay();
 }
 
-void DecayTable::Print()
+void HEP::DecayTable::Print()
 {
 	for(unsigned int i=0; i<_decays.size(); ++i){std::cout << (_decays[i]).getDecStr() << std::endl;}
 }

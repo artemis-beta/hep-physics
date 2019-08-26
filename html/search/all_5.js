@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['g_16',['g',['../namespace_h_e_p.html#a9af1eb62beb7aa5a68aec1bb2d84b5f9',1,'HEP']]],
-  ['gamma_17',['gamma',['../namespace_h_e_p.html#a168e7216fc6df3ff916842b131e1e2e0',1,'HEP']]],
+  ['g_16',['g',['../namespace_h_e_p_1_1_particles.html#aed38eda14bd5db2c8824bdd1c33323ed',1,'HEP::Particles']]],
+  ['gamma_17',['gamma',['../namespace_h_e_p_1_1_particles.html#a958ea94c0129109274235fb353dc60bd',1,'HEP::Particles']]],
   ['getbr_18',['getBR',['../class_h_e_p_1_1_decay.html#ad484bad2d456a23cd96b02e957da913b',1,'HEP::Decay']]],
   ['getdaughters_19',['getDaughters',['../class_h_e_p_1_1_decay.html#add522d926b5b1105f56397ad73a5aa80',1,'HEP::Decay']]],
   ['getdecays_20',['getDecays',['../class_h_e_p_1_1_decay_table.html#acdacfed4b85fcf6c7078894e9119ac48',1,'HEP::DecayTable']]],

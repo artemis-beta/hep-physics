@@ -6,6 +6,7 @@
 
 #include <string>
 #include "LorentzVector.hxx"
+#include "Units.hxx"
 
 namespace HEP
 {
