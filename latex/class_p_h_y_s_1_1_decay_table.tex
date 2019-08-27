@@ -1,0 +1,121 @@
+\hypertarget{class_p_h_y_s_1_1_decay_table}{}\doxysection{P\+H\+YS\+::Decay\+Table Class Reference}
+\label{class_p_h_y_s_1_1_decay_table}\index{PHYS::DecayTable@{PHYS::DecayTable}}
+
+
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Table Class.  
+
+
+
+
+{\ttfamily \#include $<$Decay\+Table.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_a73a52fc361bc386f69fee14f8e2f87fe}{Decay\+Table}} (const \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \&mother)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_a7dcac0e5c5af2e8d251bad8b08dc69dc}\label{class_p_h_y_s_1_1_decay_table_a7dcac0e5c5af2e8d251bad8b08dc69dc}} 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_a7dcac0e5c5af2e8d251bad8b08dc69dc}{add\+Decay}} (\mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} \&decay)
+\begin{DoxyCompactList}\small\item\em Add a new decay to the decay table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_a2abcc99ff32a046ed8e1fbf59669b924}\label{class_p_h_y_s_1_1_decay_table_a2abcc99ff32a046ed8e1fbf59669b924}} 
+std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_a2abcc99ff32a046ed8e1fbf59669b924}{get\+Decays}} ()
+\begin{DoxyCompactList}\small\item\em Get the decays in decay tablea as a vector. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_ab9ef857bf3453995d4bbe8a6b31ad851}{get\+Random}} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_a1e7e23f1e13fb30a53b750733bba6715}\label{class_p_h_y_s_1_1_decay_table_a1e7e23f1e13fb30a53b750733bba6715}} 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_a1e7e23f1e13fb30a53b750733bba6715}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Print the decay table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_affdcfa0ef265e1207597ae3cafecadfc}{\+\_\+brs}}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_a75f26e605b0f70a9d67227eeda1f6f4f}\label{class_p_h_y_s_1_1_decay_table_a75f26e605b0f70a9d67227eeda1f6f4f}} 
+std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_a75f26e605b0f70a9d67227eeda1f6f4f}{\+\_\+decays}}
+\begin{DoxyCompactList}\small\item\em Decays as list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_ae17e67db1f30a2d4bc8d777fc31d7633}\label{class_p_h_y_s_1_1_decay_table_ae17e67db1f30a2d4bc8d777fc31d7633}} 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_ae17e67db1f30a2d4bc8d777fc31d7633}{\+\_\+cumul\+\_\+brs}}
+\begin{DoxyCompactList}\small\item\em Cumulative branching ratios. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_a52efde46f74f3660a2612b7ba2f4419f}\label{class_p_h_y_s_1_1_decay_table_a52efde46f74f3660a2612b7ba2f4419f}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table_a52efde46f74f3660a2612b7ba2f4419f}{\+\_\+mother}} = \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}}()
+\begin{DoxyCompactList}\small\item\em Common mother to all decays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Table Class. 
+
+Class containing all decay channels for a given mother particle this is used to generate a decay at random \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/26 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_kplus_dec_table_8hxx-example}{Kplus\+Dec\+Table.\+hxx}}.\end{Desc}
+
+
+Definition at line 63 of file Decay\+Table.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_a73a52fc361bc386f69fee14f8e2f87fe}\label{class_p_h_y_s_1_1_decay_table_a73a52fc361bc386f69fee14f8e2f87fe}} 
+\index{PHYS::DecayTable@{PHYS::DecayTable}!DecayTable@{DecayTable}}
+\index{DecayTable@{DecayTable}!PHYS::DecayTable@{PHYS::DecayTable}}
+\doxysubsubsection{\texorpdfstring{DecayTable()}{DecayTable()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+Decay\+Table\+::\+Decay\+Table (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \&}]{mother }\end{DoxyParamCaption})}
+
+Construct a decay table for a given mother particle. 
+\begin{DoxyParams}{Parameters}
+{\em mother} & The mother particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Decay\+Table.\+cxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_ab9ef857bf3453995d4bbe8a6b31ad851}\label{class_p_h_y_s_1_1_decay_table_ab9ef857bf3453995d4bbe8a6b31ad851}} 
+\index{PHYS::DecayTable@{PHYS::DecayTable}!getRandom@{getRandom}}
+\index{getRandom@{getRandom}!PHYS::DecayTable@{PHYS::DecayTable}}
+\doxysubsubsection{\texorpdfstring{getRandom()}{getRandom()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{P\+H\+Y\+S\+::\+Decay}} P\+H\+Y\+S\+::\+Decay\+Table\+::get\+Random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get a decay at random based on the branching ratios \begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Decay$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Decay\+Table.\+cxx.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_table_affdcfa0ef265e1207597ae3cafecadfc}\label{class_p_h_y_s_1_1_decay_table_affdcfa0ef265e1207597ae3cafecadfc}} 
+\index{PHYS::DecayTable@{PHYS::DecayTable}!\_brs@{\_brs}}
+\index{\_brs@{\_brs}!PHYS::DecayTable@{PHYS::DecayTable}}
+\doxysubsubsection{\texorpdfstring{\_brs}{\_brs}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ P\+H\+Y\+S\+::\+Decay\+Table\+::\+\_\+brs\hspace{0.3cm}{\ttfamily [private]}}
+
+Branching ratios as keys 
+
+Definition at line 68 of file Decay\+Table.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Decay\+Table.\+hxx\item 
+src/Decay\+Table.\+cxx\end{DoxyCompactItemize}

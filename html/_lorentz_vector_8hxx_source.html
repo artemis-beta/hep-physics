@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HEP Simulations: include/LorentzVector.hxx Source File</title>
+<title>PHYS Simulations: include/LorentzVector.hxx Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HEP Simulations
+   <div id="projectname">PHYS Simulations
    &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
@@ -70,37 +70,37 @@ $(function() {
 <div class="title">LorentzVector.hxx</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HEPLORENTZ_VECTOR_HXX</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define HEPLORENTZ_VECTOR_HXX</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PHYSLORENTZ_VECTOR_HXX</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PHYSLORENTZ_VECTOR_HXX</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_h_e_p.html">HEP</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_p_h_y_s.html">PHYS</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_h_e_p_1_1_lorentz_vector.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_h_e_p_1_1_lorentz_vector.html">LorentzVector</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_lorentz_vector.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html">LorentzVector</a> {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">double</span> x0=-9999, x1=-9999, x2=-9999, x3=-9999;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_h_e_p_1_1_lorentz_vector.html#a771668e91cb52469fe10a1661173344b">   21</a></span>&#160;            <a class="code" href="class_h_e_p_1_1_lorentz_vector.html#a771668e91cb52469fe10a1661173344b">LorentzVector</a>(){};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="class_h_e_p_1_1_lorentz_vector.html#ac8f5a131d10401b664aed094dcde8dcb">operator[] </a>(<span class="keywordtype">size_t</span> i);</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_h_e_p_1_1_lorentz_vector.html#a86685c6fad5b12685c987b9edd9d4299">   25</a></span>&#160;            <span class="keywordtype">double</span> <a class="code" href="class_h_e_p_1_1_lorentz_vector.html#ac8f5a131d10401b664aed094dcde8dcb">operator[] </a>(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_lorentz_vector.html#a68fcd7cc29fcfdb856a0d6df3cb84efa">   21</a></span>&#160;            <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html#a68fcd7cc29fcfdb856a0d6df3cb84efa">LorentzVector</a>(){};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html#a583b8349c7d1daf81e8755cebe748ff8">operator[] </a>(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_lorentz_vector.html#acebd093ef52f26aa8d304719ed43796f">   25</a></span>&#160;            <span class="keywordtype">double</span> <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html#a583b8349c7d1daf81e8755cebe748ff8">operator[] </a>(<span class="keywordtype">size_t</span> i)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">            </span>{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">return</span> (*const_cast&lt;LorentzVector*&gt;(<span class="keyword">this</span>))[i];</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_h_e_p_1_1_lorentz_vector.html#ac463a8d62d02242d472fac0d02f57f2c">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_h_e_p_1_1_lorentz_vector.html">LorentzVector</a>&amp; lv);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_h_e_p_1_1_lorentz_vector.html#a771668e91cb52469fe10a1661173344b">LorentzVector</a>(<span class="keywordtype">double</span> x0, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> x2, <span class="keywordtype">double</span> x3);</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_h_e_p_1_1_lorentz_vector.html#af7652e5ff223ab3f6ed594e1ec8b6d0b">   34</a></span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_h_e_p_1_1_lorentz_vector.html#af7652e5ff223ab3f6ed594e1ec8b6d0b">magnitude</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pow(x0*x0-x1*x1+x2*x2, 0.5);}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html#ac463a8d62d02242d472fac0d02f57f2c">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html">LorentzVector</a>&amp; lv);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html#a68fcd7cc29fcfdb856a0d6df3cb84efa">LorentzVector</a>(<span class="keywordtype">double</span> x0, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> x2, <span class="keywordtype">double</span> x3);</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_lorentz_vector.html#ae4f1245d35929738ed9850df8cc41644">   34</a></span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_p_h_y_s_1_1_lorentz_vector.html#ae4f1245d35929738ed9850df8cc41644">magnitude</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pow(x0*x0-x1*x1+x2*x2, 0.5);}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_h_e_p_1_1_lorentz_vector_html_ac463a8d62d02242d472fac0d02f57f2c"><div class="ttname"><a href="class_h_e_p_1_1_lorentz_vector.html#ac463a8d62d02242d472fac0d02f57f2c">HEP::LorentzVector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const LorentzVector &amp;lv)</div><div class="ttdoc">Output the components of the LorentzVector to the ostream when printing.</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8cxx_source.html#l00022">LorentzVector.cxx:22</a></div></div>
-<div class="ttc" id="aclass_h_e_p_1_1_lorentz_vector_html_ac8f5a131d10401b664aed094dcde8dcb"><div class="ttname"><a href="class_h_e_p_1_1_lorentz_vector.html#ac8f5a131d10401b664aed094dcde8dcb">HEP::LorentzVector::operator[]</a></div><div class="ttdeci">const double &amp; operator[](size_t i)</div><div class="ttdoc">Specify a component of the LorentzVector by index [0, 3] for .</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8cxx_source.html#l00011">LorentzVector.cxx:11</a></div></div>
-<div class="ttc" id="aclass_h_e_p_1_1_lorentz_vector_html_af7652e5ff223ab3f6ed594e1ec8b6d0b"><div class="ttname"><a href="class_h_e_p_1_1_lorentz_vector.html#af7652e5ff223ab3f6ed594e1ec8b6d0b">HEP::LorentzVector::magnitude</a></div><div class="ttdeci">const double magnitude() const</div><div class="ttdoc">Returns the magnitude of the vector as .</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8hxx_source.html#l00034">LorentzVector.hxx:34</a></div></div>
-<div class="ttc" id="anamespace_h_e_p_html"><div class="ttname"><a href="namespace_h_e_p.html">HEP</a></div><div class="ttdef"><b>Definition:</b> <a href="_bc_dec_table_8hxx_source.html#l00021">BcDecTable.hxx:21</a></div></div>
-<div class="ttc" id="aclass_h_e_p_1_1_lorentz_vector_html"><div class="ttname"><a href="class_h_e_p_1_1_lorentz_vector.html">HEP::LorentzVector</a></div><div class="ttdoc">Lorentz Vector Class.</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8hxx_source.html#l00016">LorentzVector.hxx:16</a></div></div>
-<div class="ttc" id="aclass_h_e_p_1_1_lorentz_vector_html_a771668e91cb52469fe10a1661173344b"><div class="ttname"><a href="class_h_e_p_1_1_lorentz_vector.html#a771668e91cb52469fe10a1661173344b">HEP::LorentzVector::LorentzVector</a></div><div class="ttdeci">LorentzVector()</div><div class="ttdoc">Create a blank LorentzVector with the default values of -9999.</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8hxx_source.html#l00021">LorentzVector.hxx:21</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_lorentz_vector_html"><div class="ttname"><a href="class_p_h_y_s_1_1_lorentz_vector.html">PHYS::LorentzVector</a></div><div class="ttdoc">Lorentz Vector Class.</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8hxx_source.html#l00016">LorentzVector.hxx:16</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_lorentz_vector_html_a68fcd7cc29fcfdb856a0d6df3cb84efa"><div class="ttname"><a href="class_p_h_y_s_1_1_lorentz_vector.html#a68fcd7cc29fcfdb856a0d6df3cb84efa">PHYS::LorentzVector::LorentzVector</a></div><div class="ttdeci">LorentzVector()</div><div class="ttdoc">Create a blank LorentzVector with the default values of -9999.</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8hxx_source.html#l00021">LorentzVector.hxx:21</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_lorentz_vector_html_ac463a8d62d02242d472fac0d02f57f2c"><div class="ttname"><a href="class_p_h_y_s_1_1_lorentz_vector.html#ac463a8d62d02242d472fac0d02f57f2c">PHYS::LorentzVector::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const LorentzVector &amp;lv)</div><div class="ttdoc">Output the components of the LorentzVector to the ostream when printing.</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8cxx_source.html#l00022">LorentzVector.cxx:22</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_lorentz_vector_html_a583b8349c7d1daf81e8755cebe748ff8"><div class="ttname"><a href="class_p_h_y_s_1_1_lorentz_vector.html#a583b8349c7d1daf81e8755cebe748ff8">PHYS::LorentzVector::operator[]</a></div><div class="ttdeci">const double &amp; operator[](size_t i)</div><div class="ttdoc">Specify a component of the LorentzVector by index [0, 3] for .</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8cxx_source.html#l00011">LorentzVector.cxx:11</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_lorentz_vector_html_ae4f1245d35929738ed9850df8cc41644"><div class="ttname"><a href="class_p_h_y_s_1_1_lorentz_vector.html#ae4f1245d35929738ed9850df8cc41644">PHYS::LorentzVector::magnitude</a></div><div class="ttdeci">const double magnitude() const</div><div class="ttdoc">Returns the magnitude of the vector as .</div><div class="ttdef"><b>Definition:</b> <a href="_lorentz_vector_8hxx_source.html#l00034">LorentzVector.hxx:34</a></div></div>
+<div class="ttc" id="anamespace_p_h_y_s_html"><div class="ttname"><a href="namespace_p_h_y_s.html">PHYS</a></div><div class="ttdef"><b>Definition:</b> <a href="_bc_dec_table_8hxx_source.html#l00021">BcDecTable.hxx:21</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

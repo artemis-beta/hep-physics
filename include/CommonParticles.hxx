@@ -5,11 +5,11 @@
 #include "Units.hxx"
 #include "Constants.hxx"
 
-/*! @namespace HEP
-    The HEP namespace contains all currently accepted particles within the standard model
+/*! @namespace PHYS
+    The PHYS namespace contains all currently accepted particles within the standard model
     and beyond. The masses and data are taken from the Particle Data Group listings @cite PDGlist.
     @warning It is recommend you do not use the namespace within the script as there is
-    a high probability of accidental overwriting. Instead use the particles as HEP::Particles::particle
+    a high probability of accidental overwriting. Instead use the particles as PHYS::Particles::particle
     
     @author K. Zarebski
 
@@ -18,9 +18,9 @@
     @date last modified 2019-08-26
 */
 
-namespace HEP
+namespace PHYS
 {
-    /*! @namespace HEP::Particles
+    /*! @namespace PHYS::Particles
     
     Namespace containing all particles listed within the PDG
 

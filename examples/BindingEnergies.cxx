@@ -7,10 +7,10 @@
 
 int main()
 {
-	HEP::Nucleus n = HEP::Elements::Nitrogen;
+	PHYS::Nucleus n = PHYS::Elements::Nitrogen;
 
-	std::cout << "The mass defect energy of Nitrogen is " << n.mass_defect()*pow(HEP::Constants::c,2)/HEP::Units::keV << "keV" << std::endl;
-	std::cout << "The Binding Energy per Nucleon is " << HEP::getBindingEnergyPerNucleon(&n) << "MeV" << std::endl;
+	std::cout << "The mass defect energy of Nitrogen is " << n.mass_defect()*pow(PHYS::Constants::c,2)/PHYS::Units::keV << "keV" << std::endl;
+	std::cout << "The Binding Energy per Nucleon is " << PHYS::getBindingEnergyPerNucleon(&n) << "MeV" << std::endl;
 
 	return 0;
 

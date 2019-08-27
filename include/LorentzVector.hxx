@@ -1,10 +1,10 @@
-#ifndef HEPLORENTZ_VECTOR_HXX
-#define HEPLORENTZ_VECTOR_HXX
+#ifndef PHYSLORENTZ_VECTOR_HXX
+#define PHYSLORENTZ_VECTOR_HXX
 
 #include <math.h>
 #include <iostream>
 
-namespace HEP
+namespace PHYS
 {
     /*!	@brief  Lorentz Vector Class
 	@details    Class to represent Lorentz vectors of the form e.g. four momenta

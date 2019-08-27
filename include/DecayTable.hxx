@@ -9,7 +9,7 @@
 #include <time.h>
 
 
-namespace HEP
+namespace PHYS
 {
 	class Particle;
 
@@ -74,7 +74,7 @@ namespace HEP
 			Particle _mother = Particle();
 		public:
 			/*! Construct a decay table for a given mother particle. 
-				@param mother constParticle& the mother particle
+				@param mother The mother particle
 				@return void
 			*/
 			DecayTable(const Particle& mother);

@@ -7,7 +7,7 @@
 
 #include <vector>
 
-using namespace HEP;
+using namespace PHYS;
 
 int main(int argc, char** argv)
 {

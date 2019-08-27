@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HEP Simulations: src/NuclearPhysics.cxx Source File</title>
+<title>PHYS Simulations: src/NuclearPhysics.cxx Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HEP Simulations
+   <div id="projectname">PHYS Simulations
    &#160;<span id="projectnumber">0.1.0</span>
    </div>
   </td>
@@ -72,31 +72,39 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;NuclearPhysics.hxx&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_h_e_p_1_1_nucleus.html#a6a47d528e4cff35cb990a36a1cd72de4">    3</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_h_e_p_1_1_nucleus.html#a6a47d528e4cff35cb990a36a1cd72de4">HEP::Nucleus::mass_defect</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_nucleus.html#aa45585f13960e14e4dd3b4d0ea13eccd">    3</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="class_p_h_y_s_1_1_nucleus.html#aa45585f13960e14e4dd3b4d0ea13eccd">PHYS::Nucleus::mass_defect</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> m_p = 1.007276;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> m_n = 1.008665;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> (m_p*n_protons_+m_n*n_neutrons_-atomic_mass_)*<a class="code" href="namespace_h_e_p_1_1_constants.html#a2b00e9b77bb687eaf66470224bbcc31e">HEP::Constants::u</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> (m_p*_n_protons+m_n*_n_neutrons-_atomic_mass)*<a class="code" href="namespace_p_h_y_s_1_1_constants.html#a2542f480cefe55f8029b93fbfb7bd977">PHYS::Constants::u</a>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> HEP::getBindingEnergyPerNucleon(<span class="keyword">const</span> <a class="code" href="class_h_e_p_1_1_nucleus.html">Nucleus</a>* n)</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespace_p_h_y_s.html#aa07b3a8107b63378ff7b9ad579ac24f2">   11</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespace_p_h_y_s.html#aa07b3a8107b63378ff7b9ad579ac24f2">PHYS::getBindingEnergyPerNucleon</a>(<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_nucleus.html">Nucleus</a>* n)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> <span class="keyword">const</span> a = 14.0, b = 13.0, c = 0.585, d = 19.3, e = 33;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> <span class="keyword">const</span> a_v = 15.7827, a_s = 17.9042, a_c = 0.724040, a_a = 23.7193, a_p = 11;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> _tmp = a - b/pow(n-&gt;A(), -1/3.) - c*pow(n-&gt;Z(), 2)*pow(n-&gt;A(), -4/3.);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    _tmp -= d*pow(n-&gt;N()-n-&gt;Z(), 2)*pow(n-&gt;A(), 2);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> _tmp = a_v - a_s/pow(n-&gt;A(), -1/3.) - a_c*pow(n-&gt;Z(), 2)*pow(n-&gt;A(), -4/3.);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    _tmp -= a_a*pow(n-&gt;N()-n-&gt;Z(), 2)*pow(n-&gt;A(), 2);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(n-&gt;N() % 2 != 0 &amp;&amp; n-&gt;Z() % 2 != 0){_tmp -= e*pow(n-&gt;A(), -7/4.);}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(n-&gt;N() % 2 != 0 &amp;&amp; n-&gt;Z() % 2 != 0){_tmp -= a_p*pow(n-&gt;A(), -3/2.);}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(n-&gt;N() % 2 == 0 &amp;&amp; n-&gt;Z() % 2 == 0){_tmp += e*pow(n-&gt;A(), -7/4.);}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(n-&gt;N() % 2 == 0 &amp;&amp; n-&gt;Z() % 2 == 0){_tmp += a_p*pow(n-&gt;A(), -3/2.);}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> _tmp;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespace_p_h_y_s.html#a750a7959d5e4648758bbc1d8c64d31df">   25</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="namespace_p_h_y_s.html#a750a7959d5e4648758bbc1d8c64d31df">PHYS::fracIsotopesAt</a>(<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_isotope.html">Isotope</a>* i, <span class="keyword">const</span> <span class="keywordtype">double</span> time)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> exp(-time/i-&gt;getHalfLife());</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_h_e_p_1_1_nucleus_html"><div class="ttname"><a href="class_h_e_p_1_1_nucleus.html">HEP::Nucleus</a></div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00011">NuclearPhysics.hxx:11</a></div></div>
-<div class="ttc" id="aclass_h_e_p_1_1_nucleus_html_a6a47d528e4cff35cb990a36a1cd72de4"><div class="ttname"><a href="class_h_e_p_1_1_nucleus.html#a6a47d528e4cff35cb990a36a1cd72de4">HEP::Nucleus::mass_defect</a></div><div class="ttdeci">const double mass_defect() const</div><div class="ttdoc">Get the mass defect for the nucleus.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00003">NuclearPhysics.cxx:3</a></div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_constants_html_a2b00e9b77bb687eaf66470224bbcc31e"><div class="ttname"><a href="namespace_h_e_p_1_1_constants.html#a2b00e9b77bb687eaf66470224bbcc31e">HEP::Constants::u</a></div><div class="ttdeci">const double u</div><div class="ttdoc">Atomic mass unit.</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8cxx_source.html#l00028">Constants.cxx:28</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_nucleus_html_aa45585f13960e14e4dd3b4d0ea13eccd"><div class="ttname"><a href="class_p_h_y_s_1_1_nucleus.html#aa45585f13960e14e4dd3b4d0ea13eccd">PHYS::Nucleus::mass_defect</a></div><div class="ttdeci">const double mass_defect() const</div><div class="ttdoc">Get the mass defect for the nucleus.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00003">NuclearPhysics.cxx:3</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_nucleus_html"><div class="ttname"><a href="class_p_h_y_s_1_1_nucleus.html">PHYS::Nucleus</a></div><div class="ttdoc">Nucleus Class.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00018">NuclearPhysics.hxx:18</a></div></div>
+<div class="ttc" id="anamespace_p_h_y_s_html_aa07b3a8107b63378ff7b9ad579ac24f2"><div class="ttname"><a href="namespace_p_h_y_s.html#aa07b3a8107b63378ff7b9ad579ac24f2">PHYS::getBindingEnergyPerNucleon</a></div><div class="ttdeci">const double getBindingEnergyPerNucleon(const Nucleus *n)</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00011">NuclearPhysics.cxx:11</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_isotope_html"><div class="ttname"><a href="class_p_h_y_s_1_1_isotope.html">PHYS::Isotope</a></div><div class="ttdoc">Isotope Subclass.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00058">NuclearPhysics.hxx:58</a></div></div>
+<div class="ttc" id="anamespace_p_h_y_s_1_1_constants_html_a2542f480cefe55f8029b93fbfb7bd977"><div class="ttname"><a href="namespace_p_h_y_s_1_1_constants.html#a2542f480cefe55f8029b93fbfb7bd977">PHYS::Constants::u</a></div><div class="ttdeci">const double u</div><div class="ttdoc">Atomic mass unit.</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8cxx_source.html#l00028">Constants.cxx:28</a></div></div>
+<div class="ttc" id="anamespace_p_h_y_s_html_a750a7959d5e4648758bbc1d8c64d31df"><div class="ttname"><a href="namespace_p_h_y_s.html#a750a7959d5e4648758bbc1d8c64d31df">PHYS::fracIsotopesAt</a></div><div class="ttdeci">const double fracIsotopesAt(const Isotope *i, const double t)</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00025">NuclearPhysics.cxx:25</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

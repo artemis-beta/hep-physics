@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['g_168',['g',['../namespace_h_e_p_1_1_particles.html#aed38eda14bd5db2c8824bdd1c33323ed',1,'HEP::Particles::g()'],['../namespace_h_e_p_1_1_constants.html#ae6fae4b75ca82845b00336ea79ddd8b7',1,'HEP::Constants::g()'],['../namespace_h_e_p_1_1_constants.html#a5ac2e4b72295346b8c1db405e77cd4b8',1,'HEP::Constants::G()']]],
-  ['gamma_169',['gamma',['../namespace_h_e_p_1_1_particles.html#a958ea94c0129109274235fb353dc60bd',1,'HEP::Particles']]]
+  ['g_191',['g',['../namespace_p_h_y_s_1_1_particles.html#ab0ebd62dafc7d171776820acabe8822d',1,'PHYS::Particles::g()'],['../namespace_p_h_y_s_1_1_constants.html#aeb608ee0964ac925646dce4c78d30108',1,'PHYS::Constants::g()'],['../namespace_p_h_y_s_1_1_constants.html#a1b6047817c480466dff66cb4ebb24329',1,'PHYS::Constants::G()']]],
+  ['gamma_192',['gamma',['../namespace_p_h_y_s_1_1_particles.html#ae70b723e7014f6e240dc147791c9195d',1,'PHYS::Particles']]]
 ];

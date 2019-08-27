@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['g_31',['g',['../namespace_h_e_p_1_1_particles.html#aed38eda14bd5db2c8824bdd1c33323ed',1,'HEP::Particles::g()'],['../namespace_h_e_p_1_1_constants.html#ae6fae4b75ca82845b00336ea79ddd8b7',1,'HEP::Constants::g()'],['../namespace_h_e_p_1_1_constants.html#a5ac2e4b72295346b8c1db405e77cd4b8',1,'HEP::Constants::G()']]],
-  ['gamma_32',['gamma',['../class_h_e_p_1_1_particle.html#a4dea6ae733928a76e2efe8e756f73f6c',1,'HEP::Particle::gamma()'],['../namespace_h_e_p_1_1_particles.html#a958ea94c0129109274235fb353dc60bd',1,'HEP::Particles::gamma()']]],
-  ['getbr_33',['getBR',['../class_h_e_p_1_1_decay.html#ad484bad2d456a23cd96b02e957da913b',1,'HEP::Decay']]],
-  ['getdaughters_34',['getDaughters',['../class_h_e_p_1_1_decay.html#add522d926b5b1105f56397ad73a5aa80',1,'HEP::Decay']]],
-  ['getdecays_35',['getDecays',['../class_h_e_p_1_1_decay_table.html#acdacfed4b85fcf6c7078894e9119ac48',1,'HEP::DecayTable']]],
-  ['getdecstr_36',['getDecStr',['../class_h_e_p_1_1_decay.html#a775673e672a0a59aad492a7c5886b68e',1,'HEP::Decay']]],
-  ['getmother_37',['getMother',['../class_h_e_p_1_1_decay.html#ad46ba88dae94efb7c0769c321e569118',1,'HEP::Decay']]],
-  ['getname_38',['getName',['../class_h_e_p_1_1_particle.html#a7b617e152067285937a588a5d2f084a6',1,'HEP::Particle']]],
-  ['getrandom_39',['getRandom',['../class_h_e_p_1_1_decay_table.html#a13e7b469d486b388328b0a86a3e91193',1,'HEP::DecayTable']]]
+  ['g_35',['g',['../namespace_p_h_y_s_1_1_particles.html#ab0ebd62dafc7d171776820acabe8822d',1,'PHYS::Particles::g()'],['../namespace_p_h_y_s_1_1_constants.html#aeb608ee0964ac925646dce4c78d30108',1,'PHYS::Constants::g()'],['../namespace_p_h_y_s_1_1_constants.html#a1b6047817c480466dff66cb4ebb24329',1,'PHYS::Constants::G()']]],
+  ['gamma_36',['gamma',['../class_p_h_y_s_1_1_particle.html#a8f9278ebc08c9a2165ecd66d9dfefda2',1,'PHYS::Particle::gamma()'],['../namespace_p_h_y_s_1_1_particles.html#ae70b723e7014f6e240dc147791c9195d',1,'PHYS::Particles::gamma()']]],
+  ['getbindingenergypernucleon_37',['getBindingEnergyPerNucleon',['../namespace_p_h_y_s.html#aa07b3a8107b63378ff7b9ad579ac24f2',1,'PHYS']]],
+  ['getbr_38',['getBR',['../class_p_h_y_s_1_1_decay.html#acfdffbd0b47270d96a54c56c3653c18d',1,'PHYS::Decay']]],
+  ['getdaughters_39',['getDaughters',['../class_p_h_y_s_1_1_decay.html#a9ce5540ef04d16e9efd9dc92708ea33c',1,'PHYS::Decay']]],
+  ['getdecays_40',['getDecays',['../class_p_h_y_s_1_1_decay_table.html#a2abcc99ff32a046ed8e1fbf59669b924',1,'PHYS::DecayTable']]],
+  ['getdecstr_41',['getDecStr',['../class_p_h_y_s_1_1_decay.html#ad59df19384af98b32f1f0f333d0b8cb4',1,'PHYS::Decay']]],
+  ['getmother_42',['getMother',['../class_p_h_y_s_1_1_decay.html#aba626e239eb70b2b3abbc6d11437093e',1,'PHYS::Decay']]],
+  ['getname_43',['getName',['../class_p_h_y_s_1_1_nucleus.html#a1a38fb9393f4cda69d6bb80fa4185906',1,'PHYS::Nucleus::getName()'],['../class_p_h_y_s_1_1_particle.html#a436e8e4e4a609f74328cfed32cfcb344',1,'PHYS::Particle::getName()']]],
+  ['getrandom_44',['getRandom',['../class_p_h_y_s_1_1_decay_table.html#ab9ef857bf3453995d4bbe8a6b31ad851',1,'PHYS::DecayTable']]]
 ];

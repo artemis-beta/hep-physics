@@ -1,102 +1,102 @@
 #include "KplusDecTable.hxx"
 
-const HEP::DecayTable gen_KplusDecays()
+const PHYS::DecayTable gen_KplusDecays()
 {
-	HEP::DecayTable _tmp(HEP::Particles::Kplus);
+	PHYS::DecayTable _tmp(PHYS::Particles::Kplus);
 	
-	std::vector<HEP::Particle> _d = {HEP::Particles::mu.anti(), 
-	                            HEP::Particles::nu_mu};
+	std::vector<PHYS::Particle> _d = {PHYS::Particles::mu.anti(), 
+	                            PHYS::Particles::nu_mu};
 
-	HEP::Decay _kdec = HEP::Decay(_d, 0.6356);
+	PHYS::Decay _kdec = PHYS::Decay(_d, 0.6356);
 
 	_tmp.addDecay(_kdec);
 	
-	_d = {HEP::Particles::Piplus, 
-	      HEP::Particles::Pi0};
+	_d = {PHYS::Particles::Piplus, 
+	      PHYS::Particles::Pi0};
 
-        _kdec = HEP::Decay(_d, 0.2067);
+        _kdec = PHYS::Decay(_d, 0.2067);
 
         _tmp.addDecay(_kdec);
         
-	_d = {HEP::Particles::Piplus,
-	      HEP::Particles::Piplus,
-	      HEP::Particles::Piplus.anti()};
+	_d = {PHYS::Particles::Piplus,
+	      PHYS::Particles::Piplus,
+	      PHYS::Particles::Piplus.anti()};
 
-        _kdec = HEP::Decay(_d, 0.05583);
-
-        _tmp.addDecay(_kdec);
-	
-	_d = {HEP::Particles::Pi0,
-	      HEP::Particles::e.anti(),
-	      HEP::Particles::nu_e};
-
-        _kdec = HEP::Decay(_d, 0.0507);
+        _kdec = PHYS::Decay(_d, 0.05583);
 
         _tmp.addDecay(_kdec);
 	
-	_d = {HEP::Particles::Pi0, 
-	      HEP::Particles::mu.anti(),
-	      HEP::Particles::nu_mu};
+	_d = {PHYS::Particles::Pi0,
+	      PHYS::Particles::e.anti(),
+	      PHYS::Particles::nu_e};
 
-        _kdec = HEP::Decay(_d, 0.03352);
-
-        _tmp.addDecay(_kdec);
-	
-	_d = {HEP::Particles::Piplus,
-	      HEP::Particles::Pi0,
-	      HEP::Particles::Pi0};
-
-        _kdec = HEP::Decay(_d, 0.01760);
+        _kdec = PHYS::Decay(_d, 0.0507);
 
         _tmp.addDecay(_kdec);
 	
-	_d = {HEP::Particles::Piplus,
-	      HEP::Particles::Piplus.anti(),
-	      HEP::Particles::e.anti(),
-	      HEP::Particles::nu_e};
+	_d = {PHYS::Particles::Pi0, 
+	      PHYS::Particles::mu.anti(),
+	      PHYS::Particles::nu_mu};
+
+        _kdec = PHYS::Decay(_d, 0.03352);
+
+        _tmp.addDecay(_kdec);
+	
+	_d = {PHYS::Particles::Piplus,
+	      PHYS::Particles::Pi0,
+	      PHYS::Particles::Pi0};
+
+        _kdec = PHYS::Decay(_d, 0.01760);
+
+        _tmp.addDecay(_kdec);
+	
+	_d = {PHYS::Particles::Piplus,
+	      PHYS::Particles::Piplus.anti(),
+	      PHYS::Particles::e.anti(),
+	      PHYS::Particles::nu_e};
         
-	_kdec = HEP::Decay(_d, 4.247E-5);
+	_kdec = PHYS::Decay(_d, 4.247E-5);
 
         _tmp.addDecay(_kdec);
 	
-	_d = {HEP::Particles::Pi0, 
-	      HEP::Particles::Pi0,
-	      HEP::Particles::e.anti(), 
-	      HEP::Particles::nu_e};
+	_d = {PHYS::Particles::Pi0, 
+	      PHYS::Particles::Pi0,
+	      PHYS::Particles::e.anti(), 
+	      PHYS::Particles::nu_e};
         
-	_kdec = HEP::Decay(_d, 2.55E-5);
+	_kdec = PHYS::Decay(_d, 2.55E-5);
 
         _tmp.addDecay(_kdec);
 	
-	_d = {HEP::Particles::e.anti(),
-	      HEP::Particles::nu_e};
+	_d = {PHYS::Particles::e.anti(),
+	      PHYS::Particles::nu_e};
         
-	_kdec = HEP::Decay(_d, 1.582E-5);
+	_kdec = PHYS::Decay(_d, 1.582E-5);
 
         _tmp.addDecay(_kdec);
 	
-	_d = {HEP::Particles::Piplus, 
-	HEP::Particles::Piplus.anti(), 
-	HEP::Particles::mu.anti(), 
-	HEP::Particles::nu_mu};
+	_d = {PHYS::Particles::Piplus, 
+	PHYS::Particles::Piplus.anti(), 
+	PHYS::Particles::mu.anti(), 
+	PHYS::Particles::nu_mu};
         
-	_kdec = HEP::Decay(_d, 1.4E-5);
+	_kdec = PHYS::Decay(_d, 1.4E-5);
 
         _tmp.addDecay(_kdec);
 
-        _d = {HEP::Particles::Piplus, 
-	      HEP::Particles::mu, 
-	      HEP::Particles::mu.anti()};
+        _d = {PHYS::Particles::Piplus, 
+	      PHYS::Particles::mu, 
+	      PHYS::Particles::mu.anti()};
 
-        _kdec = HEP::Decay(_d, 9.6E-8);
+        _kdec = PHYS::Decay(_d, 9.6E-8);
 
 	_tmp.addDecay(_kdec);
 
-	_d = {HEP::Particles::Piplus, 
-	      HEP::Particles::e, 
-	      HEP::Particles::e.anti()};
+	_d = {PHYS::Particles::Piplus, 
+	      PHYS::Particles::e, 
+	      PHYS::Particles::e.anti()};
 
-	_kdec = HEP::Decay(_d, 1.7E-7);
+	_kdec = PHYS::Decay(_d, 1.7E-7);
 
 	_tmp.addDecay(_kdec);
 
@@ -104,4 +104,4 @@ const HEP::DecayTable gen_KplusDecays()
 	return _tmp;
 }
 
-const HEP::DecayTable HEP::KplusDecays = gen_KplusDecays();
+const PHYS::DecayTable PHYS::KplusDecays = gen_KplusDecays();

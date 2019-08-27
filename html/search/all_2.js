@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['b_11',['b',['../namespace_h_e_p_1_1_constants.html#ad842cb5d82f8b32d287774258c6fcc77',1,'HEP::Constants']]],
-  ['b0_12',['B0',['../namespace_h_e_p_1_1_particles.html#a2dd0f95ca138e250384f8d2f0ba7ce53',1,'HEP::Particles']]],
-  ['bc_13',['Bc',['../namespace_h_e_p_1_1_particles.html#a3c8153bf2e5c21984226df8389ac2409',1,'HEP::Particles']]],
-  ['bcdecays_14',['BcDecays',['../namespace_h_e_p.html#ab1c3bfde5a19d4a90abc4e2608c46cab',1,'HEP']]],
-  ['beta_15',['beta',['../class_h_e_p_1_1_particle.html#ad5ecfd9c0f64516ee20c61cee568467c',1,'HEP::Particle']]],
-  ['bplus_16',['Bplus',['../namespace_h_e_p_1_1_particles.html#a0e55797b2dcc0e1be84405add673a764',1,'HEP::Particles']]],
-  ['bs_17',['Bs',['../namespace_h_e_p_1_1_particles.html#aaf81300eaf30326f17be14dee4d73379',1,'HEP::Particles']]],
-  ['bibliography_18',['Bibliography',['../citelist.html',1,'']]]
+  ['b_12',['b',['../namespace_p_h_y_s_1_1_constants.html#a981d79c86e8e232700d63d893eec018a',1,'PHYS::Constants']]],
+  ['b0_13',['B0',['../namespace_p_h_y_s_1_1_particles.html#a42686d5d490e0e34eaf033143bd7ffe4',1,'PHYS::Particles']]],
+  ['bc_14',['Bc',['../namespace_p_h_y_s_1_1_particles.html#aae87b52c2b67c5c06c20afa450a4671d',1,'PHYS::Particles']]],
+  ['bcdecays_15',['BcDecays',['../namespace_p_h_y_s.html#aeb22ad938efaec345cf05081367c2600',1,'PHYS']]],
+  ['beta_16',['beta',['../class_p_h_y_s_1_1_particle.html#ada07828479050a11bc12690d287235ba',1,'PHYS::Particle']]],
+  ['bplus_17',['Bplus',['../namespace_p_h_y_s_1_1_particles.html#aa435933637ce30f38a15439f6c440c95',1,'PHYS::Particles']]],
+  ['bs_18',['Bs',['../namespace_p_h_y_s_1_1_particles.html#a3e6b09d739b87b8a93f75d94c7dada6a',1,'PHYS::Particles']]],
+  ['bibliography_19',['Bibliography',['../citelist.html',1,'']]]
 ];

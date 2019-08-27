@@ -1,0 +1,77 @@
+\hypertarget{class_p_h_y_s_1_1_decay}{}\doxysection{P\+H\+YS\+::Decay Class Reference}
+\label{class_p_h_y_s_1_1_decay}\index{PHYS::Decay@{PHYS::Decay}}
+
+
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Channel Class.  
+
+
+
+
+{\ttfamily \#include $<$Decay\+Table.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_ab8960d09917704a53ddeff68975f48cf}\label{class_p_h_y_s_1_1_decay_ab8960d09917704a53ddeff68975f48cf}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay_ab8960d09917704a53ddeff68975f48cf}{Decay}} ()
+\begin{DoxyCompactList}\small\item\em Blank decay object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_ad59df19384af98b32f1f0f333d0b8cb4}\label{class_p_h_y_s_1_1_decay_ad59df19384af98b32f1f0f333d0b8cb4}} 
+const std\+::string \mbox{\hyperlink{class_p_h_y_s_1_1_decay_ad59df19384af98b32f1f0f333d0b8cb4}{get\+Dec\+Str}} () const
+\begin{DoxyCompactList}\small\item\em Get the decay description as a string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_a565ad9e0ffca4781be8d4878b865b842}\label{class_p_h_y_s_1_1_decay_a565ad9e0ffca4781be8d4878b865b842}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay_a565ad9e0ffca4781be8d4878b865b842}{Decay}} (std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} $>$ daughters, double probability, \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} mother=\mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}}())
+\begin{DoxyCompactList}\small\item\em Construct a decay with a given mother, daughters and branching ratio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_adab1bec8b1df2a71fb7645229e5e29e8}\label{class_p_h_y_s_1_1_decay_adab1bec8b1df2a71fb7645229e5e29e8}} 
+bool \mbox{\hyperlink{class_p_h_y_s_1_1_decay_adab1bec8b1df2a71fb7645229e5e29e8}{is\+Valid}} (double threshold)
+\begin{DoxyCompactList}\small\item\em Used to check probability of decay occuring against a threshold. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_acfdffbd0b47270d96a54c56c3653c18d}\label{class_p_h_y_s_1_1_decay_acfdffbd0b47270d96a54c56c3653c18d}} 
+const double \mbox{\hyperlink{class_p_h_y_s_1_1_decay_acfdffbd0b47270d96a54c56c3653c18d}{get\+BR}} () const
+\begin{DoxyCompactList}\small\item\em Returns the branching ratio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_aba626e239eb70b2b3abbc6d11437093e}\label{class_p_h_y_s_1_1_decay_aba626e239eb70b2b3abbc6d11437093e}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \mbox{\hyperlink{class_p_h_y_s_1_1_decay_aba626e239eb70b2b3abbc6d11437093e}{get\+Mother}} () const
+\begin{DoxyCompactList}\small\item\em Returns the mother object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_abb58ab2a85a3bae5b5b1c767edb5c92c}\label{class_p_h_y_s_1_1_decay_abb58ab2a85a3bae5b5b1c767edb5c92c}} 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_decay_abb58ab2a85a3bae5b5b1c767edb5c92c}{set\+Mother}} (\mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \&Mother)
+\begin{DoxyCompactList}\small\item\em Sets the mother particle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_a9ce5540ef04d16e9efd9dc92708ea33c}\label{class_p_h_y_s_1_1_decay_a9ce5540ef04d16e9efd9dc92708ea33c}} 
+const std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay_a9ce5540ef04d16e9efd9dc92708ea33c}{get\+Daughters}} () const
+\begin{DoxyCompactList}\small\item\em Returns a vector of the daughter particles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_a77dffbafa32daa59b2b16596efad3574}\label{class_p_h_y_s_1_1_decay_a77dffbafa32daa59b2b16596efad3574}} 
+double \mbox{\hyperlink{class_p_h_y_s_1_1_decay_a77dffbafa32daa59b2b16596efad3574}{\+\_\+prob}}
+\begin{DoxyCompactList}\small\item\em Probability of decay occuring (i.\+e. Branching Ratio) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_a6abd08d295b668e28b264b6c1e81037e}\label{class_p_h_y_s_1_1_decay_a6abd08d295b668e28b264b6c1e81037e}} 
+std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_decay_a6abd08d295b668e28b264b6c1e81037e}{\+\_\+daughters}}
+\begin{DoxyCompactList}\small\item\em Daughter particles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_decay_a48c410b8a5dcfaf857773f9c2030a9bc}\label{class_p_h_y_s_1_1_decay_a48c410b8a5dcfaf857773f9c2030a9bc}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \mbox{\hyperlink{class_p_h_y_s_1_1_decay_a48c410b8a5dcfaf857773f9c2030a9bc}{\+\_\+mother}} = \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}}()
+\begin{DoxyCompactList}\small\item\em Mother particle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Channel Class. 
+
+Class describing a single particle decay with information on the mother and daughter particles and branching ratio. \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/25 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+Definition at line 24 of file Decay\+Table.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Decay\+Table.\+hxx\item 
+src/Decay\+Table.\+cxx\end{DoxyCompactItemize}

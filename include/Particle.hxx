@@ -9,7 +9,7 @@
 #include "Units.hxx"
 #include "Constants.hxx"
 
-namespace HEP
+namespace PHYS
 {
         /*! @brief  Particle Class
 	@details    Class representing a single particle with information on mass and lifetime
@@ -24,7 +24,7 @@ namespace HEP
                         std::string _sign="";
                         double _mass     = -1;
                         double _lifetime = -1;
-                        HEP::LorentzVector _momentum;
+                        PHYS::LorentzVector _momentum;
                 public:
                         //! Default constructor with properties set to -1
                         Particle();
@@ -49,7 +49,7 @@ namespace HEP
                         //! Get the angle @f$\theta @f$ of the particle trajectory in the @f$x-z @f$ plane
                         const double theta() const;
                         //! Get the LorentzVector of the given particle
-                        const HEP::LorentzVector momentum() const;
+                        const PHYS::LorentzVector momentum() const;
                         //! Get the transverse momentum @f$p_T @f$ of the particle
                         const double PT() const;
                         //! Get the 3-momentum magnitude @f$p@f$

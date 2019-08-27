@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['d0_21',['D0',['../namespace_h_e_p_1_1_particles.html#a1dc8dad775e2e9283b01434040da4aa1',1,'HEP::Particles']]],
-  ['decay_22',['Decay',['../class_h_e_p_1_1_decay.html',1,'HEP::Decay'],['../class_h_e_p_1_1_decay.html#af3575fde205a2c1bb0eb008f8577199a',1,'HEP::Decay::Decay()'],['../class_h_e_p_1_1_decay.html#a060174496450d5a0a650e53c08c62e9c',1,'HEP::Decay::Decay(std::vector&lt; Particle &gt; daughters, double probability, Particle mother=Particle())']]],
-  ['decaytable_23',['DecayTable',['../class_h_e_p_1_1_decay_table.html',1,'HEP::DecayTable'],['../class_h_e_p_1_1_decay_table.html#a9a58a0cb314b3cf85bee2d10d687211f',1,'HEP::DecayTable::DecayTable()']]],
-  ['dplus_24',['Dplus',['../namespace_h_e_p_1_1_particles.html#ab96c082b508308addb42a0b2c38361dc',1,'HEP::Particles']]],
-  ['ds_25',['Ds',['../namespace_h_e_p_1_1_particles.html#acef780df61d4c0772e846d842f3881aa',1,'HEP::Particles']]]
+  ['d0_23',['D0',['../namespace_p_h_y_s_1_1_particles.html#a26cefa13311f94450958cb3ca44979c9',1,'PHYS::Particles']]],
+  ['decay_24',['Decay',['../class_p_h_y_s_1_1_decay.html',1,'PHYS::Decay'],['../class_p_h_y_s_1_1_decay.html#ab8960d09917704a53ddeff68975f48cf',1,'PHYS::Decay::Decay()'],['../class_p_h_y_s_1_1_decay.html#a565ad9e0ffca4781be8d4878b865b842',1,'PHYS::Decay::Decay(std::vector&lt; Particle &gt; daughters, double probability, Particle mother=Particle())']]],
+  ['decaytable_25',['DecayTable',['../class_p_h_y_s_1_1_decay_table.html',1,'PHYS::DecayTable'],['../class_p_h_y_s_1_1_decay_table.html#a73a52fc361bc386f69fee14f8e2f87fe',1,'PHYS::DecayTable::DecayTable()']]],
+  ['dplus_26',['Dplus',['../namespace_p_h_y_s_1_1_particles.html#aea68ec07af7f1d93fc8b411029139a1f',1,'PHYS::Particles']]],
+  ['ds_27',['Ds',['../namespace_p_h_y_s_1_1_particles.html#ad22472bf8bfc5a88d69f60c703e33588',1,'PHYS::Particles']]]
 ];

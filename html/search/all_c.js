@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['m_56',['M',['../class_h_e_p_1_1_particle.html#ac48b1050b027be0ee3aa746f626b0379',1,'HEP::Particle']]],
-  ['m_5fe_57',['m_e',['../namespace_h_e_p_1_1_constants.html#adc2aaa2fb912c5ba9bd1137727637226',1,'HEP::Constants']]],
-  ['m_5fp_58',['m_p',['../namespace_h_e_p_1_1_constants.html#a6aaaf0d00ce5683edc05272b3742a8f8',1,'HEP::Constants']]],
-  ['m_5fplanck_59',['m_planck',['../namespace_h_e_p_1_1_constants.html#ad427a1e3770c7f151ebcb6b5e8c49729',1,'HEP::Constants']]],
-  ['magnitude_60',['magnitude',['../class_h_e_p_1_1_lorentz_vector.html#af7652e5ff223ab3f6ed594e1ec8b6d0b',1,'HEP::LorentzVector']]],
-  ['mass_5fdefect_61',['mass_defect',['../class_h_e_p_1_1_nucleus.html#a6a47d528e4cff35cb990a36a1cd72de4',1,'HEP::Nucleus']]],
-  ['momentum_62',['momentum',['../class_h_e_p_1_1_particle.html#a55acb7a6d55729f667a5dee2674b4683',1,'HEP::Particle']]],
-  ['mu_63',['mu',['../namespace_h_e_p_1_1_particles.html#af700fae388e0d94a849cbdffa68a3883',1,'HEP::Particles']]],
-  ['mu_5f0_64',['mu_0',['../namespace_h_e_p_1_1_constants.html#a8767dff0b8205595c6e342097e5d13e8',1,'HEP::Constants']]],
-  ['mu_5fb_65',['mu_B',['../namespace_h_e_p_1_1_constants.html#afb50ff6ad42c58ba5fecb063d014b538',1,'HEP::Constants']]],
-  ['mu_5fn_66',['mu_N',['../namespace_h_e_p_1_1_constants.html#ac0e241c6bd9203608862716cc8f5c320',1,'HEP::Constants']]]
+  ['m_57',['M',['../class_p_h_y_s_1_1_nucleus.html#a4d599568309064b553a5ad7f72e26b55',1,'PHYS::Nucleus::M()'],['../class_p_h_y_s_1_1_particle.html#ace7ff4ef7e2c158330a5f098665c0333',1,'PHYS::Particle::M()']]],
+  ['m_5fe_58',['m_e',['../namespace_p_h_y_s_1_1_constants.html#a0b2dae33f9c5527b56338dd423170c20',1,'PHYS::Constants']]],
+  ['m_5fp_59',['m_p',['../namespace_p_h_y_s_1_1_constants.html#a61e206002f06f260c5c1da80b209ea31',1,'PHYS::Constants']]],
+  ['m_5fplanck_60',['m_planck',['../namespace_p_h_y_s_1_1_constants.html#a3195f78b5e2d5269c1d3f9b7f3b5f7a0',1,'PHYS::Constants']]],
+  ['magnitude_61',['magnitude',['../class_p_h_y_s_1_1_lorentz_vector.html#ae4f1245d35929738ed9850df8cc41644',1,'PHYS::LorentzVector']]],
+  ['mass_5fdefect_62',['mass_defect',['../class_p_h_y_s_1_1_nucleus.html#aa45585f13960e14e4dd3b4d0ea13eccd',1,'PHYS::Nucleus']]],
+  ['momentum_63',['momentum',['../class_p_h_y_s_1_1_particle.html#add15d7b158f5f185fc9834d6ff506df5',1,'PHYS::Particle']]],
+  ['mu_64',['mu',['../namespace_p_h_y_s_1_1_particles.html#ad62dc9c2048f115e907f127f65ea3b16',1,'PHYS::Particles']]],
+  ['mu_5f0_65',['mu_0',['../namespace_p_h_y_s_1_1_constants.html#af0c87b0da695dbde26680c5e36533ca2',1,'PHYS::Constants']]],
+  ['mu_5fb_66',['mu_B',['../namespace_p_h_y_s_1_1_constants.html#a9f12e057ec3c66aa79abe31acb6fe936',1,'PHYS::Constants']]],
+  ['mu_5fn_67',['mu_N',['../namespace_p_h_y_s_1_1_constants.html#a3ef1c2d43cebdc9ea7a61a27bb8bddb1',1,'PHYS::Constants']]]
 ];

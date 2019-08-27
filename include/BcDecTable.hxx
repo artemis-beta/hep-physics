@@ -4,13 +4,13 @@
 #include "CommonParticles.hxx"
 #include "DecayTable.hxx"
 
-const HEP::DecayTable gen_BcDecays()
+const PHYS::DecayTable gen_BcDecays()
 {
-    HEP::DecayTable _tmp(HEP::Particles::Bc);
+    PHYS::DecayTable _tmp(PHYS::Particles::Bc);
 
-    std::vector<HEP::Particle> _d = {HEP::Particles::phi_1020, HEP::Particles::Kplus};    
+    std::vector<PHYS::Particle> _d = {PHYS::Particles::phi_1020, PHYS::Particles::Kplus};    
 
-    HEP::Decay _dec = HEP::Decay(_d, 1E-3);
+    PHYS::Decay _dec = PHYS::Decay(_d, 1E-3);
 
     _tmp.addDecay(_dec);
 
@@ -18,9 +18,9 @@ const HEP::DecayTable gen_BcDecays()
 
 } 
 
-namespace HEP
+namespace PHYS
 {
-    //! HEP::DecayTable of all decays of the @f$ B_c @f$ meson. The @c gen_BcDecays function generates all the relevant channels
+    //! PHYS::DecayTable of all decays of the @f$ B_c @f$ meson. The @c gen_BcDecays function generates all the relevant channels
     extern const DecayTable BcDecays = gen_BcDecays();
 }
 

@@ -1,23 +1,23 @@
 \begin{theindex}
 
   \item {Bc}
-    \subitem {HEP::Particles}, \hyperpage{10}
+    \subitem {PHYS::Particles}, \hyperpage{10}
 
   \indexspace
 
-  \item {HEP}, \hyperpage{7}
-  \item {HEP::Decay}, \hyperpage{13}
-  \item {HEP::DecayTable}, \hyperpage{14}
-  \item {HEP::LorentzVector}, \hyperpage{15}
-  \item {HEP::Particle}, \hyperpage{16}
-  \item {HEP::Particles}, \hyperpage{8}
+  \item {PHYS}, \hyperpage{7}
+  \item {PHYS::Decay}, \hyperpage{13}
+  \item {PHYS::DecayTable}, \hyperpage{14}
+  \item {PHYS::LorentzVector}, \hyperpage{15}
+  \item {PHYS::Particle}, \hyperpage{16}
+  \item {PHYS::Particles}, \hyperpage{8}
     \subitem {Bc}, \hyperpage{10}
     \subitem {phi\_1020}, \hyperpage{10}
-  \item {HEP::Units}, \hyperpage{11}
+  \item {PHYS::Units}, \hyperpage{11}
 
   \indexspace
 
   \item {phi\_1020}
-    \subitem {HEP::Particles}, \hyperpage{10}
+    \subitem {PHYS::Particles}, \hyperpage{10}
 
 \end{theindex}

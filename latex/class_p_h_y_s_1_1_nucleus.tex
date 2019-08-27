@@ -1,0 +1,107 @@
+\hypertarget{class_p_h_y_s_1_1_nucleus}{}\doxysection{P\+H\+YS\+::Nucleus Class Reference}
+\label{class_p_h_y_s_1_1_nucleus}\index{PHYS::Nucleus@{PHYS::Nucleus}}
+
+
+\mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} Class.  
+
+
+
+
+{\ttfamily \#include $<$Nuclear\+Physics.\+hxx$>$}
+
+
+
+Inheritance diagram for P\+H\+YS\+::Nucleus\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{class_p_h_y_s_1_1_nucleus__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a143a4bef306cf0de13312556df462b79}{Nucleus}} (const std\+::string name, const int atomic\+\_\+number, const double atomic\+\_\+mass)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a1a38fb9393f4cda69d6bb80fa4185906}\label{class_p_h_y_s_1_1_nucleus_a1a38fb9393f4cda69d6bb80fa4185906}} 
+const std\+::string \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a1a38fb9393f4cda69d6bb80fa4185906}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get name of nucleus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a45606d2819bbbcd0e953271badd2bb4f}\label{class_p_h_y_s_1_1_nucleus_a45606d2819bbbcd0e953271badd2bb4f}} 
+const int \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a45606d2819bbbcd0e953271badd2bb4f}{N}} () const
+\begin{DoxyCompactList}\small\item\em Get number of neutrons $N$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a6729823c29f8787fc12247e60f4b0a95}\label{class_p_h_y_s_1_1_nucleus_a6729823c29f8787fc12247e60f4b0a95}} 
+const int \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a6729823c29f8787fc12247e60f4b0a95}{A}} () const
+\begin{DoxyCompactList}\small\item\em Get atomic mass number $A$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a983486c610681e2c6b43840ab155b43e}\label{class_p_h_y_s_1_1_nucleus_a983486c610681e2c6b43840ab155b43e}} 
+const int \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a983486c610681e2c6b43840ab155b43e}{Z}} () const
+\begin{DoxyCompactList}\small\item\em Get number of protons/atomic number $Z$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a4d599568309064b553a5ad7f72e26b55}\label{class_p_h_y_s_1_1_nucleus_a4d599568309064b553a5ad7f72e26b55}} 
+const double \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a4d599568309064b553a5ad7f72e26b55}{M}} () const
+\begin{DoxyCompactList}\small\item\em Get atomic mass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_aa45585f13960e14e4dd3b4d0ea13eccd}\label{class_p_h_y_s_1_1_nucleus_aa45585f13960e14e4dd3b4d0ea13eccd}} 
+const double \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_aa45585f13960e14e4dd3b4d0ea13eccd}{mass\+\_\+defect}} () const
+\begin{DoxyCompactList}\small\item\em Get the mass defect for the nucleus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a22c443f076c97e983f7cad14b1be1bc3}\label{class_p_h_y_s_1_1_nucleus_a22c443f076c97e983f7cad14b1be1bc3}} 
+const std\+::string {\bfseries \+\_\+name}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_abc99f20980d263ead399f9806105ca36}\label{class_p_h_y_s_1_1_nucleus_abc99f20980d263ead399f9806105ca36}} 
+const int {\bfseries \+\_\+n\+\_\+protons}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a201135204a5281469e06b3abae902c33}\label{class_p_h_y_s_1_1_nucleus_a201135204a5281469e06b3abae902c33}} 
+const int {\bfseries \+\_\+n\+\_\+neutrons}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a93f767ee2624f92622f1572cb3015c9c}\label{class_p_h_y_s_1_1_nucleus_a93f767ee2624f92622f1572cb3015c9c}} 
+const double {\bfseries \+\_\+atomic\+\_\+mass}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} Class. 
+
+Class representing a nucleus which can be used to construct the elements \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/27 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+Definition at line 18 of file Nuclear\+Physics.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a143a4bef306cf0de13312556df462b79}\label{class_p_h_y_s_1_1_nucleus_a143a4bef306cf0de13312556df462b79}} 
+\index{PHYS::Nucleus@{PHYS::Nucleus}!Nucleus@{Nucleus}}
+\index{Nucleus@{Nucleus}!PHYS::Nucleus@{PHYS::Nucleus}}
+\doxysubsubsection{\texorpdfstring{Nucleus()}{Nucleus()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+Nucleus\+::\+Nucleus (\begin{DoxyParamCaption}\item[{const std\+::string}]{name,  }\item[{const int}]{atomic\+\_\+number,  }\item[{const double}]{atomic\+\_\+mass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new nucleus object 
+\begin{DoxyParams}{Parameters}
+{\em name} & Symbol/\+Name of nucleus \\
+\hline
+{\em atomic\+\_\+number} & Number of protons/\+Atomic number $Z$ \\
+\hline
+{\em atomic\+\_\+mass} & Mass of the nucleus in atomic mass units \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Nuclear\+Physics.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Nuclear\+Physics.\+hxx\item 
+src/Nuclear\+Physics.\+cxx\end{DoxyCompactItemize}

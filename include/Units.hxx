@@ -4,9 +4,9 @@
 #include <string>
 #include <exception>
 
-namespace HEP
+namespace PHYS
 {
-    /*! @namespace HEP::Units
+    /*! @namespace PHYS::Units
     
     Namespace containing all units for easy conversion to SI units
     for calculations
@@ -36,6 +36,7 @@ namespace HEP
 
         const extern double kg;
         const extern double t;
+        const extern double g;
 
         const extern double sec;
         const extern double ms;

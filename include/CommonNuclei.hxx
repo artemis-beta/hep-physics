@@ -3,9 +3,9 @@
 
 #include "NuclearPhysics.hxx"
 
-namespace HEP
+namespace PHYS
 {
-    /*! @namespace HEP::Elements
+    /*! @namespace PHYS::Elements
     
     Namespace containing all stable elements found in CommonNuclei.hxx
 
@@ -19,35 +19,35 @@ namespace HEP
     */
     namespace Elements
     {
-        extern const HEP::Nucleus Hydrogen;
-        extern const HEP::Nucleus Helium;
-        extern const HEP::Nucleus Lithium;
-        extern const HEP::Nucleus Beryllium;
-        extern const HEP::Nucleus Boron;
-        extern const HEP::Nucleus Carbon;
-        extern const HEP::Nucleus Nitrogen;
-        extern const HEP::Nucleus Oxygen;
-        extern const HEP::Nucleus Fluorine;
-        extern const HEP::Nucleus Neon;
-        extern const HEP::Nucleus Sodium;
-        extern const HEP::Nucleus Magnesium;
-        extern const HEP::Nucleus Aluminium;
-        extern const HEP::Nucleus Silicon;
-        extern const HEP::Nucleus Phosphorus;
-        extern const HEP::Nucleus Sulfur;
-        extern const HEP::Nucleus Chlorine;
-        extern const HEP::Nucleus Potassium;
-        extern const HEP::Nucleus Argon;
-        extern const HEP::Nucleus Calcium;
-        extern const HEP::Nucleus Scandium;
-        extern const HEP::Nucleus Titanium;
-        extern const HEP::Nucleus Vanadium;
-        extern const HEP::Nucleus Chromium;
-        extern const HEP::Nucleus Manganese;
-        extern const HEP::Nucleus Iron;
-        extern const HEP::Nucleus Nickel;
-        extern const HEP::Nucleus Cobalt;
-        extern const HEP::Nucleus Copper;
+        extern const PHYS::Nucleus Hydrogen;
+        extern const PHYS::Nucleus Helium;
+        extern const PHYS::Nucleus Lithium;
+        extern const PHYS::Nucleus Beryllium;
+        extern const PHYS::Nucleus Boron;
+        extern const PHYS::Nucleus Carbon;
+        extern const PHYS::Nucleus Nitrogen;
+        extern const PHYS::Nucleus Oxygen;
+        extern const PHYS::Nucleus Fluorine;
+        extern const PHYS::Nucleus Neon;
+        extern const PHYS::Nucleus Sodium;
+        extern const PHYS::Nucleus Magnesium;
+        extern const PHYS::Nucleus Aluminium;
+        extern const PHYS::Nucleus Silicon;
+        extern const PHYS::Nucleus Phosphorus;
+        extern const PHYS::Nucleus Sulfur;
+        extern const PHYS::Nucleus Chlorine;
+        extern const PHYS::Nucleus Potassium;
+        extern const PHYS::Nucleus Argon;
+        extern const PHYS::Nucleus Calcium;
+        extern const PHYS::Nucleus Scandium;
+        extern const PHYS::Nucleus Titanium;
+        extern const PHYS::Nucleus Vanadium;
+        extern const PHYS::Nucleus Chromium;
+        extern const PHYS::Nucleus Manganese;
+        extern const PHYS::Nucleus Iron;
+        extern const PHYS::Nucleus Nickel;
+        extern const PHYS::Nucleus Cobalt;
+        extern const PHYS::Nucleus Copper;
     }
 }
 

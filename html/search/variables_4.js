@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['d0_161',['D0',['../namespace_h_e_p_1_1_particles.html#a1dc8dad775e2e9283b01434040da4aa1',1,'HEP::Particles']]],
-  ['dplus_162',['Dplus',['../namespace_h_e_p_1_1_particles.html#ab96c082b508308addb42a0b2c38361dc',1,'HEP::Particles']]],
-  ['ds_163',['Ds',['../namespace_h_e_p_1_1_particles.html#acef780df61d4c0772e846d842f3881aa',1,'HEP::Particles']]]
+  ['d0_184',['D0',['../namespace_p_h_y_s_1_1_particles.html#a26cefa13311f94450958cb3ca44979c9',1,'PHYS::Particles']]],
+  ['dplus_185',['Dplus',['../namespace_p_h_y_s_1_1_particles.html#aea68ec07af7f1d93fc8b411029139a1f',1,'PHYS::Particles']]],
+  ['ds_186',['Ds',['../namespace_p_h_y_s_1_1_particles.html#ad22472bf8bfc5a88d69f60c703e33588',1,'PHYS::Particles']]]
 ];

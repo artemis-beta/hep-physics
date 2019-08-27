@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['b_154',['b',['../namespace_h_e_p_1_1_constants.html#ad842cb5d82f8b32d287774258c6fcc77',1,'HEP::Constants']]],
-  ['b0_155',['B0',['../namespace_h_e_p_1_1_particles.html#a2dd0f95ca138e250384f8d2f0ba7ce53',1,'HEP::Particles']]],
-  ['bc_156',['Bc',['../namespace_h_e_p_1_1_particles.html#a3c8153bf2e5c21984226df8389ac2409',1,'HEP::Particles']]],
-  ['bcdecays_157',['BcDecays',['../namespace_h_e_p.html#ab1c3bfde5a19d4a90abc4e2608c46cab',1,'HEP']]],
-  ['bplus_158',['Bplus',['../namespace_h_e_p_1_1_particles.html#a0e55797b2dcc0e1be84405add673a764',1,'HEP::Particles']]],
-  ['bs_159',['Bs',['../namespace_h_e_p_1_1_particles.html#aaf81300eaf30326f17be14dee4d73379',1,'HEP::Particles']]]
+  ['b_177',['b',['../namespace_p_h_y_s_1_1_constants.html#a981d79c86e8e232700d63d893eec018a',1,'PHYS::Constants']]],
+  ['b0_178',['B0',['../namespace_p_h_y_s_1_1_particles.html#a42686d5d490e0e34eaf033143bd7ffe4',1,'PHYS::Particles']]],
+  ['bc_179',['Bc',['../namespace_p_h_y_s_1_1_particles.html#aae87b52c2b67c5c06c20afa450a4671d',1,'PHYS::Particles']]],
+  ['bcdecays_180',['BcDecays',['../namespace_p_h_y_s.html#aeb22ad938efaec345cf05081367c2600',1,'PHYS']]],
+  ['bplus_181',['Bplus',['../namespace_p_h_y_s_1_1_particles.html#aa435933637ce30f38a15439f6c440c95',1,'PHYS::Particles']]],
+  ['bs_182',['Bs',['../namespace_p_h_y_s_1_1_particles.html#a3e6b09d739b87b8a93f75d94c7dada6a',1,'PHYS::Particles']]]
 ];

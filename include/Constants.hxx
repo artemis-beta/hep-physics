@@ -7,9 +7,9 @@
 
 #include "Units.hxx"
 
-namespace HEP
+namespace PHYS
 {
-    /*! @namespace HEP::Constants
+    /*! @namespace PHYS::Constants
     
     Namespace containing all physical constants
     

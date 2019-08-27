@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k_48',['k',['../namespace_h_e_p_1_1_constants.html#add73c0505d1699352d5932971fb67fe6',1,'HEP::Constants']]],
-  ['kplus_49',['Kplus',['../namespace_h_e_p_1_1_particles.html#a1d61dc1daacb2bc5cb1b3421c01bf979',1,'HEP::Particles']]],
-  ['kplusdecays_50',['KplusDecays',['../namespace_h_e_p.html#a59ba822530cd781999889579d1e5ed9b',1,'HEP']]]
+  ['k_49',['k',['../namespace_p_h_y_s_1_1_constants.html#a7259d4c5821595a17b6249bca61b66fd',1,'PHYS::Constants']]],
+  ['kplus_50',['Kplus',['../namespace_p_h_y_s_1_1_particles.html#a9f2eef7f6b9f53493daef8ec84f4ba8f',1,'PHYS::Particles']]],
+  ['kplusdecays_51',['KplusDecays',['../namespace_p_h_y_s.html#aea2c5c97f2cec3fa4e37e062794ee143',1,'PHYS']]]
 ];

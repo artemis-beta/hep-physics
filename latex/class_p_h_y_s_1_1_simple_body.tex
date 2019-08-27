@@ -1,0 +1,124 @@
+\hypertarget{class_p_h_y_s_1_1_simple_body}{}\doxysection{P\+H\+YS\+::Simple\+Body Class Reference}
+\label{class_p_h_y_s_1_1_simple_body}\index{PHYS::SimpleBody@{PHYS::SimpleBody}}
+
+
+Simple Body Class.  
+
+
+
+
+{\ttfamily \#include $<$Classical\+Mechanics.\+hxx$>$}
+
+
+
+Inheritance diagram for P\+H\+YS\+::Simple\+Body\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_p_h_y_s_1_1_simple_body__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_simple_body_aad580bf305f31095542bb260c73e4345}{Simple\+Body}} (const std\+::string label=\char`\"{}\char`\"{}, const double mass=1.$\ast$P\+H\+Y\+S\+::\+Units\+::kg, const double radius=1.$\ast$P\+H\+Y\+S\+::\+Units\+::cm)
+\item 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_simple_body_a0c909fe4f65fbe03369b9408fbe33dd8}{apply\+Force}} (const \mbox{\hyperlink{namespace_p_h_y_s_a91e31f6e5d86fef7d0b1f1455f4a4aff}{Force}} \&f)
+\item 
+const \mbox{\hyperlink{namespace_p_h_y_s_a91e31f6e5d86fef7d0b1f1455f4a4aff}{Force}} \mbox{\hyperlink{class_p_h_y_s_1_1_simple_body_acba50c4011425e118e446198fffa4746}{resolve}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_simple_body_a3378e375330dd02fdf6688dd3072da2a}\label{class_p_h_y_s_1_1_simple_body_a3378e375330dd02fdf6688dd3072da2a}} 
+const double {\bfseries \+\_\+mass}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_simple_body_ad5df719b97fe2d9e1ef5cbeb69f79489}\label{class_p_h_y_s_1_1_simple_body_ad5df719b97fe2d9e1ef5cbeb69f79489}} 
+const double {\bfseries \+\_\+radius}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_simple_body_a82c5095e1f07b77dae02a064fe1a8a37}\label{class_p_h_y_s_1_1_simple_body_a82c5095e1f07b77dae02a064fe1a8a37}} 
+std\+::vector$<$ \mbox{\hyperlink{namespace_p_h_y_s_a91e31f6e5d86fef7d0b1f1455f4a4aff}{Force}} $>$ {\bfseries \+\_\+forces}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple Body Class. 
+
+Subclass of \mbox{\hyperlink{class_p_h_y_s_1_1_object}{Object}} representing a simple object represented as a sphere in the co-\/ordinate system \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/27 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+Definition at line 45 of file Classical\+Mechanics.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_simple_body_aad580bf305f31095542bb260c73e4345}\label{class_p_h_y_s_1_1_simple_body_aad580bf305f31095542bb260c73e4345}} 
+\index{PHYS::SimpleBody@{PHYS::SimpleBody}!SimpleBody@{SimpleBody}}
+\index{SimpleBody@{SimpleBody}!PHYS::SimpleBody@{PHYS::SimpleBody}}
+\doxysubsubsection{\texorpdfstring{SimpleBody()}{SimpleBody()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+Simple\+Body\+::\+Simple\+Body (\begin{DoxyParamCaption}\item[{const std\+::string}]{label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const double}]{mass = {\ttfamily 1.$\ast$PHYS\+:\+:Units\+:\+:kg},  }\item[{const double}]{radius = {\ttfamily 1.$\ast$PHYS\+:\+:Units\+:\+:cm} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a simple body, additional arguments are optional 
+\begin{DoxyParams}{Parameters}
+{\em label} & Name of simple body \\
+\hline
+{\em mass} & If specified, sets the mass of the body \\
+\hline
+{\em radius} & If specified, sets the radius of the sphere representing the body \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Classical\+Mechanics.\+hxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_simple_body_a0c909fe4f65fbe03369b9408fbe33dd8}\label{class_p_h_y_s_1_1_simple_body_a0c909fe4f65fbe03369b9408fbe33dd8}} 
+\index{PHYS::SimpleBody@{PHYS::SimpleBody}!applyForce@{applyForce}}
+\index{applyForce@{applyForce}!PHYS::SimpleBody@{PHYS::SimpleBody}}
+\doxysubsubsection{\texorpdfstring{applyForce()}{applyForce()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Simple\+Body\+::apply\+Force (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_p_h_y_s_a91e31f6e5d86fef7d0b1f1455f4a4aff}{Force}} \&}]{f }\end{DoxyParamCaption})}
+
+Apply a force to the body 
+\begin{DoxyParams}{Parameters}
+{\em f} & Force in the form of a \mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 3 of file Classical\+Mechanics.\+cxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_simple_body_acba50c4011425e118e446198fffa4746}\label{class_p_h_y_s_1_1_simple_body_acba50c4011425e118e446198fffa4746}} 
+\index{PHYS::SimpleBody@{PHYS::SimpleBody}!resolve@{resolve}}
+\index{resolve@{resolve}!PHYS::SimpleBody@{PHYS::SimpleBody}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespace_p_h_y_s_a91e31f6e5d86fef7d0b1f1455f4a4aff}{P\+H\+Y\+S\+::\+Force}} P\+H\+Y\+S\+::\+Simple\+Body\+::resolve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Resolve all applied forces to give the resultant force \begin{DoxyReturn}{Returns}
+Force (\mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}}) 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file Classical\+Mechanics.\+cxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Classical\+Mechanics.\+hxx\item 
+src/Classical\+Mechanics.\+cxx\end{DoxyCompactItemize}

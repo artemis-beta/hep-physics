@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['alpha_152',['alpha',['../namespace_h_e_p_1_1_constants.html#af487330f6e41b506097fd428839aa122',1,'HEP::Constants']]],
-  ['alpha_5fs_153',['alpha_s',['../namespace_h_e_p_1_1_constants.html#aabbe6c85c875fadec54e53502f9811df',1,'HEP::Constants']]]
+  ['alpha_175',['alpha',['../namespace_p_h_y_s_1_1_constants.html#ac8d05e4d4a9ad0c5af3acdc46dde25d3',1,'PHYS::Constants']]],
+  ['alpha_5fs_176',['alpha_s',['../namespace_p_h_y_s_1_1_constants.html#a4b790b93a269456bbcd46c56b466f801',1,'PHYS::Constants']]]
 ];
