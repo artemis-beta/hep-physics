@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['h_130',['h',['../namespace_h_e_p_1_1_constants.html#ac4dd073289cc816b802a997b741cf6e8',1,'HEP::Constants::h()'],['../namespace_h_e_p_1_1_particles.html#a4f7c0cbfc2d0ccf8862d1068259fce1c',1,'HEP::Particles::H()']]],
-  ['hbar_131',['hbar',['../namespace_h_e_p_1_1_constants.html#ad4f25ddaf41096a4e9823ec2271bac03',1,'HEP::Constants']]]
+  ['g_145',['G',['../namespace_h_e_p_1_1_constants.html#a5ac2e4b72295346b8c1db405e77cd4b8',1,'HEP::Constants::G()'],['../namespace_h_e_p_1_1_particles.html#aed38eda14bd5db2c8824bdd1c33323ed',1,'HEP::Particles::g()'],['../namespace_h_e_p_1_1_constants.html#ae6fae4b75ca82845b00336ea79ddd8b7',1,'HEP::Constants::g()']]],
+  ['gamma_146',['gamma',['../namespace_h_e_p_1_1_particles.html#a958ea94c0129109274235fb353dc60bd',1,'HEP::Particles']]]
 ];

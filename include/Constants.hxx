@@ -12,8 +12,6 @@ namespace HEP
     /*! @namespace HEP::Constants
     
     Namespace containing all physical constants
-
-    @todo Finish all constant definitions
     
     @author K. Zarebski
 
@@ -42,6 +40,38 @@ namespace HEP
         extern const double m_p;
         //! Permitttivity of free space @f$\epsilon_0@f$
         extern const double epsilon_0;
+        //! Permeability of free space @f$\mu_0@f$
+        extern const double mu_0;
+        //! Fine structure constant @f$ \alpha@f$
+        extern const double alpha;
+        //! Classical electron radius @f$r_e@f$
+        extern const double r_e;
+        //! Bohr radius (mass of nucleus is infinite) @f$r_{Bohr}@f$
+        extern const double r_bohr;
+        //! Thomson cross section @f$\sigma_T@f$
+        extern const double sigma_T;
+        //! Bohr magneton @f$\mu_B@f$
+        extern const double mu_B;
+        //! Nuclear magneton @f\mu_N@f$
+        extern const double mu_N;
+        //! Gravitational Constant @f$G@f$
+        extern const double G;
+        //! Standard gravitational acceleration @f$g@f$
+        extern const double g;
+        //! Boltzmann constant @f$ k@f$
+        extern const double k;
+        //! Wien constant @f$b@f$
+        extern const double b;
+        //! Stefan-Boltzmann constant @f$\sigma@f$
+        extern const double sigma;
+        //! Strong coupling constant @f$\alpha_s@f$
+        extern const double alpha_s;
+        //! Exponential number
+        extern const double exp;
+        //! Planck Mass
+        extern const double m_planck;
+        //! Planck Length
+        extern const double l_planck;
     }
 }
 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tau_153',['tau',['../namespace_h_e_p_1_1_particles.html#ac363665e09a07204f2afc13d67acfcd4',1,'HEP::Particles']]]
+  ['r_5fbohr_174',['r_bohr',['../namespace_h_e_p_1_1_constants.html#a86e95936be270838e6339dffa174fef0',1,'HEP::Constants']]],
+  ['r_5fe_175',['r_e',['../namespace_h_e_p_1_1_constants.html#a22445135960aabed51bff67fd25aeadf',1,'HEP::Constants']]]
 ];
