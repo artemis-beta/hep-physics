@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['xi0_63',['Xi0',['../namespace_h_e_p_1_1_particles.html#a961b5eefde8bfa84c8af0ed674fa1ca9',1,'HEP::Particles']]],
-  ['ximinus_64',['Ximinus',['../namespace_h_e_p_1_1_particles.html#a2e56380e718eab4855c105c4af4adcb1',1,'HEP::Particles']]]
+  ['w_72',['W',['../namespace_h_e_p_1_1_particles.html#a3c32d93c0d930a2f577e785936280f5b',1,'HEP::Particles']]]
 ];

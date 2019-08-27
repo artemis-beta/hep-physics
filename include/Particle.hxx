@@ -7,6 +7,7 @@
 #include <string>
 #include "LorentzVector.hxx"
 #include "Units.hxx"
+#include "Constants.hxx"
 
 namespace HEP
 {
@@ -51,6 +52,14 @@ namespace HEP
                         const HEP::LorentzVector momentum() const;
                         //! Get the transverse momentum @f$p_T @f$ of the particle
                         const double PT() const;
+                        //! Get the 3-momentum magnitude @f$p@f$
+                        const double P() const;
+                        //! Calculate the speed @f$\beta = \frac{p_i}{E} @f$ in terms of @f$ c @f$. Optional argument allows you to specify a component of momentum [1-3] for @f$ (x,y,z) @f$
+                        const double beta(const int p_i=0) const;
+                        //! Calculate the Lorentz factor @f$\gamma @f$
+                        const double gamma() const;
+                        //! Return decay length in particle rest frame
+                        const double ctau() const;
                         //! Returns true if the particle has been initialised (does not have default blank values)
                         operator bool() const;
                         //! Output the particle properties to the ostream

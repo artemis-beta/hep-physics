@@ -9,7 +9,7 @@
 
 //================= Leptons ====================//
 
- const HEP::Particle HEP::Particles::e = HEP::Particle("e", "-", 0.5109989461*HEP::Units::MeV, 3E36*HEP::Units::sec);
+ const HEP::Particle HEP::Particles::e = HEP::Particle("e", "-", HEP::Constants::m_e, 3E36*HEP::Units::sec);
 
  const HEP::Particle HEP::Particles::mu = HEP::Particle("mu", "-", 105.6583745*HEP::Units::MeV, 2.1969811E-6*HEP::Units::sec);
 

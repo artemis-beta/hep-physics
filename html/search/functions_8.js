@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operator_20bool_92',['operator bool',['../class_h_e_p_1_1_particle.html#a2fdf064c3c530c4f0edb40443b6a81d4',1,'HEP::Particle']]],
-  ['operator_5b_5d_93',['operator[]',['../class_h_e_p_1_1_lorentz_vector.html#a45c221e4911d5d597687856c857664df',1,'HEP::LorentzVector::operator[](size_t i)'],['../class_h_e_p_1_1_lorentz_vector.html#a86685c6fad5b12685c987b9edd9d4299',1,'HEP::LorentzVector::operator[](size_t i) const']]]
+  ['lorentzvector_102',['LorentzVector',['../class_h_e_p_1_1_lorentz_vector.html#a771668e91cb52469fe10a1661173344b',1,'HEP::LorentzVector::LorentzVector()'],['../class_h_e_p_1_1_lorentz_vector.html#aaf0c95661426bb16dbbab611b643c5f7',1,'HEP::LorentzVector::LorentzVector(double x0, double x1, double x2, double x3)']]]
 ];

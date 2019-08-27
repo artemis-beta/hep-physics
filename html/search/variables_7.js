@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['mu_119',['mu',['../namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2',1,'HEP::Particles']]]
+  ['lambda_134',['Lambda',['../namespace_h_e_p_1_1_particles.html#a9f9c2984481f0e417357394aab2d2097',1,'HEP::Particles']]],
+  ['lambdab0_135',['Lambdab0',['../namespace_h_e_p_1_1_particles.html#a24e01b5dae61cc0b597bb7646ef3ec91',1,'HEP::Particles']]],
+  ['lambdac_136',['Lambdac',['../namespace_h_e_p_1_1_particles.html#a58ebec631c4c4c28e106cc48148f258b',1,'HEP::Particles']]]
 ];

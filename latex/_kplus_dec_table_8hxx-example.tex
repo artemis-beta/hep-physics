@@ -9,91 +9,11 @@ An example of the Decay Table class for K+
 \DoxyCodeLine{\textcolor{preprocessor}{\#include "DecayTable.hxx"}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include "CommonParticles.hxx"}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keyword}{using namespace }\mbox{\hyperlink{namespace_h_e_p_1_1_particles}{HEP::Particles}};}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keyword}{const} DecayTable gen\_KplusDecays()}
-\DoxyCodeLine{\{}
-\DoxyCodeLine{    DecayTable \_tmp(\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a97c8da0396bd5a2fbfd2979e066a1c83}{Kplus}});}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    std::vector<Particle> \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a10b0d92fc925579a9b4af3680c0429d2}{mu}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_ab9b372cf1afc8d39acedfdd66aca415d}{nu\_mu}}\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{    Decay \_kdec = Decay(\_d, 0.6356);}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_kdec = Decay(\_d, 0.2067);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{        }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}()\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_kdec = Decay(\_d, 0.05583);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a4ea84868e00079688464bf0f38aece65}{e}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a3868fd974d5f705be3389b9c2192d4d2}{nu\_e}}\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_kdec = Decay(\_d, 0.0507);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a10b0d92fc925579a9b4af3680c0429d2}{mu}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_ab9b372cf1afc8d39acedfdd66aca415d}{nu\_mu}}\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_kdec = Decay(\_d, 0.03352);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_kdec = Decay(\_d, 0.01760);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a4ea84868e00079688464bf0f38aece65}{e}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a3868fd974d5f705be3389b9c2192d4d2}{nu\_e}}\};}
-\DoxyCodeLine{        }
-\DoxyCodeLine{    \_kdec = Decay(\_d, 4.247E-\/5);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a2f77b263be69ce85f2a3302c7bfbb1d8}{Pi0}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a4ea84868e00079688464bf0f38aece65}{e}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a3868fd974d5f705be3389b9c2192d4d2}{nu\_e}}\};}
-\DoxyCodeLine{        }
-\DoxyCodeLine{    \_kdec = Decay(\_d, 2.55E-\/5);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a4ea84868e00079688464bf0f38aece65}{e}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a3868fd974d5f705be3389b9c2192d4d2}{nu\_e}}\};}
-\DoxyCodeLine{        }
-\DoxyCodeLine{    \_kdec = Decay(\_d, 1.582E-\/5);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{    }
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a10b0d92fc925579a9b4af3680c0429d2}{mu}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}(), \mbox{\hyperlink{namespace_h_e_p_1_1_particles_ab9b372cf1afc8d39acedfdd66aca415d}{nu\_mu}}\};}
-\DoxyCodeLine{        }
-\DoxyCodeLine{    \_kdec = Decay(\_d, 1.4E-\/5);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a10b0d92fc925579a9b4af3680c0429d2}{mu}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a10b0d92fc925579a9b4af3680c0429d2}{mu}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}()\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{        \_kdec = Decay(\_d, 9.6E-\/8);}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \_d = \{\mbox{\hyperlink{namespace_h_e_p_1_1_particles_a66095ba4d9305db81eab198a1d662a9c}{Piplus}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a4ea84868e00079688464bf0f38aece65}{e}}, \mbox{\hyperlink{namespace_h_e_p_1_1_particles_a4ea84868e00079688464bf0f38aece65}{e}}.\mbox{\hyperlink{class_h_e_p_1_1_particle_a61c7cb84afd76cb7ef4f44d90bc4968b}{anti}}()\};}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \_kdec = Decay(\_d, 1.7E-\/7);}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \_tmp.addDecay(\_kdec);}
-\DoxyCodeLine{}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keywordflow}{return} \_tmp;}
-\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keyword}{const} \mbox{\hyperlink{class_h_e_p_1_1_decay_table}{HEP::DecayTable}} gen\_KplusDecays();}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_h_e_p}{HEP}}}
 \DoxyCodeLine{\{}
-\DoxyCodeLine{    \textcolor{keyword}{extern} \textcolor{keyword}{const} DecayTable \mbox{\hyperlink{namespace_h_e_p_a107d03a27251c92b749e43ee58ad9e03}{KplusDecays}} = gen\_KplusDecays();}
+\DoxyCodeLine{    \textcolor{keyword}{extern} \textcolor{keyword}{const} DecayTable \mbox{\hyperlink{namespace_h_e_p_a59ba822530cd781999889579d1e5ed9b}{KplusDecays}};}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{preprocessor}{\#endif}}

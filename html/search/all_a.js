@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['m_36',['M',['../class_h_e_p_1_1_particle.html#a988ac47ae4c07f4cf239b84eed8dc4e3',1,'HEP::Particle']]],
-  ['magnitude_37',['magnitude',['../class_h_e_p_1_1_lorentz_vector.html#af7652e5ff223ab3f6ed594e1ec8b6d0b',1,'HEP::LorentzVector']]],
-  ['momentum_38',['momentum',['../class_h_e_p_1_1_particle.html#a2dc228e26645a61a6c3652fbdad2a9d7',1,'HEP::Particle']]],
-  ['mu_39',['mu',['../namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2',1,'HEP::Particles']]]
+  ['lambda_38',['Lambda',['../namespace_h_e_p_1_1_particles.html#a9f9c2984481f0e417357394aab2d2097',1,'HEP::Particles']]],
+  ['lambdab0_39',['Lambdab0',['../namespace_h_e_p_1_1_particles.html#a24e01b5dae61cc0b597bb7646ef3ec91',1,'HEP::Particles']]],
+  ['lambdac_40',['Lambdac',['../namespace_h_e_p_1_1_particles.html#a58ebec631c4c4c28e106cc48148f258b',1,'HEP::Particles']]],
+  ['lorentzvector_41',['LorentzVector',['../class_h_e_p_1_1_lorentz_vector.html',1,'HEP::LorentzVector'],['../class_h_e_p_1_1_lorentz_vector.html#a771668e91cb52469fe10a1661173344b',1,'HEP::LorentzVector::LorentzVector()'],['../class_h_e_p_1_1_lorentz_vector.html#aaf0c95661426bb16dbbab611b643c5f7',1,'HEP::LorentzVector::LorentzVector(double x0, double x1, double x2, double x3)']]]
 ];

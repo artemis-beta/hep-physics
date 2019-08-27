@@ -3,6 +3,7 @@
 
 #include "Particle.hxx"
 #include "Units.hxx"
+#include "Constants.hxx"
 
 /*! @namespace HEP
     The HEP namespace contains all currently accepted particles within the standard model

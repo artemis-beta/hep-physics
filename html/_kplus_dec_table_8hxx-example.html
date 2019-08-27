@@ -73,106 +73,18 @@ $(function() {
 <div class="line"><span class="preprocessor">#include &quot;DecayTable.hxx&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;CommonParticles.hxx&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespace_h_e_p_1_1_particles.html">HEP::Particles</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">const</span> DecayTable gen_KplusDecays()</div>
-<div class="line">{</div>
-<div class="line">    DecayTable _tmp(<a name="a0"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#a97c8da0396bd5a2fbfd2979e066a1c83">Kplus</a>);</div>
-<div class="line">    </div>
-<div class="line">    std::vector&lt;Particle&gt; _d = {<a name="a1"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2">mu</a>.<a name="a2"></a><a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a name="a3"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#ab9b372cf1afc8d39acedfdd66aca415d">nu_mu</a>};</div>
-<div class="line"> </div>
-<div class="line">    Decay _kdec = Decay(_d, 0.6356);</div>
-<div class="line"> </div>
-<div class="line">    _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a name="a4"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a name="a5"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>};</div>
-<div class="line"> </div>
-<div class="line">        _kdec = Decay(_d, 0.2067);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">        </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>()};</div>
-<div class="line"> </div>
-<div class="line">        _kdec = Decay(_d, 0.05583);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>, <a name="a6"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">e</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a name="a7"></a><a class="code" href="namespace_h_e_p_1_1_particles.html#a3868fd974d5f705be3389b9c2192d4d2">nu_e</a>};</div>
-<div class="line"> </div>
-<div class="line">        _kdec = Decay(_d, 0.0507);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2">mu</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#ab9b372cf1afc8d39acedfdd66aca415d">nu_mu</a>};</div>
-<div class="line"> </div>
-<div class="line">        _kdec = Decay(_d, 0.03352);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>};</div>
-<div class="line"> </div>
-<div class="line">        _kdec = Decay(_d, 0.01760);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">e</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#a3868fd974d5f705be3389b9c2192d4d2">nu_e</a>};</div>
-<div class="line">        </div>
-<div class="line">    _kdec = Decay(_d, 4.247E-5);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">Pi0</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">e</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#a3868fd974d5f705be3389b9c2192d4d2">nu_e</a>};</div>
-<div class="line">        </div>
-<div class="line">    _kdec = Decay(_d, 2.55E-5);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">e</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#a3868fd974d5f705be3389b9c2192d4d2">nu_e</a>};</div>
-<div class="line">        </div>
-<div class="line">    _kdec = Decay(_d, 1.582E-5);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line">    </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2">mu</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>(), <a class="code" href="namespace_h_e_p_1_1_particles.html#ab9b372cf1afc8d39acedfdd66aca415d">nu_mu</a>};</div>
-<div class="line">        </div>
-<div class="line">    _kdec = Decay(_d, 1.4E-5);</div>
-<div class="line"> </div>
-<div class="line">        _tmp.addDecay(_kdec);</div>
-<div class="line"> </div>
-<div class="line">        _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2">mu</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2">mu</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>()};</div>
-<div class="line"> </div>
-<div class="line">        _kdec = Decay(_d, 9.6E-8);</div>
-<div class="line"> </div>
-<div class="line">    _tmp.addDecay(_kdec);</div>
-<div class="line"> </div>
-<div class="line">    _d = {<a class="code" href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">Piplus</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">e</a>, <a class="code" href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">e</a>.<a class="code" href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">anti</a>()};</div>
-<div class="line"> </div>
-<div class="line">    _kdec = Decay(_d, 1.7E-7);</div>
-<div class="line"> </div>
-<div class="line">    _tmp.addDecay(_kdec);</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> _tmp;</div>
-<div class="line">}</div>
+<div class="line"><span class="keyword">const</span> <a name="_a0"></a><a class="code" href="class_h_e_p_1_1_decay_table.html">HEP::DecayTable</a> gen_KplusDecays();</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span><a class="code" href="namespace_h_e_p.html">HEP</a></div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">extern</span> <span class="keyword">const</span> DecayTable <a name="a8"></a><a class="code" href="namespace_h_e_p.html#a107d03a27251c92b749e43ee58ad9e03">KplusDecays</a> = gen_KplusDecays();</div>
+<div class="line">    <span class="keyword">extern</span> <span class="keyword">const</span> DecayTable <a name="a1"></a><a class="code" href="namespace_h_e_p.html#a59ba822530cd781999889579d1e5ed9b">KplusDecays</a>;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_a66095ba4d9305db81eab198a1d662a9c"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#a66095ba4d9305db81eab198a1d662a9c">HEP::Particles::Piplus</a></div><div class="ttdeci">const Particle Piplus</div><div class="ttdoc">Charged Pion, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:35</div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_a2f77b263be69ce85f2a3302c7bfbb1d8"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#a2f77b263be69ce85f2a3302c7bfbb1d8">HEP::Particles::Pi0</a></div><div class="ttdeci">const Particle Pi0</div><div class="ttdoc">Neutral Pion, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:37</div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_ab9b372cf1afc8d39acedfdd66aca415d"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#ab9b372cf1afc8d39acedfdd66aca415d">HEP::Particles::nu_mu</a></div><div class="ttdeci">const Particle nu_mu</div><div class="ttdoc">Muon Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:23</div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_a4ea84868e00079688464bf0f38aece65"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#a4ea84868e00079688464bf0f38aece65">HEP::Particles::e</a></div><div class="ttdeci">const Particle e</div><div class="ttdoc">Electron, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:15</div></div>
-<div class="ttc" id="anamespace_h_e_p_html_a107d03a27251c92b749e43ee58ad9e03"><div class="ttname"><a href="namespace_h_e_p.html#a107d03a27251c92b749e43ee58ad9e03">HEP::KplusDecays</a></div><div class="ttdeci">const DecayTable KplusDecays</div><div class="ttdoc">DecayTable of all decays of the  meson. The gen_KplusDecay function generates all the relevant channe...</div></div>
-<div class="ttc" id="anamespace_h_e_p_html"><div class="ttname"><a href="namespace_h_e_p.html">HEP</a></div><div class="ttdef"><b>Definition:</b> BcDecTable.hxx:23</div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_a10b0d92fc925579a9b4af3680c0429d2"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#a10b0d92fc925579a9b4af3680c0429d2">HEP::Particles::mu</a></div><div class="ttdeci">const Particle mu</div><div class="ttdoc">Muon, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:17</div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_a3868fd974d5f705be3389b9c2192d4d2"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#a3868fd974d5f705be3389b9c2192d4d2">HEP::Particles::nu_e</a></div><div class="ttdeci">const Particle nu_e</div><div class="ttdoc">Electron Neutrino, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:21</div></div>
-<div class="ttc" id="aclass_h_e_p_1_1_particle_html_a61c7cb84afd76cb7ef4f44d90bc4968b"><div class="ttname"><a href="class_h_e_p_1_1_particle.html#a61c7cb84afd76cb7ef4f44d90bc4968b">HEP::Particle::anti</a></div><div class="ttdeci">const Particle anti() const</div><div class="ttdoc">Get the antiparticle partner of the current particle.</div><div class="ttdef"><b>Definition:</b> Particle.cxx:44</div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html">HEP::Particles</a></div></div>
-<div class="ttc" id="anamespace_h_e_p_1_1_particles_html_a97c8da0396bd5a2fbfd2979e066a1c83"><div class="ttname"><a href="namespace_h_e_p_1_1_particles.html#a97c8da0396bd5a2fbfd2979e066a1c83">HEP::Particles::Kplus</a></div><div class="ttdeci">const Particle Kplus</div><div class="ttdoc">Charged Kaon, .</div><div class="ttdef"><b>Definition:</b> CommonParticles.cxx:29</div></div>
+<div class="ttc" id="anamespace_h_e_p_html"><div class="ttname"><a href="namespace_h_e_p.html">HEP</a></div><div class="ttdef"><b>Definition:</b> BcDecTable.hxx:21</div></div>
+<div class="ttc" id="anamespace_h_e_p_html_a59ba822530cd781999889579d1e5ed9b"><div class="ttname"><a href="namespace_h_e_p.html#a59ba822530cd781999889579d1e5ed9b">HEP::KplusDecays</a></div><div class="ttdeci">const DecayTable KplusDecays</div><div class="ttdoc">DecayTable of all decays of the  meson. The gen_KplusDecay function generates all the relevant channe...</div><div class="ttdef"><b>Definition:</b> KplusDecTable.cxx:107</div></div>
+<div class="ttc" id="aclass_h_e_p_1_1_decay_table_html"><div class="ttname"><a href="class_h_e_p_1_1_decay_table.html">HEP::DecayTable</a></div><div class="ttdoc">Decay Table Class.</div><div class="ttdef"><b>Definition:</b> DecayTable.hxx:63</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

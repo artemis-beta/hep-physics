@@ -19,6 +19,7 @@ namespace HEP
 
     @date last modified 2019-08-26
     */
+
     namespace Units
     {
         const extern double m;
@@ -57,6 +58,9 @@ namespace HEP
 
         const extern double N;
         const extern double kN;
+
+        const extern double C;
+        const extern double F;
     }
 }
 

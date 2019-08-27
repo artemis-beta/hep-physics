@@ -89,3 +89,24 @@ const HEP::LorentzVector HEP::Particle::momentum() const
 {
     return momentum_;
 }
+
+const double HEP::Particle::P() const
+{
+	return pow(momentum_[1]*momentum_[1]+momentum_[2]*momentum_[2]+momentum_[3]*momentum_[3], 0.5);
+}
+
+const double HEP::Particle::beta(const int p_i) const
+{
+	if(p_i == 0){return this->P()/momentum_[0];}
+	else{return momentum_[p_i]/momentum_[0];}
+}
+
+const double HEP::Particle::gamma() const
+{
+	return momentum_[0]/mass_;
+}
+
+const double HEP::Particle::ctau() const
+{
+	return HEP::Constants::c*lifetime_;
+}
