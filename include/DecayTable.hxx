@@ -73,13 +73,17 @@ namespace HEP
 			//! Common mother to all decays
 			Particle _mother = Particle();
 		public:
-			//! Construct a decay table for a given mother particle
+			/*! Construct a decay table for a given mother particle. 
+				@param mother constParticle& the mother particle
+				@return void
+			*/
 			DecayTable(const Particle& mother);
 			//! Add a new decay to the decay table
 			void addDecay(Decay& decay);
 			//! Get the decays in decay tablea as a vector
 			std::vector<Decay> getDecays(){return _decays;}
-			//! Get a decay at random based on the branching ratios
+			/*! Get a decay at random based on the branching ratios
+				@return std::vector<Decay>*/
 			const Decay getRandom() const;
 			//! Print the decay table
 			void Print();

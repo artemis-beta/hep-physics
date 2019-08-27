@@ -25,3 +25,4 @@ extern const double HEP::Constants::alpha_s = 0.1181;
 extern const double HEP::Constants::exp = 2.718281828459045235;
 extern const double HEP::Constants::m_planck = pow(HEP::Constants::hbar*HEP::Constants::c/HEP::Constants::G, 0.5);
 extern const double HEP::Constants::l_planck = pow(HEP::Constants::hbar*HEP::Constants::G/pow(HEP::Constants::c, 3), 0.5);
+extern const double HEP::Constants::u = 1.66053906660E-27*HEP::Units::kg;

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['alpha_129',['alpha',['../namespace_h_e_p_1_1_constants.html#af487330f6e41b506097fd428839aa122',1,'HEP::Constants']]],
-  ['alpha_5fs_130',['alpha_s',['../namespace_h_e_p_1_1_constants.html#aabbe6c85c875fadec54e53502f9811df',1,'HEP::Constants']]]
+  ['_5fbrs_146',['_brs',['../class_h_e_p_1_1_decay_table.html#a6200f0bbff6657940f03ebec0dec56ac',1,'HEP::DecayTable']]],
+  ['_5fcumul_5fbrs_147',['_cumul_brs',['../class_h_e_p_1_1_decay_table.html#a3424183e20858f252469a2e9792ca173',1,'HEP::DecayTable']]],
+  ['_5fdaughters_148',['_daughters',['../class_h_e_p_1_1_decay.html#a58347d855304a75f2dc111e4aab2da91',1,'HEP::Decay']]],
+  ['_5fdecays_149',['_decays',['../class_h_e_p_1_1_decay_table.html#aaada137a9c0c0c28396241c0745eda10',1,'HEP::DecayTable']]],
+  ['_5fmother_150',['_mother',['../class_h_e_p_1_1_decay.html#a7e2df726ddc50dacf3e207406a00687e',1,'HEP::Decay::_mother()'],['../class_h_e_p_1_1_decay_table.html#a9e4675dbb27d07d27b2ba529ca973113',1,'HEP::DecayTable::_mother()']]],
+  ['_5fprob_151',['_prob',['../class_h_e_p_1_1_decay.html#a91e7fa94600c4f79bfb3838133f401df',1,'HEP::Decay']]]
 ];

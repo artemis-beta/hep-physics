@@ -72,6 +72,8 @@ namespace HEP
         extern const double m_planck;
         //! Planck Length
         extern const double l_planck;
+        //! Atomic mass unit
+        extern const double u;
     }
 }
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_88',['y',['../class_h_e_p_1_1_particle.html#a006003c5b7eb633b5e845f85f266a6b5',1,'HEP::Particle']]]
+  ['w_96',['W',['../namespace_h_e_p_1_1_particles.html#a3c32d93c0d930a2f577e785936280f5b',1,'HEP::Particles']]]
 ];

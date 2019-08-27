@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_h_e_p_1_1_particle-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,6 +80,15 @@ $(function() {
  <a href="class_h_e_p_1_1_particle.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_particle_8hxx_source.html">Particle.hxx</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for HEP::Particle:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_h_e_p_1_1_particle__coll__graph.png" border="0" usemap="#_h_e_p_1_1_particle_coll__map" alt="Collaboration graph"/></div>
+<map name="_h_e_p_1_1_particle_coll__map" id="_h_e_p_1_1_particle_coll__map">
+<area shape="rect" title="Particle Class." alt="" coords="24,92,125,117"/>
+<area shape="rect" href="class_h_e_p_1_1_lorentz_vector.html" title="Lorentz Vector Class." alt="" coords="5,5,144,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -155,6 +165,24 @@ const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:af45d4f15c6c4ef3d0c71c461a2714c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the particle has been initialised (does not have default blank values) <br /></td></tr>
 <tr class="separator:af45d4f15c6c4ef3d0c71c461a2714c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a62fcba8f92ecc0aa271f75edb53974b2"><td class="memItemLeft" align="right" valign="top"><a id="a62fcba8f92ecc0aa271f75edb53974b2"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b> =&quot;X&quot;</td></tr>
+<tr class="separator:a62fcba8f92ecc0aa271f75edb53974b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2815bf8182c7a572f175d07290e69158"><td class="memItemLeft" align="right" valign="top"><a id="a2815bf8182c7a572f175d07290e69158"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>_sign</b> =&quot;&quot;</td></tr>
+<tr class="separator:a2815bf8182c7a572f175d07290e69158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9217d97e5bf92df34a1e3fbef39ebca2"><td class="memItemLeft" align="right" valign="top"><a id="a9217d97e5bf92df34a1e3fbef39ebca2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>_mass</b> = -1</td></tr>
+<tr class="separator:a9217d97e5bf92df34a1e3fbef39ebca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5c6a532baf761a1e03a1e921ef039d"><td class="memItemLeft" align="right" valign="top"><a id="abe5c6a532baf761a1e03a1e921ef039d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>_lifetime</b> = -1</td></tr>
+<tr class="separator:abe5c6a532baf761a1e03a1e921ef039d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207eec52863d7b39d3c37f47335a5d08"><td class="memItemLeft" align="right" valign="top"><a id="a207eec52863d7b39d3c37f47335a5d08"></a>
+<a class="el" href="class_h_e_p_1_1_lorentz_vector.html">HEP::LorentzVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_momentum</b></td></tr>
+<tr class="separator:a207eec52863d7b39d3c37f47335a5d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a9e8d44514741aa9208549130e2112fab"><td class="memItemLeft" align="right" valign="top"><a id="a9e8d44514741aa9208549130e2112fab"></a>
@@ -168,9 +196,11 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <dl class="section author"><dt>Author</dt><dd>Kristian Zarebski </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>last modified 2019-08-26 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT License </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_particle_8hxx_source.html#l00021">21</a> of file <a class="el" href="_particle_8hxx_source.html">Particle.hxx</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_particle_8hxx_source.html">Particle.hxx</a></li>
-<li>src/Particle.cxx</li>
+<li>src/<a class="el" href="_particle_8cxx_source.html">Particle.cxx</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

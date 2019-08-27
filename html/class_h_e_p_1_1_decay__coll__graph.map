@@ -1,0 +1,5 @@
+<map id="HEP::Decay" name="HEP::Decay">
+<area shape="rect" id="node1" title="Decay Channel Class." alt="" coords="28,179,122,204"/>
+<area shape="rect" id="node2" href="$class_h_e_p_1_1_particle.html" title="Particle Class." alt="" coords="24,92,125,117"/>
+<area shape="rect" id="node3" href="$class_h_e_p_1_1_lorentz_vector.html" title="Lorentz Vector Class." alt="" coords="5,5,144,31"/>
+</map>

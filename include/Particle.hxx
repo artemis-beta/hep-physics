@@ -20,11 +20,11 @@ namespace HEP
         */
         class Particle {
                 private:
-                        std::string name_="X";
-                        std::string sign_="";
-                        double mass_     = -1;
-                        double lifetime_ = -1;
-                        HEP::LorentzVector momentum_;
+                        std::string _name="X";
+                        std::string _sign="";
+                        double _mass     = -1;
+                        double _lifetime = -1;
+                        HEP::LorentzVector _momentum;
                 public:
                         //! Default constructor with properties set to -1
                         Particle();
@@ -33,7 +33,7 @@ namespace HEP
                         //! Construct a particle giving only the four momentum components
                         Particle(double,double,double,double);
                         //! Returns as a string the particle name
-                        const std::string getName() const {return name_+sign_;}
+                        const std::string getName() const {return _name+_sign;}
                         //! Get the antiparticle partner of the current particle
                         const Particle anti() const;
                         //! Fire the particle at a given energy

@@ -8,30 +8,30 @@ std::ostream &operator<<(std::ostream &os, HEP::Particle  &p)
 
 HEP::Particle::Particle()
 {
-	name_ = "";
-	sign_ = "";
-	mass_ = -1;
-	momentum_ = HEP::LorentzVector();
-	lifetime_ = -1;
+	_name = "";
+	_sign = "";
+	_mass = -1;
+	_momentum = HEP::LorentzVector();
+	_lifetime = -1;
 }
 
-HEP::Particle::Particle(std::string _name, std::string _sign, double _mass, double _tau)
+HEP::Particle::Particle(std::string name, std::string sign, double mass, double lifetime)
 {
-    name_ = _name;
-	sign_ = _sign;
-	mass_ = _mass;
-	momentum_ = HEP::LorentzVector(_mass, 0, 0, 0);
-	lifetime_ = _tau;
+    _name = name;
+	_sign = sign;
+	_mass = mass;
+	_momentum = HEP::LorentzVector(mass, 0, 0, 0);
+	_lifetime = lifetime;
 }
 
 HEP::Particle::Particle(double e, double px, double py, double pz)
 {
-    momentum_ = HEP::LorentzVector(e,px,py,pz);
+    _momentum = HEP::LorentzVector(e,px,py,pz);
 }
 
 HEP::Particle::operator bool() const
 {
-	if(name_ == "" || mass_ == -1 || lifetime_ == -1)
+	if(_name == "" || _mass == -1 || _lifetime == -1)
 	{
 		return false;
 	}
@@ -42,10 +42,10 @@ HEP::Particle::operator bool() const
 const HEP::Particle HEP::Particle::anti() const
 {
 	HEP::Particle other = *this;
-	if(other.sign_ == "+"){other.sign_ = "-";}
-	else if(other.sign_ == "-"){other.sign_ = "+";}
-	else if(other.sign_ == "0"){other.sign_ = "~0";}
-	else{other.sign_ = "0";}
+	if(other._sign == "+"){other._sign = "-";}
+	else if(other._sign == "-"){other._sign = "+";}
+	else if(other._sign == "0"){other._sign = "~0";}
+	else{other._sign = "0";}
 	return other;
 }
 
@@ -57,7 +57,7 @@ const double HEP::Particle::theta() const
 void HEP::Particle::Fire(double energy)
 {
 	double e_ = pow(this->M()*this->M()+energy*energy, 0.5);
-	momentum_  = HEP::LorentzVector(e_, 0, 0, energy);
+	_momentum  = HEP::LorentzVector(e_, 0, 0, energy);
 }	
 
 const double HEP::Particle::phi() const
@@ -82,31 +82,31 @@ const double HEP::Particle::y() const
 
 const double HEP::Particle::M() const
 {
-    return momentum_.magnitude();
+    return _momentum.magnitude();
 }
 
 const HEP::LorentzVector HEP::Particle::momentum() const
 {
-    return momentum_;
+    return _momentum;
 }
 
 const double HEP::Particle::P() const
 {
-	return pow(momentum_[1]*momentum_[1]+momentum_[2]*momentum_[2]+momentum_[3]*momentum_[3], 0.5);
+	return pow(_momentum[1]*_momentum[1]+_momentum[2]*_momentum[2]+_momentum[3]*_momentum[3], 0.5);
 }
 
 const double HEP::Particle::beta(const int p_i) const
 {
-	if(p_i == 0){return this->P()/momentum_[0];}
-	else{return momentum_[p_i]/momentum_[0];}
+	if(p_i == 0){return this->P()/_momentum[0];}
+	else{return _momentum[p_i]/_momentum[0];}
 }
 
 const double HEP::Particle::gamma() const
 {
-	return momentum_[0]/mass_;
+	return _momentum[0]/_mass;
 }
 
 const double HEP::Particle::ctau() const
 {
-	return HEP::Constants::c*lifetime_;
+	return HEP::Constants::c*_lifetime;
 }
