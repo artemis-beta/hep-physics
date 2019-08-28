@@ -89,3 +89,8 @@ const PHYS::Cartesian PHYS::Spherical::inCartesian() const
 
     return Cartesian(x, y, z);
 }
+
+const double PHYS::Spherical::magnitude() const
+{
+    return abs((*this)[0]);
+}

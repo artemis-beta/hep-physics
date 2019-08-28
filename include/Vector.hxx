@@ -83,6 +83,7 @@ namespace PHYS
             @returns Cartesian
             */
             const Cartesian inCartesian() const;
+            const double magnitude() const;
     };
 }
 

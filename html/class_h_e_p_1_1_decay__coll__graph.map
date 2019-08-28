@@ -1,5 +1,0 @@
-<map id="PHYS::Decay" name="PHYS::Decay">
-<area shape="rect" id="node1" title="Decay Channel Class." alt="" coords="14,541,135,721"/>
-<area shape="rect" id="node2" href="$class_h_e_p_1_1_particle.html" title="Particle Class." alt="" coords="24,233,125,480"/>
-<area shape="rect" id="node3" href="$class_h_e_p_1_1_lorentz_vector.html" title="Lorentz Vector Class." alt="" coords="5,5,144,172"/>
-</map>
