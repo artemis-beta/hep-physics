@@ -11,8 +11,7 @@
 
 
 
-Inheritance diagram for P\+H\+YS\+::Spring\+:
-\nopagebreak
+Inheritance diagram for P\+H\+YS\+::Spring\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,9 +21,16 @@ Inheritance diagram for P\+H\+YS\+::Spring\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_aea0ebf34533d4bb62eeb1b4301998180}\label{class_p_h_y_s_1_1_spring_aea0ebf34533d4bb62eeb1b4301998180}} 
-{\bfseries Spring} (const std\+::string label=\char`\"{}\char`\"{}, const double spring\+\_\+constant, const double length)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_p_h_y_s_1_1_spring_a915e8e44c5f2a1ac2a156ec4b7fec34c}{Spring}} (const std\+::string label, const double spring\+\_\+constant, const double length)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_acd2d2c240340e0b1bc53d0110598dad4}\label{class_p_h_y_s_1_1_spring_acd2d2c240340e0b1bc53d0110598dad4}} 
+const \mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{Force}} {\bfseries force\+Spring} ()
+\item 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_spring_a4a7dc12ff1776cefe998c368efa7b50f}{Attach}} (\mbox{\hyperlink{class_p_h_y_s_1_1_object}{Object}} $\ast$other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_a57dd8763646d13954999b43a11ce1689}\label{class_p_h_y_s_1_1_spring_a57dd8763646d13954999b43a11ce1689}} 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_spring_a57dd8763646d13954999b43a11ce1689}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update the \mbox{\hyperlink{class_p_h_y_s_1_1_spring}{Spring}} co-\/ordinates based on attached objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,6 +39,12 @@ const double {\bfseries \+\_\+spring\+\_\+constant}
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_spring_a5866b37e1b0e82e80cc9d10aca2a1bbb}\label{class_p_h_y_s_1_1_spring_a5866b37e1b0e82e80cc9d10aca2a1bbb}} 
 const double {\bfseries \+\_\+length\+\_\+at\+\_\+rest}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_aff7c3b0f97dddbf453cb4bf5eaa73282}\label{class_p_h_y_s_1_1_spring_aff7c3b0f97dddbf453cb4bf5eaa73282}} 
+\mbox{\hyperlink{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}{Coordinate}} {\bfseries \+\_\+points} \mbox{[}2\mbox{]} = \{\{0,0,0\}, \{0,1,0\}\}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_aea986689ef9b0eaa06edf1b46c3f0883}\label{class_p_h_y_s_1_1_spring_aea986689ef9b0eaa06edf1b46c3f0883}} 
+std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1_object}{Object}} $\ast$ $>$ {\bfseries \+\_\+attachments}
 \end{DoxyCompactItemize}
 
 
@@ -53,10 +65,54 @@ M\+IT License
 \end{DoxyCopyright}
 
 
-Definition at line 78 of file Classical\+Mechanics.\+hxx.
+Definition at line 79 of file Classical\+Mechanics.\+hxx.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_a915e8e44c5f2a1ac2a156ec4b7fec34c}\label{class_p_h_y_s_1_1_spring_a915e8e44c5f2a1ac2a156ec4b7fec34c}} 
+\index{PHYS::Spring@{PHYS::Spring}!Spring@{Spring}}
+\index{Spring@{Spring}!PHYS::Spring@{PHYS::Spring}}
+\doxysubsubsection{\texorpdfstring{Spring()}{Spring()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+Spring\+::\+Spring (\begin{DoxyParamCaption}\item[{const std\+::string}]{label,  }\item[{const double}]{spring\+\_\+constant,  }\item[{const double}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a spring within the workspace 
+\begin{DoxyParams}{Parameters}
+{\em label} & Name of the spring \\
+\hline
+{\em spring\+\_\+constant} & The spring constant $k$ of the spring \\
+\hline
+{\em length} & The unextended spring length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_p_h_y_s_1_1_spring}{Spring}} 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file Classical\+Mechanics.\+hxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_spring_a4a7dc12ff1776cefe998c368efa7b50f}\label{class_p_h_y_s_1_1_spring_a4a7dc12ff1776cefe998c368efa7b50f}} 
+\index{PHYS::Spring@{PHYS::Spring}!Attach@{Attach}}
+\index{Attach@{Attach}!PHYS::Spring@{PHYS::Spring}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Spring\+::\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_p_h_y_s_1_1_object}{P\+H\+Y\+S\+::\+Object}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+Attach the spring to another object 
+\begin{DoxyParams}{Parameters}
+{\em other} & Another object of type \mbox{\hyperlink{class_p_h_y_s_1_1_object}{Object}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file Classical\+Mechanics.\+cxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Classical\+Mechanics.\+hxx\end{DoxyCompactItemize}
+include/Classical\+Mechanics.\+hxx\item 
+src/Classical\+Mechanics.\+cxx\end{DoxyCompactItemize}

@@ -66,9 +66,9 @@ namespace PHYS
             @returns Isotope of Nucleus n
             */
             Isotope(const Nucleus& n, const int n_neutrons, const double half_life) :
-                _half_life(half_life),
                 Nucleus(n.getName()+"-"+std::to_string(n_neutrons),
-                        n.Z(), n.M()+(n_neutrons-n.N()))
+                        n.Z(), n.M()+(n_neutrons-n.N())),
+                _half_life(half_life)
             {
             };
             const double getHalfLife() const {return _half_life;}

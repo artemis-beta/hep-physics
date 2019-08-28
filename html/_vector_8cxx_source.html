@@ -72,8 +72,8 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Vector.hxx&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> PHYS::Vector::operator[] (<span class="keyword">const</span> <span class="keywordtype">int</span> index)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> PHYS::Vector::operator[] (<span class="keyword">const</span> <span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">switch</span>(index)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordflow">case</span> 0:</div>
@@ -90,8 +90,8 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator+ (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator+ (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> _tmp = <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>(_x1+other._x1, </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                     _x2+other._x2,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                     _x3+other._x3);</div>
@@ -99,8 +99,8 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> _tmp;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator- (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator- (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> _tmp = <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>(_x1-other._x1, </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                     _x2-other._x2,</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                     _x3-other._x3);</div>
@@ -108,28 +108,65 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> _tmp;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">const</span> <span class="keywordtype">bool</span> PHYS::Vector::operator== (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">const</span> <span class="keywordtype">bool</span> PHYS::Vector::operator== (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> _x1 == other._x1 &amp;&amp; _x2 == other._x2 &amp;&amp; _x3 == other._x3;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> PHYS::Vector::magnitude()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> PHYS::Cartesian::magnitude()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> pow(pow(_x1, 2)+pow(_x2, 2)+pow(_x3, 2), 0.5);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> pow(pow((*<span class="keyword">this</span>)[0], 2)+pow((*<span class="keyword">this</span>)[1], 2)+pow((*<span class="keyword">this</span>)[2], 2), 0.5);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator+= (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator+= (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> _tmp = *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> _tmp + other;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator= (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator= (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> other;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a> PHYS::Vector::operator/ (<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> pow(other,-1)*(*this);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a> PHYS::Cartesian::operator- (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> (Cartesian)(Vector(*<span class="keyword">this</span>)-Vector(other));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a> PHYS::Cartesian::operator+ (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a>&amp; other)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> (Cartesian)(Vector(*<span class="keyword">this</span>)+Vector(other));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_cartesian.html#a7e29b688d65d1acd2d4da34426801d4d">   75</a></span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_spherical.html">PHYS::Spherical</a> <a class="code" href="class_p_h_y_s_1_1_cartesian.html#a7e29b688d65d1acd2d4da34426801d4d">PHYS::Cartesian::inSphericalPolar</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> r = this-&gt;magnitude();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> theta = acos((*<span class="keyword">this</span>)[0]/r);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> phi = atan((*<span class="keyword">this</span>)[1]/(*<span class="keyword">this</span>)[0]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_p_h_y_s_1_1_spherical.html">Spherical</a>(r, theta, phi);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_spherical.html#a11d459b06fbce65fc19075bc321ee72a">   84</a></span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a> <a class="code" href="class_p_h_y_s_1_1_spherical.html#a11d459b06fbce65fc19075bc321ee72a">PHYS::Spherical::inCartesian</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> x = (*this)[0]*sin((*<span class="keyword">this</span>)[1])*cos((*<span class="keyword">this</span>)[2]);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> y = (*this)[0]*sin((*<span class="keyword">this</span>)[1])*sin((*<span class="keyword">this</span>)[2]);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> z = (*this)[0]*cos((*<span class="keyword">this</span>)[1]);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">Cartesian</a>(x, y, z);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_p_h_y_s_1_1_vector_html"><div class="ttname"><a href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a></div><div class="ttdef"><b>Definition:</b> <a href="_vector_8hxx_source.html#l00009">Vector.hxx:9</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_cartesian_html_a7e29b688d65d1acd2d4da34426801d4d"><div class="ttname"><a href="class_p_h_y_s_1_1_cartesian.html#a7e29b688d65d1acd2d4da34426801d4d">PHYS::Cartesian::inSphericalPolar</a></div><div class="ttdeci">const Spherical inSphericalPolar() const</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8cxx_source.html#l00075">Vector.cxx:75</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_spherical_html"><div class="ttname"><a href="class_p_h_y_s_1_1_spherical.html">PHYS::Spherical</a></div><div class="ttdoc">Spherical Class.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8hxx_source.html#l00075">Vector.hxx:75</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_spherical_html_a11d459b06fbce65fc19075bc321ee72a"><div class="ttname"><a href="class_p_h_y_s_1_1_spherical.html#a11d459b06fbce65fc19075bc321ee72a">PHYS::Spherical::inCartesian</a></div><div class="ttdeci">const Cartesian inCartesian() const</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8cxx_source.html#l00084">Vector.cxx:84</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_cartesian_html"><div class="ttname"><a href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a></div><div class="ttdoc">Cartesian Class.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8hxx_source.html#l00052">Vector.hxx:52</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_vector_html"><div class="ttname"><a href="class_p_h_y_s_1_1_vector.html">PHYS::Vector</a></div><div class="ttdoc">Vector Class.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8hxx_source.html#l00017">Vector.hxx:17</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

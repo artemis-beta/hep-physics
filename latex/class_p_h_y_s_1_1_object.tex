@@ -11,8 +11,7 @@
 
 
 
-Inheritance diagram for P\+H\+YS\+::Object\+:
-\nopagebreak
+Inheritance diagram for P\+H\+YS\+::Object\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,16 +22,20 @@ Inheritance diagram for P\+H\+YS\+::Object\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_object_a9df35068619bddc3b376668899e854da}\label{class_p_h_y_s_1_1_object_a9df35068619bddc3b376668899e854da}} 
-{\bfseries Object} (const std\+::string label=\char`\"{}\char`\"{}, const \mbox{\hyperlink{namespace_p_h_y_s_a989ed5b346ef6ac490e268c7cf5ce537}{Coordinate}} position=\{-\/999,-\/999,-\/999\})
+{\bfseries Object} (const std\+::string label=\char`\"{}\char`\"{}, const \mbox{\hyperlink{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}{Coordinate}} position=\{-\/999,-\/999,-\/999\})
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_object_ab9b6c61a9b6a760a5c7200ca499eb481}\label{class_p_h_y_s_1_1_object_ab9b6c61a9b6a760a5c7200ca499eb481}} 
-void {\bfseries Place} (const \mbox{\hyperlink{namespace_p_h_y_s_a989ed5b346ef6ac490e268c7cf5ce537}{Coordinate}} \&c)
+void {\bfseries Place} (const \mbox{\hyperlink{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}{Coordinate}} \&c)
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_object_a60b2eaf75f28497a6ec9820a584729f3}\label{class_p_h_y_s_1_1_object_a60b2eaf75f28497a6ec9820a584729f3}} 
 const std\+::string {\bfseries get\+Name} () const
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_object_a558ad6ce3883f7a92cc5248bb2315111}\label{class_p_h_y_s_1_1_object_a558ad6ce3883f7a92cc5248bb2315111}} 
-const \mbox{\hyperlink{namespace_p_h_y_s_a989ed5b346ef6ac490e268c7cf5ce537}{Coordinate}} {\bfseries get\+Position} () const
+const \mbox{\hyperlink{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}{Coordinate}} {\bfseries get\+Position} () const
+\item 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_object_af5b7ded50ccf2d57116533218554ff3e}{apply\+Force}} (\mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{Force}} \&f)
+\item 
+const \mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{Force}} \mbox{\hyperlink{class_p_h_y_s_1_1_object_a26dbabfd6aebaf70447b36bb161f810d}{resolve}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -41,7 +44,10 @@ const \mbox{\hyperlink{namespace_p_h_y_s_a989ed5b346ef6ac490e268c7cf5ce537}{Coor
 std\+::string {\bfseries \+\_\+name}
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_object_ad0424060771e60394088c0045679cb87}\label{class_p_h_y_s_1_1_object_ad0424060771e60394088c0045679cb87}} 
-\mbox{\hyperlink{namespace_p_h_y_s_a989ed5b346ef6ac490e268c7cf5ce537}{Coordinate}} {\bfseries \+\_\+position}
+\mbox{\hyperlink{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}{Coordinate}} {\bfseries \+\_\+position}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_object_a9605639a8b422cde0a23fde4dd2c87a0}\label{class_p_h_y_s_1_1_object_a9605639a8b422cde0a23fde4dd2c87a0}} 
+std\+::vector$<$ \mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{Force}} $>$ {\bfseries \+\_\+forces}
 \end{DoxyCompactItemize}
 
 
@@ -66,6 +72,41 @@ Definition at line 25 of file Classical\+Mechanics.\+hxx.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_object_af5b7ded50ccf2d57116533218554ff3e}\label{class_p_h_y_s_1_1_object_af5b7ded50ccf2d57116533218554ff3e}} 
+\index{PHYS::Object@{PHYS::Object}!applyForce@{applyForce}}
+\index{applyForce@{applyForce}!PHYS::Object@{PHYS::Object}}
+\doxysubsubsection{\texorpdfstring{applyForce()}{applyForce()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Object\+::apply\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{P\+H\+Y\+S\+::\+Force}} \&}]{f }\end{DoxyParamCaption})}
+
+Apply a force to the body 
+\begin{DoxyParams}{Parameters}
+{\em f} & Force in the form of a \mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 3 of file Classical\+Mechanics.\+cxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_object_a26dbabfd6aebaf70447b36bb161f810d}\label{class_p_h_y_s_1_1_object_a26dbabfd6aebaf70447b36bb161f810d}} 
+\index{PHYS::Object@{PHYS::Object}!resolve@{resolve}}
+\index{resolve@{resolve}!PHYS::Object@{PHYS::Object}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{P\+H\+Y\+S\+::\+Force}} P\+H\+Y\+S\+::\+Object\+::resolve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Resolve all applied forces to give the resultant force \begin{DoxyReturn}{Returns}
+Force (\mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}}) 
+\end{DoxyReturn}
+
+
+Definition at line 8 of file Classical\+Mechanics.\+cxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Classical\+Mechanics.\+hxx\end{DoxyCompactItemize}
+include/Classical\+Mechanics.\+hxx\item 
+src/Classical\+Mechanics.\+cxx\end{DoxyCompactItemize}

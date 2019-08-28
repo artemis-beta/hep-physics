@@ -5,5 +5,6 @@ var searchData=
   ['alpha_8',['alpha',['../namespace_p_h_y_s_1_1_constants.html#ac8d05e4d4a9ad0c5af3acdc46dde25d3',1,'PHYS::Constants']]],
   ['alpha_5fs_9',['alpha_s',['../namespace_p_h_y_s_1_1_constants.html#a4b790b93a269456bbcd46c56b466f801',1,'PHYS::Constants']]],
   ['anti_10',['anti',['../class_p_h_y_s_1_1_particle.html#a7bbb559a4b3c4df1bdef33feb3ea975c',1,'PHYS::Particle']]],
-  ['applyforce_11',['applyForce',['../class_p_h_y_s_1_1_simple_body.html#a0c909fe4f65fbe03369b9408fbe33dd8',1,'PHYS::SimpleBody']]]
+  ['applyforce_11',['applyForce',['../class_p_h_y_s_1_1_object.html#af5b7ded50ccf2d57116533218554ff3e',1,'PHYS::Object']]],
+  ['attach_12',['Attach',['../class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f',1,'PHYS::Spring']]]
 ];
