@@ -9,5 +9,9 @@ var searchData=
   ['simplebody_120',['SimpleBody',['../class_p_h_y_s_1_1_simple_body.html',1,'PHYS::SimpleBody'],['../class_p_h_y_s_1_1_simple_body.html#a8963cfd72b2b6809982aa99272275297',1,'PHYS::SimpleBody::SimpleBody()']]],
   ['spherical_121',['Spherical',['../class_p_h_y_s_1_1_spherical.html',1,'PHYS']]],
   ['spring_122',['Spring',['../class_p_h_y_s_1_1_spring.html',1,'PHYS::Spring'],['../class_p_h_y_s_1_1_spring.html#a915e8e44c5f2a1ac2a156ec4b7fec34c',1,'PHYS::Spring::Spring()']]],
-  ['suvatsolver_123',['SUVATSolver',['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html',1,'PHYS::SUVATSolver'],['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html#a23baf4dcd828be4eb25187fdf6e76226',1,'PHYS::SUVATSolver::SUVATSolver()']]]
+  ['suvat1_123',['SUVAT1',['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html#ae00dd1bd422e864eb2b72d48c460ebc6',1,'PHYS::SUVATSolver']]],
+  ['suvat2_124',['SUVAT2',['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html#a7b61bff9ee40a4c761ee91cab2b4368c',1,'PHYS::SUVATSolver']]],
+  ['suvat3_125',['SUVAT3',['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html#a1256e3da032dac0146b011d6f036ca8a',1,'PHYS::SUVATSolver']]],
+  ['suvat4_126',['SUVAT4',['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html#a837801112b29e83a148f49120c10850f',1,'PHYS::SUVATSolver']]],
+  ['suvatsolver_127',['SUVATSolver',['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html',1,'PHYS::SUVATSolver'],['../class_p_h_y_s_1_1_s_u_v_a_t_solver.html#a23baf4dcd828be4eb25187fdf6e76226',1,'PHYS::SUVATSolver::SUVATSolver()']]]
 ];

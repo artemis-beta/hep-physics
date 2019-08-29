@@ -113,9 +113,13 @@ namespace PHYS
     {
         private:
             std::map<char, double> _variables;
+            //! @f$ a = \frac{v-u}{t}@f$
             void SUVAT1();
+            //! @f$ s = ut + \frac{1}{2}at^2@f$
             void SUVAT2();
+            //! @f$ s = \frac{u+v}{2}t @f$
             void SUVAT3();
+            //! @f$ v^2 = u^2 +2as @f$
             void SUVAT4();
         public:
             /*! Use SUVAT to find unknown variables, where unknowns are assigned the value of @c 1E-38
