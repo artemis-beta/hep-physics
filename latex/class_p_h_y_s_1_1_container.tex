@@ -9,14 +9,13 @@ void \mbox{\hyperlink{class_p_h_y_s_1_1_container_ad69965f3c1750a00bb7f0f9dc42a3
 \item 
 void \mbox{\hyperlink{class_p_h_y_s_1_1_container_a5a2eeb30d405ba47d3e6f9d0e151b6e3}{set\+Temperature}} (const double temperature)
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}\label{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}} 
-const double {\bfseries get\+Volume} () const
+void \mbox{\hyperlink{class_p_h_y_s_1_1_container_adb7bad5900ee6694920ef54b7d56beee}{set\+Pressure}} (const double pressure)
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}\label{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}} 
-const double {\bfseries get\+N\+Moles} (const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}} \&molecule)
+const double \mbox{\hyperlink{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}{get\+Volume}} () const
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}\label{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}} 
-const double {\bfseries get\+Pressure} ()
+const double \mbox{\hyperlink{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}{get\+N\+Moles}} (const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}} \&molecule)
+\item 
+const double \mbox{\hyperlink{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}{get\+Pressure}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -32,6 +31,9 @@ bool {\bfseries is\+\_\+empty} = true
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_container_a75a0740f191dd9f86ce00985f194060a}\label{class_p_h_y_s_1_1_container_a75a0740f191dd9f86ce00985f194060a}} 
 double {\bfseries \+\_\+temperature} = 298$\ast$P\+H\+Y\+S\+::\+Units\+::K
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_ad4d1c23d960a4276f5c7c0825ac8ea64}\label{class_p_h_y_s_1_1_container_ad4d1c23d960a4276f5c7c0825ac8ea64}} 
+double {\bfseries \+\_\+pressure}
 \end{DoxyCompactItemize}
 
 
@@ -60,7 +62,7 @@ Define a new container, the starting temperature is set to be room temperature a
 \end{DoxyParams}
 
 
-Definition at line 32 of file Thermodynamics.\+hxx.
+Definition at line 33 of file Thermodynamics.\+hxx.
 
 
 
@@ -82,11 +84,70 @@ Fill container with a molecule
 
 Definition at line 3 of file Thermodynamics.\+cxx.
 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}\label{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}} 
+\index{PHYS::Container@{PHYS::Container}!getNMoles@{getNMoles}}
+\index{getNMoles@{getNMoles}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{getNMoles()}{getNMoles()}}
+{\footnotesize\ttfamily const double P\+H\+Y\+S\+::\+Container\+::get\+N\+Moles (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}} \&}]{molecule = {\ttfamily \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}}()} }\end{DoxyParamCaption})}
+
+Get number of moles of contents 
+\begin{DoxyParams}{Parameters}
+{\em molecule} & Molecule to calculate number of moles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file Thermodynamics.\+cxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}\label{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}} 
+\index{PHYS::Container@{PHYS::Container}!getPressure@{getPressure}}
+\index{getPressure@{getPressure}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{getPressure()}{getPressure()}}
+{\footnotesize\ttfamily const double P\+H\+Y\+S\+::\+Container\+::get\+Pressure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Use Ideal Gas equation to calculate the pressure of the contents \begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Thermodynamics.\+cxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}\label{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}} 
+\index{PHYS::Container@{PHYS::Container}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily const double P\+H\+Y\+S\+::\+Container\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the volume of the container \begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Thermodynamics.\+hxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_adb7bad5900ee6694920ef54b7d56beee}\label{class_p_h_y_s_1_1_container_adb7bad5900ee6694920ef54b7d56beee}} 
+\index{PHYS::Container@{PHYS::Container}!setPressure@{setPressure}}
+\index{setPressure@{setPressure}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{setPressure()}{setPressure()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Container\+::set\+Pressure (\begin{DoxyParamCaption}\item[{const double}]{pressure }\end{DoxyParamCaption})}
+
+Set pressure within container 
+\begin{DoxyParams}{Parameters}
+{\em pressure} & Set the pressure to a value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Thermodynamics.\+cxx.
+
 \mbox{\Hypertarget{class_p_h_y_s_1_1_container_a5a2eeb30d405ba47d3e6f9d0e151b6e3}\label{class_p_h_y_s_1_1_container_a5a2eeb30d405ba47d3e6f9d0e151b6e3}} 
 \index{PHYS::Container@{PHYS::Container}!setTemperature@{setTemperature}}
 \index{setTemperature@{setTemperature}!PHYS::Container@{PHYS::Container}}
 \doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
-{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Container\+::set\+Temperature (\begin{DoxyParamCaption}\item[{const double}]{temperature }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Container\+::set\+Temperature (\begin{DoxyParamCaption}\item[{const double}]{temperature }\end{DoxyParamCaption})}
 
 Set temperature within container 
 \begin{DoxyParams}{Parameters}
@@ -95,7 +156,7 @@ Set temperature within container
 \end{DoxyParams}
 
 
-Definition at line 43 of file Thermodynamics.\+hxx.
+Definition at line 44 of file Thermodynamics.\+cxx.
 
 
 

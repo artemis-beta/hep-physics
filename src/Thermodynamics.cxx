@@ -38,5 +38,17 @@ const double PHYS::Container::getNMoles(const PHYS::Molecules::Molecule& molecul
 
 const double PHYS::Container::getPressure()
 {
-    return getNMoles()*PHYS::Constants::R*_temperature/getVolume();
+    return _pressure;
+}
+
+void PHYS::Container::setTemperature(const double temperature)
+{
+    _temperature = temperature;
+    _pressure = getNMoles()*PHYS::Constants::R*_temperature/getVolume();
+}
+
+void PHYS::Container::setPressure(const double pressure)
+{
+    _pressure = pressure;
+    _temperature = getVolume()*pressure/(getNMoles()*PHYS::Constants::R);
 }

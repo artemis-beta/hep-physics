@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <string>
+#include <map>
+#include <iostream>
 
 #include "Units.hxx"
 #include "Vector.hxx"
@@ -105,6 +107,45 @@ namespace PHYS
             void Attach(Object* other);
             //! Update the Spring co-ordinates based on attached objects
             void Update();          
+    };
+
+    class SUVATSolver
+    {
+        private:
+            std::map<char, double> _variables;
+            void SUVAT1();
+            void SUVAT2();
+            void SUVAT3();
+            void SUVAT4();
+        public:
+            /*! Use SUVAT to find unknown variables, where unknowns are assigned the value of @c 1E-38
+            @param s Displacement
+            @param u Initial Velocity
+            @param v Final Velocity
+            @param a Acceleration
+            @param t Time
+            */
+            SUVATSolver(const double s=1E-38, const double u=1E-38, const double v=1E-38, const double a=1E-38, const double t=1E-38);
+            /*! Access/assign to a variable, returns set value of variable
+            @param var The variable to access
+            @param val If stated, set the variable to be the value
+            @returns double*/
+            double& operator()(const char& var, const double val=1E-38);
+
+            friend std::ostream& operator<< (std::ostream& o, const SUVATSolver& solver)
+            {
+                std::string units[5] = {"m", "m/s", "m/s", "m/s^2", "s"};
+                int i = 0;
+                for(const auto& var : solver._variables)
+                {
+                    const char c = var.first;
+                    const double val = var.second;
+
+                    o << c << ": " << val << " " << units[i] << std::endl;
+                    ++i;
+                }
+                return o;
+            }
     };
 }
 

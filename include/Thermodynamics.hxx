@@ -23,6 +23,7 @@ namespace PHYS
             Occupancy _contents;// = {{PHYS::Molecules::Vacuum, -1}};
             bool is_empty = true;
             double _temperature = 298*PHYS::Units::K;
+            double _pressure;
         public:
             /*! Define a new container, the starting temperature is set to be room temperature at 298K
             @param x  length
@@ -40,9 +41,20 @@ namespace PHYS
             /*! Set temperature within container
             @param temperature Set the temperature to a value
             */
-            void setTemperature(const double temperature){_temperature = temperature;};
+            void setTemperature(const double temperature);
+            /*! Set pressure within container
+            @param pressure Set the pressure to a value
+            */
+            void setPressure(const double pressure);
+            /*! Get the volume of the container
+                @returns double*/
             const double getVolume() const {return _dimensions.magnitude();}
+            /*! Get number of moles of contents
+            @param molecule Molecule to calculate number of moles
+            @returns double*/
             const double getNMoles(const PHYS::Molecules::Molecule& molecule);
+            /*! Use Ideal Gas equation to calculate the pressure of the contents
+            @returns double*/
             const double getPressure();
     };
 }

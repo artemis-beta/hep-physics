@@ -13,6 +13,7 @@ all:
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/IdealGas.cxx -o binaries/IdealGas
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/Mass_on_Spring.cxx -o binaries/Mass_on_Spring
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/GenKplusDec.cxx -o binaries/GenKplusDec
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/SUVAT_Example.cxx -o binaries/SUVAT_Example
 
 clean:
 	rm -rf obj/ binaries/

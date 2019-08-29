@@ -1,0 +1,98 @@
+\hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver}{}\doxysection{P\+H\+YS\+::S\+U\+V\+A\+T\+Solver Class Reference}
+\label{class_p_h_y_s_1_1_s_u_v_a_t_solver}\index{PHYS::SUVATSolver@{PHYS::SUVATSolver}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_s_u_v_a_t_solver_a23baf4dcd828be4eb25187fdf6e76226}{S\+U\+V\+A\+T\+Solver}} (const double s=1E-\/38, const double u=1E-\/38, const double v=1E-\/38, const double a=1E-\/38, const double t=1E-\/38)
+\item 
+double \& \mbox{\hyperlink{class_p_h_y_s_1_1_s_u_v_a_t_solver_a3ee5814aa98de123eb2ef1c5cadeff2e}{operator()}} (const char \&var, const double val=1E-\/38)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_ae00dd1bd422e864eb2b72d48c460ebc6}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_ae00dd1bd422e864eb2b72d48c460ebc6}} 
+void {\bfseries S\+U\+V\+A\+T1} ()
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_a7b61bff9ee40a4c761ee91cab2b4368c}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_a7b61bff9ee40a4c761ee91cab2b4368c}} 
+void {\bfseries S\+U\+V\+A\+T2} ()
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_a1256e3da032dac0146b011d6f036ca8a}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_a1256e3da032dac0146b011d6f036ca8a}} 
+void {\bfseries S\+U\+V\+A\+T3} ()
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_a837801112b29e83a148f49120c10850f}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_a837801112b29e83a148f49120c10850f}} 
+void {\bfseries S\+U\+V\+A\+T4} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_af8d4062f6ca212bd80432e00d5fdbd4e}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_af8d4062f6ca212bd80432e00d5fdbd4e}} 
+std\+::map$<$ char, double $>$ {\bfseries \+\_\+variables}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_a5ddcec4c292493241c4e16ca9b9d14f2}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_a5ddcec4c292493241c4e16ca9b9d14f2}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{class_p_h_y_s_1_1_s_u_v_a_t_solver}{S\+U\+V\+A\+T\+Solver}} \&solver)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 112 of file Classical\+Mechanics.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_a23baf4dcd828be4eb25187fdf6e76226}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_a23baf4dcd828be4eb25187fdf6e76226}} 
+\index{PHYS::SUVATSolver@{PHYS::SUVATSolver}!SUVATSolver@{SUVATSolver}}
+\index{SUVATSolver@{SUVATSolver}!PHYS::SUVATSolver@{PHYS::SUVATSolver}}
+\doxysubsubsection{\texorpdfstring{SUVATSolver()}{SUVATSolver()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+S\+U\+V\+A\+T\+Solver\+::\+S\+U\+V\+A\+T\+Solver (\begin{DoxyParamCaption}\item[{const double}]{s = {\ttfamily 1E-\/38},  }\item[{const double}]{u = {\ttfamily 1E-\/38},  }\item[{const double}]{v = {\ttfamily 1E-\/38},  }\item[{const double}]{a = {\ttfamily 1E-\/38},  }\item[{const double}]{t = {\ttfamily 1E-\/38} }\end{DoxyParamCaption})}
+
+Use S\+U\+V\+AT to find unknown variables, where unknowns are assigned the value of {\ttfamily 1E-\/38} 
+\begin{DoxyParams}{Parameters}
+{\em s} & Displacement \\
+\hline
+{\em u} & Initial Velocity \\
+\hline
+{\em v} & Final Velocity \\
+\hline
+{\em a} & Acceleration \\
+\hline
+{\em t} & Time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 126 of file Classical\+Mechanics.\+cxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_s_u_v_a_t_solver_a3ee5814aa98de123eb2ef1c5cadeff2e}\label{class_p_h_y_s_1_1_s_u_v_a_t_solver_a3ee5814aa98de123eb2ef1c5cadeff2e}} 
+\index{PHYS::SUVATSolver@{PHYS::SUVATSolver}!operator()@{operator()}}
+\index{operator()@{operator()}!PHYS::SUVATSolver@{PHYS::SUVATSolver}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily double \& P\+H\+Y\+S\+::\+S\+U\+V\+A\+T\+Solver\+::operator() (\begin{DoxyParamCaption}\item[{const char \&}]{var,  }\item[{const double}]{val = {\ttfamily 1E-\/38} }\end{DoxyParamCaption})}
+
+Access/assign to a variable, returns set value of variable 
+\begin{DoxyParams}{Parameters}
+{\em var} & The variable to access \\
+\hline
+{\em val} & If stated, set the variable to be the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file Classical\+Mechanics.\+cxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Classical\+Mechanics.\+hxx\item 
+src/Classical\+Mechanics.\+cxx\end{DoxyCompactItemize}

@@ -83,14 +83,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad69965f3c1750a00bb7f0f9dc42a3e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2eeb30d405ba47d3e6f9d0e151b6e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_h_y_s_1_1_container.html#a5a2eeb30d405ba47d3e6f9d0e151b6e3">setTemperature</a> (const double temperature)</td></tr>
 <tr class="separator:a5a2eeb30d405ba47d3e6f9d0e151b6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addecbef33bc34bd993de8915e5b35fb8"><td class="memItemLeft" align="right" valign="top"><a id="addecbef33bc34bd993de8915e5b35fb8"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>getVolume</b> () const</td></tr>
+<tr class="memitem:adb7bad5900ee6694920ef54b7d56beee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_h_y_s_1_1_container.html#adb7bad5900ee6694920ef54b7d56beee">setPressure</a> (const double pressure)</td></tr>
+<tr class="separator:adb7bad5900ee6694920ef54b7d56beee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addecbef33bc34bd993de8915e5b35fb8"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_h_y_s_1_1_container.html#addecbef33bc34bd993de8915e5b35fb8">getVolume</a> () const</td></tr>
 <tr class="separator:addecbef33bc34bd993de8915e5b35fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43a336a10c4f60e1725cecc4d72e6885"><td class="memItemLeft" align="right" valign="top"><a id="a43a336a10c4f60e1725cecc4d72e6885"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>getNMoles</b> (const <a class="el" href="class_p_h_y_s_1_1_molecules_1_1_molecule.html">PHYS::Molecules::Molecule</a> &amp;molecule)</td></tr>
+<tr class="memitem:a43a336a10c4f60e1725cecc4d72e6885"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_h_y_s_1_1_container.html#a43a336a10c4f60e1725cecc4d72e6885">getNMoles</a> (const <a class="el" href="class_p_h_y_s_1_1_molecules_1_1_molecule.html">PHYS::Molecules::Molecule</a> &amp;molecule)</td></tr>
 <tr class="separator:a43a336a10c4f60e1725cecc4d72e6885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19158dccf53f96083f0f12d4c648a98f"><td class="memItemLeft" align="right" valign="top"><a id="a19158dccf53f96083f0f12d4c648a98f"></a>
-const double&#160;</td><td class="memItemRight" valign="bottom"><b>getPressure</b> ()</td></tr>
+<tr class="memitem:a19158dccf53f96083f0f12d4c648a98f"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_h_y_s_1_1_container.html#a19158dccf53f96083f0f12d4c648a98f">getPressure</a> ()</td></tr>
 <tr class="separator:a19158dccf53f96083f0f12d4c648a98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -107,6 +106,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_empty</b> = true</
 <tr class="memitem:a75a0740f191dd9f86ce00985f194060a"><td class="memItemLeft" align="right" valign="top"><a id="a75a0740f191dd9f86ce00985f194060a"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>_temperature</b> = 298*PHYS::Units::K</td></tr>
 <tr class="separator:a75a0740f191dd9f86ce00985f194060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d1c23d960a4276f5c7c0825ac8ea64"><td class="memItemLeft" align="right" valign="top"><a id="ad4d1c23d960a4276f5c7c0825ac8ea64"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>_pressure</b></td></tr>
+<tr class="separator:ad4d1c23d960a4276f5c7c0825ac8ea64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -160,7 +162,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_temperature</b> = 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_thermodynamics_8hxx_source.html#l00032">32</a> of file <a class="el" href="_thermodynamics_8hxx_source.html">Thermodynamics.hxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thermodynamics_8hxx_source.html#l00033">33</a> of file <a class="el" href="_thermodynamics_8hxx_source.html">Thermodynamics.hxx</a>.</p>
 
 </div>
 </div>
@@ -202,14 +204,112 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_temperature</b> = 
 
 </div>
 </div>
-<a id="a5a2eeb30d405ba47d3e6f9d0e151b6e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a2eeb30d405ba47d3e6f9d0e151b6e3">&#9670;&nbsp;</a></span>setTemperature()</h2>
+<a id="a43a336a10c4f60e1725cecc4d72e6885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a336a10c4f60e1725cecc4d72e6885">&#9670;&nbsp;</a></span>getNMoles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double PHYS::Container::getNMoles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_p_h_y_s_1_1_molecules_1_1_molecule.html">PHYS::Molecules::Molecule</a> &amp;&#160;</td>
+          <td class="paramname"><em>molecule</em> = <code><a class="el" href="class_p_h_y_s_1_1_molecules_1_1_molecule.html">PHYS::Molecules::Molecule</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get number of moles of contents </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">molecule</td><td>Molecule to calculate number of moles </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_thermodynamics_8cxx_source.html#l00016">16</a> of file <a class="el" href="_thermodynamics_8cxx_source.html">Thermodynamics.cxx</a>.</p>
+
+</div>
+</div>
+<a id="a19158dccf53f96083f0f12d4c648a98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19158dccf53f96083f0f12d4c648a98f">&#9670;&nbsp;</a></span>getPressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double PHYS::Container::getPressure </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use Ideal Gas equation to calculate the pressure of the contents </p><dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_thermodynamics_8cxx_source.html#l00039">39</a> of file <a class="el" href="_thermodynamics_8cxx_source.html">Thermodynamics.cxx</a>.</p>
+
+</div>
+</div>
+<a id="addecbef33bc34bd993de8915e5b35fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addecbef33bc34bd993de8915e5b35fb8">&#9670;&nbsp;</a></span>getVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double PHYS::Container::getVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the volume of the container </p><dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_thermodynamics_8hxx_source.html#l00051">51</a> of file <a class="el" href="_thermodynamics_8hxx_source.html">Thermodynamics.hxx</a>.</p>
+
+</div>
+</div>
+<a id="adb7bad5900ee6694920ef54b7d56beee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7bad5900ee6694920ef54b7d56beee">&#9670;&nbsp;</a></span>setPressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PHYS::Container::setPressure </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>pressure</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set pressure within container </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pressure</td><td>Set the pressure to a value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_thermodynamics_8cxx_source.html#l00050">50</a> of file <a class="el" href="_thermodynamics_8cxx_source.html">Thermodynamics.cxx</a>.</p>
+
+</div>
+</div>
+<a id="a5a2eeb30d405ba47d3e6f9d0e151b6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2eeb30d405ba47d3e6f9d0e151b6e3">&#9670;&nbsp;</a></span>setTemperature()</h2>
+
+<div class="memitem">
+<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void PHYS::Container::setTemperature </td>
@@ -219,11 +319,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_temperature</b> = 
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Set temperature within container </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -232,7 +327,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_temperature</b> = 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_thermodynamics_8hxx_source.html#l00043">43</a> of file <a class="el" href="_thermodynamics_8hxx_source.html">Thermodynamics.hxx</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_thermodynamics_8cxx_source.html#l00044">44</a> of file <a class="el" href="_thermodynamics_8cxx_source.html">Thermodynamics.cxx</a>.</p>
 
 </div>
 </div>
