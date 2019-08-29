@@ -98,11 +98,22 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> exp(-time/i-&gt;getHalfLife());</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="class_p_h_y_s_1_1_nucleus.html">PHYS::Nucleus</a>&amp; PHYS::Nucleus::operator= (<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_nucleus.html">PHYS::Nucleus</a>&amp; other)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    _name = other._name;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    _n_neutrons = other._n_neutrons;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    _n_protons = other._n_protons;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    _atomic_mass = other._atomic_mass;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_p_h_y_s_1_1_nucleus_html_aa45585f13960e14e4dd3b4d0ea13eccd"><div class="ttname"><a href="class_p_h_y_s_1_1_nucleus.html#aa45585f13960e14e4dd3b4d0ea13eccd">PHYS::Nucleus::mass_defect</a></div><div class="ttdeci">const double mass_defect() const</div><div class="ttdoc">Get the mass defect for the nucleus.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00003">NuclearPhysics.cxx:3</a></div></div>
-<div class="ttc" id="aclass_p_h_y_s_1_1_nucleus_html"><div class="ttname"><a href="class_p_h_y_s_1_1_nucleus.html">PHYS::Nucleus</a></div><div class="ttdoc">Nucleus Class.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00018">NuclearPhysics.hxx:18</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_nucleus_html"><div class="ttname"><a href="class_p_h_y_s_1_1_nucleus.html">PHYS::Nucleus</a></div><div class="ttdoc">Nucleus Class.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00019">NuclearPhysics.hxx:19</a></div></div>
 <div class="ttc" id="anamespace_p_h_y_s_html_aa07b3a8107b63378ff7b9ad579ac24f2"><div class="ttname"><a href="namespace_p_h_y_s.html#aa07b3a8107b63378ff7b9ad579ac24f2">PHYS::getBindingEnergyPerNucleon</a></div><div class="ttdeci">const double getBindingEnergyPerNucleon(const Nucleus *n)</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00011">NuclearPhysics.cxx:11</a></div></div>
-<div class="ttc" id="aclass_p_h_y_s_1_1_isotope_html"><div class="ttname"><a href="class_p_h_y_s_1_1_isotope.html">PHYS::Isotope</a></div><div class="ttdoc">Isotope Subclass.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00058">NuclearPhysics.hxx:58</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_isotope_html"><div class="ttname"><a href="class_p_h_y_s_1_1_isotope.html">PHYS::Isotope</a></div><div class="ttdoc">Isotope Subclass.</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8hxx_source.html#l00071">NuclearPhysics.hxx:71</a></div></div>
 <div class="ttc" id="anamespace_p_h_y_s_1_1_constants_html_a2542f480cefe55f8029b93fbfb7bd977"><div class="ttname"><a href="namespace_p_h_y_s_1_1_constants.html#a2542f480cefe55f8029b93fbfb7bd977">PHYS::Constants::u</a></div><div class="ttdeci">const double u</div><div class="ttdoc">Atomic mass unit.</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8cxx_source.html#l00028">Constants.cxx:28</a></div></div>
 <div class="ttc" id="anamespace_p_h_y_s_html_a750a7959d5e4648758bbc1d8c64d31df"><div class="ttname"><a href="namespace_p_h_y_s.html#a750a7959d5e4648758bbc1d8c64d31df">PHYS::fracIsotopesAt</a></div><div class="ttdeci">const double fracIsotopesAt(const Isotope *i, const double t)</div><div class="ttdef"><b>Definition:</b> <a href="_nuclear_physics_8cxx_source.html#l00025">NuclearPhysics.cxx:25</a></div></div>
 <!-- start footer part -->

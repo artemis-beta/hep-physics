@@ -76,8 +76,8 @@ namespace PHYS
         const extern double esu;
 
         const extern double K;
-        const extern double Celsius;
-        const extern double Fahrenheit;
+        const extern double Celsius(const double& kelvin);
+        const extern double Fahrenheit(const double& kelvin);
 
         const extern double T;
         const extern double G;
@@ -101,6 +101,8 @@ namespace PHYS
         const extern double Sv;
 
         const extern double kat;
+
+        const extern double mol;
     }
 }
 

@@ -82,46 +82,49 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Force</a> _tmp = {0,0,0};</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i : _forces)</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        _tmp += i;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> _tmp;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        std::cout &lt;&lt; i &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        _tmp = _tmp + i;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::cout &lt;&lt; _tmp &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_spring.html#a57dd8763646d13954999b43a11ce1689">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_p_h_y_s_1_1_spring.html#a57dd8763646d13954999b43a11ce1689">PHYS::Spring::Update</a>()</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i{0}; i&lt;_attachments.size(); ++i)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        _points[i] = _attachments[i]-&gt;getPosition();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Force</a> PHYS::Spring::forceSpring()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Coordinate</a> Dir = _points[1]-_points[0];</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> r = Dir.magnitude();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> dx = r-_length_at_rest;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Force</a> F = -1*<a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a>(_spring_constant*dx*(Dir/r));</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> F;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> _tmp;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_spring.html#a57dd8763646d13954999b43a11ce1689">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_p_h_y_s_1_1_spring.html#a57dd8763646d13954999b43a11ce1689">PHYS::Spring::Update</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i{0}; i&lt;_attachments.size(); ++i)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        _points[i] = _attachments[i]-&gt;getPosition();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Force</a> PHYS::Spring::forceSpring()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Coordinate</a> Dir = _points[1]-_points[0];</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> r = Dir.magnitude();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> dx = r-_length_at_rest;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Force</a> F = -1*<a class="code" href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a>(_spring_constant*dx*(Dir/r));</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f">PHYS::Spring::Attach</a>(<a class="code" href="class_p_h_y_s_1_1_object.html">PHYS::Object</a>* other)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_cartesian.html">Force</a> _tmp = this-&gt;forceSpring();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    other-&gt;<a class="code" href="class_p_h_y_s_1_1_object.html#af5b7ded50ccf2d57116533218554ff3e">applyForce</a>(_tmp);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    _attachments.push_back(other);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    this-&gt;Update();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> F;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f">PHYS::Spring::Attach</a>(<a class="code" href="class_p_h_y_s_1_1_object.html">PHYS::Object</a>* other)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_p_h_y_s_1_1_cartesian.html">Force</a> _tmp = this-&gt;forceSpring();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    other-&gt;<a class="code" href="class_p_h_y_s_1_1_object.html#af5b7ded50ccf2d57116533218554ff3e">applyForce</a>(_tmp);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    _attachments.push_back(other);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    this-&gt;Update();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_p_h_y_s_1_1_object_html_af5b7ded50ccf2d57116533218554ff3e"><div class="ttname"><a href="class_p_h_y_s_1_1_object.html#af5b7ded50ccf2d57116533218554ff3e">PHYS::Object::applyForce</a></div><div class="ttdeci">void applyForce(Force &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8cxx_source.html#l00003">ClassicalMechanics.cxx:3</a></div></div>
 <div class="ttc" id="aclass_p_h_y_s_1_1_object_html"><div class="ttname"><a href="class_p_h_y_s_1_1_object.html">PHYS::Object</a></div><div class="ttdoc">Object Class.</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8hxx_source.html#l00025">ClassicalMechanics.hxx:25</a></div></div>
-<div class="ttc" id="aclass_p_h_y_s_1_1_cartesian_html"><div class="ttname"><a href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a></div><div class="ttdoc">Cartesian Class.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8hxx_source.html#l00052">Vector.hxx:52</a></div></div>
-<div class="ttc" id="aclass_p_h_y_s_1_1_spring_html_a57dd8763646d13954999b43a11ce1689"><div class="ttname"><a href="class_p_h_y_s_1_1_spring.html#a57dd8763646d13954999b43a11ce1689">PHYS::Spring::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Update the Spring co-ordinates based on attached objects.</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8cxx_source.html#l00019">ClassicalMechanics.cxx:19</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_cartesian_html"><div class="ttname"><a href="class_p_h_y_s_1_1_cartesian.html">PHYS::Cartesian</a></div><div class="ttdoc">Cartesian Class.</div><div class="ttdef"><b>Definition:</b> <a href="_vector_8hxx_source.html#l00055">Vector.hxx:55</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_spring_html_a57dd8763646d13954999b43a11ce1689"><div class="ttname"><a href="class_p_h_y_s_1_1_spring.html#a57dd8763646d13954999b43a11ce1689">PHYS::Spring::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Update the Spring co-ordinates based on attached objects.</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8cxx_source.html#l00022">ClassicalMechanics.cxx:22</a></div></div>
 <div class="ttc" id="aclass_p_h_y_s_1_1_object_html_a26dbabfd6aebaf70447b36bb161f810d"><div class="ttname"><a href="class_p_h_y_s_1_1_object.html#a26dbabfd6aebaf70447b36bb161f810d">PHYS::Object::resolve</a></div><div class="ttdeci">const Force resolve() const</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8cxx_source.html#l00008">ClassicalMechanics.cxx:8</a></div></div>
-<div class="ttc" id="aclass_p_h_y_s_1_1_spring_html_a4a7dc12ff1776cefe998c368efa7b50f"><div class="ttname"><a href="class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f">PHYS::Spring::Attach</a></div><div class="ttdeci">void Attach(Object *other)</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8cxx_source.html#l00039">ClassicalMechanics.cxx:39</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_spring_html_a4a7dc12ff1776cefe998c368efa7b50f"><div class="ttname"><a href="class_p_h_y_s_1_1_spring.html#a4a7dc12ff1776cefe998c368efa7b50f">PHYS::Spring::Attach</a></div><div class="ttdeci">void Attach(Object *other)</div><div class="ttdef"><b>Definition:</b> <a href="_classical_mechanics_8cxx_source.html#l00042">ClassicalMechanics.cxx:42</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

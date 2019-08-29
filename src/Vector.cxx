@@ -78,7 +78,7 @@ const PHYS::Spherical PHYS::Cartesian::inSphericalPolar() const
     const double theta = acos((*this)[0]/r);
     const double phi = atan((*this)[1]/(*this)[0]);
 
-    return Spherical(r, theta, phi);
+    return PHYS::Spherical(r, theta, phi);
 }
 
 const PHYS::Cartesian PHYS::Spherical::inCartesian() const
@@ -87,7 +87,7 @@ const PHYS::Cartesian PHYS::Spherical::inCartesian() const
     const double y = (*this)[0]*sin((*this)[1])*sin((*this)[2]);
     const double z = (*this)[0]*cos((*this)[1]);
 
-    return Cartesian(x, y, z);
+    return PHYS::Cartesian(x, y, z);
 }
 
 const double PHYS::Spherical::magnitude() const

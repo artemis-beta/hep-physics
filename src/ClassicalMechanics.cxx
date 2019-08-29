@@ -10,8 +10,11 @@ const PHYS::Force PHYS::Object::resolve() const
     PHYS::Force _tmp = {0,0,0};
     for(auto i : _forces)
     {
-        _tmp += i;
+        std::cout << i << std::endl;
+        _tmp = _tmp + i;
     }
+
+    std::cout << _tmp << std::endl;
 
     return _tmp;
 }

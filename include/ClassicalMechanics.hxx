@@ -67,6 +67,7 @@ namespace PHYS
                 _mass(mass),
                 _radius(radius)
                 {}
+            const double M() const {return _mass;}
     };
 
     /*! @brief  Spring Class

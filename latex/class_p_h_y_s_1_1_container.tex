@@ -1,0 +1,105 @@
+\hypertarget{class_p_h_y_s_1_1_container}{}\doxysection{P\+H\+YS\+::Container Class Reference}
+\label{class_p_h_y_s_1_1_container}\index{PHYS::Container@{PHYS::Container}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_container_af8d3cb7a837e672e7fd3ec23a2483661}{Container}} (const double x, const double y, const double z)
+\item 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_container_ad69965f3c1750a00bb7f0f9dc42a3e09}{Fill}} (const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}} \&molecule, const double mass)
+\item 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_container_a5a2eeb30d405ba47d3e6f9d0e151b6e3}{set\+Temperature}} (const double temperature)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}\label{class_p_h_y_s_1_1_container_addecbef33bc34bd993de8915e5b35fb8}} 
+const double {\bfseries get\+Volume} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}\label{class_p_h_y_s_1_1_container_a43a336a10c4f60e1725cecc4d72e6885}} 
+const double {\bfseries get\+N\+Moles} (const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}} \&molecule)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}\label{class_p_h_y_s_1_1_container_a19158dccf53f96083f0f12d4c648a98f}} 
+const double {\bfseries get\+Pressure} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_acacda8373dbeed377f06c01e8b73070c}\label{class_p_h_y_s_1_1_container_acacda8373dbeed377f06c01e8b73070c}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} {\bfseries \+\_\+dimensions}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_abe5a8bbce9e3d729b14a47ef4302224c}\label{class_p_h_y_s_1_1_container_abe5a8bbce9e3d729b14a47ef4302224c}} 
+\mbox{\hyperlink{namespace_p_h_y_s_adfa5b026653af575e504e3e64ccfa2ef}{Occupancy}} {\bfseries \+\_\+contents}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_aeba3e930c6f2f511df6f238aec919173}\label{class_p_h_y_s_1_1_container_aeba3e930c6f2f511df6f238aec919173}} 
+bool {\bfseries is\+\_\+empty} = true
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a75a0740f191dd9f86ce00985f194060a}\label{class_p_h_y_s_1_1_container_a75a0740f191dd9f86ce00985f194060a}} 
+double {\bfseries \+\_\+temperature} = 298$\ast$P\+H\+Y\+S\+::\+Units\+::K
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Thermodynamics.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_af8d3cb7a837e672e7fd3ec23a2483661}\label{class_p_h_y_s_1_1_container_af8d3cb7a837e672e7fd3ec23a2483661}} 
+\index{PHYS::Container@{PHYS::Container}!Container@{Container}}
+\index{Container@{Container}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{Container()}{Container()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+Container\+::\+Container (\begin{DoxyParamCaption}\item[{const double}]{x,  }\item[{const double}]{y,  }\item[{const double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Define a new container, the starting temperature is set to be room temperature at 298K 
+\begin{DoxyParams}{Parameters}
+{\em x} & length \\
+\hline
+{\em y} & width \\
+\hline
+{\em z} & height \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Thermodynamics.\+hxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_ad69965f3c1750a00bb7f0f9dc42a3e09}\label{class_p_h_y_s_1_1_container_ad69965f3c1750a00bb7f0f9dc42a3e09}} 
+\index{PHYS::Container@{PHYS::Container}!Fill@{Fill}}
+\index{Fill@{Fill}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{Fill()}{Fill()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Container\+::\+Fill (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}} \&}]{molecule,  }\item[{const double}]{mass }\end{DoxyParamCaption})}
+
+Fill container with a molecule 
+\begin{DoxyParams}{Parameters}
+{\em molecule} & The molecule to add to the container \\
+\hline
+{\em quantity} & The amount of the molecule to add by mass \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Thermodynamics.\+cxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_container_a5a2eeb30d405ba47d3e6f9d0e151b6e3}\label{class_p_h_y_s_1_1_container_a5a2eeb30d405ba47d3e6f9d0e151b6e3}} 
+\index{PHYS::Container@{PHYS::Container}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!PHYS::Container@{PHYS::Container}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Container\+::set\+Temperature (\begin{DoxyParamCaption}\item[{const double}]{temperature }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set temperature within container 
+\begin{DoxyParams}{Parameters}
+{\em temperature} & Set the temperature to a value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Thermodynamics.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Thermodynamics.\+hxx\item 
+src/Thermodynamics.\+cxx\end{DoxyCompactItemize}

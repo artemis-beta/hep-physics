@@ -7,6 +7,8 @@
 \item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_elements}{Elements}}
 \item 
+ \mbox{\hyperlink{namespace_p_h_y_s_1_1_molecules}{Molecules}}
+\item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_particles}{Particles}}
 \item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_units}{Units}}
@@ -14,8 +16,12 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} Class. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} Class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_p_h_y_s_1_1_container}{Container}}
+\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Channel Class. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table}{Decay\+Table}}
@@ -41,14 +47,28 @@ class \mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{namespace_p_h_y_s_a6932723b7f0fc22e62d3a412b8ce26cd}\label{namespace_p_h_y_s_a6932723b7f0fc22e62d3a412b8ce26cd}} 
+typedef \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} {\bfseries Ion}
+\item 
 \mbox{\Hypertarget{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}\label{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}} 
 typedef \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} \mbox{\hyperlink{namespace_p_h_y_s_a11cb18137baafd58f06085072da1ab48}{Force}}
 \begin{DoxyCompactList}\small\item\em Force on a classical body. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}\label{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}} 
 typedef \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} \mbox{\hyperlink{namespace_p_h_y_s_a7955e683507b5aa5af79e89bf5fc390f}{Coordinate}}
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} Co-\/ordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} Co-\/ordinates. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}}, double $>$ \mbox{\hyperlink{namespace_p_h_y_s_adfa5b026653af575e504e3e64ccfa2ef}{Occupancy}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_container}{Container}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_a86aa6f4cb800e140b3ada01beece04e0}\label{namespace_p_h_y_s_a86aa6f4cb800e140b3ada01beece04e0}} 
+bool {\bfseries operator$<$} (\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} const \&a, \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} const \&b)
+\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_aafe7fd220da671ad2f3ff3f5206659c2}\label{namespace_p_h_y_s_aafe7fd220da671ad2f3ff3f5206659c2}} 
+bool {\bfseries operator$>$} (\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} const \&a, \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} const \&b)
+\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_a41bbc6c8e484902acc344e6d0f38f64f}\label{namespace_p_h_y_s_a41bbc6c8e484902acc344e6d0f38f64f}} 
+bool {\bfseries operator==} (\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} const \&a, \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} const \&b)
 \item 
 \mbox{\Hypertarget{namespace_p_h_y_s_a64624fde7afa971896ad7c4a849f45e3}\label{namespace_p_h_y_s_a64624fde7afa971896ad7c4a849f45e3}} 
 std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} \&d)
@@ -81,6 +101,35 @@ M\+IT License
 \begin{DoxyDate}{Date}
 last modified 2019-\/08-\/26 
 \end{DoxyDate}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespace_p_h_y_s_adfa5b026653af575e504e3e64ccfa2ef}\label{namespace_p_h_y_s_adfa5b026653af575e504e3e64ccfa2ef}} 
+\index{PHYS@{PHYS}!Occupancy@{Occupancy}}
+\index{Occupancy@{Occupancy}!PHYS@{PHYS}}
+\doxysubsubsection{\texorpdfstring{Occupancy}{Occupancy}}
+{\footnotesize\ttfamily typedef std\+::map$<$const \mbox{\hyperlink{class_p_h_y_s_1_1_molecules_1_1_molecule}{P\+H\+Y\+S\+::\+Molecules\+::\+Molecule}}, double$>$ \mbox{\hyperlink{namespace_p_h_y_s_adfa5b026653af575e504e3e64ccfa2ef}{P\+H\+Y\+S\+::\+Occupancy}}}
+
+
+
+\mbox{\hyperlink{class_p_h_y_s_1_1_container}{Container}} Class. 
+
+Class representing a container for holding a compound \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/28 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+Definition at line 17 of file Thermodynamics.\+hxx.
+
 
 
 \doxysubsection{Function Documentation}

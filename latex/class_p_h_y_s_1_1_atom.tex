@@ -1,0 +1,132 @@
+\hypertarget{class_p_h_y_s_1_1_atom}{}\doxysection{P\+H\+YS\+::Atom Class Reference}
+\label{class_p_h_y_s_1_1_atom}\index{PHYS::Atom@{PHYS::Atom}}
+
+
+\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} Class.  
+
+
+
+
+{\ttfamily \#include $<$Atom.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_atom_aa712a94313b47867344f2d63842c326f}{Atom}} (const \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{P\+H\+Y\+S\+::\+Nucleus}} \&n)
+\item 
+void \mbox{\hyperlink{class_p_h_y_s_1_1_atom_ae128071d4b7ed6d56470fd8e717cd43a}{add\+Electrons}} (const int n\+\_\+electrons)
+\item 
+const bool \mbox{\hyperlink{class_p_h_y_s_1_1_atom_a78810683df0619a520321a6d567b1711}{is\+Ion}} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_a7a6f23b8d22e01e3778b1cdcec1a2248}\label{class_p_h_y_s_1_1_atom_a7a6f23b8d22e01e3778b1cdcec1a2248}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} {\bfseries get\+Nucleus} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_acb7caf6095db0e7fdf3e53904a998e0f}\label{class_p_h_y_s_1_1_atom_acb7caf6095db0e7fdf3e53904a998e0f}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} \&other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_a62bc412bbde79441259e70a87709d9d4}\label{class_p_h_y_s_1_1_atom_a62bc412bbde79441259e70a87709d9d4}} 
+const double {\bfseries A} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_a80e9f013be6673d57be915f3b5db2260}\label{class_p_h_y_s_1_1_atom_a80e9f013be6673d57be915f3b5db2260}} 
+const double {\bfseries Z} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_ad0dc41f4047c999163397d6f5e9f75cf}\label{class_p_h_y_s_1_1_atom_ad0dc41f4047c999163397d6f5e9f75cf}} 
+const double {\bfseries M} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_ae667d6534d613c60980ece45be926366}\label{class_p_h_y_s_1_1_atom_ae667d6534d613c60980ece45be926366}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{P\+H\+Y\+S\+::\+Nucleus}} {\bfseries \+\_\+nucleus}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_a40e126a72fdbe2385a5e0448346f72ed}\label{class_p_h_y_s_1_1_atom_a40e126a72fdbe2385a5e0448346f72ed}} 
+int {\bfseries \+\_\+n\+\_\+electrons}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_a7bcdf8628c42b3d87c400fd7b6e024da}\label{class_p_h_y_s_1_1_atom_a7bcdf8628c42b3d87c400fd7b6e024da}} 
+bool {\bfseries \+\_\+is\+\_\+ion} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_aedfb6e02ddbfc4af6da58aa2d5d9ec1a}\label{class_p_h_y_s_1_1_atom_aedfb6e02ddbfc4af6da58aa2d5d9ec1a}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} \&a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} Class. 
+
+Sister class of \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} representing an atom or ion with electrons \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/08-\/28 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+Definition at line 16 of file Atom.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_aa712a94313b47867344f2d63842c326f}\label{class_p_h_y_s_1_1_atom_aa712a94313b47867344f2d63842c326f}} 
+\index{PHYS::Atom@{PHYS::Atom}!Atom@{Atom}}
+\index{Atom@{Atom}!PHYS::Atom@{PHYS::Atom}}
+\doxysubsubsection{\texorpdfstring{Atom()}{Atom()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+Atom\+::\+Atom (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{P\+H\+Y\+S\+::\+Nucleus}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Define a new atom using a given nucleus. The number of electrons will be set to be equal to the number of protons of the nucleus 
+\begin{DoxyParams}{Parameters}
+{\em n} & \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} for the defined atom \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Atom.\+hxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_ae128071d4b7ed6d56470fd8e717cd43a}\label{class_p_h_y_s_1_1_atom_ae128071d4b7ed6d56470fd8e717cd43a}} 
+\index{PHYS::Atom@{PHYS::Atom}!addElectrons@{addElectrons}}
+\index{addElectrons@{addElectrons}!PHYS::Atom@{PHYS::Atom}}
+\doxysubsubsection{\texorpdfstring{addElectrons()}{addElectrons()}}
+{\footnotesize\ttfamily void P\+H\+Y\+S\+::\+Atom\+::add\+Electrons (\begin{DoxyParamCaption}\item[{const int}]{n\+\_\+electrons }\end{DoxyParamCaption})}
+
+Add/\+Remove electrons to the atom making it an ion 
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+electrons} & Can be positive or negative integer for adding/removing electrons \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 3 of file Atom.\+cxx.
+
+\mbox{\Hypertarget{class_p_h_y_s_1_1_atom_a78810683df0619a520321a6d567b1711}\label{class_p_h_y_s_1_1_atom_a78810683df0619a520321a6d567b1711}} 
+\index{PHYS::Atom@{PHYS::Atom}!isIon@{isIon}}
+\index{isIon@{isIon}!PHYS::Atom@{PHYS::Atom}}
+\doxysubsubsection{\texorpdfstring{isIon()}{isIon()}}
+{\footnotesize\ttfamily const bool P\+H\+Y\+S\+::\+Atom\+::is\+Ion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns whether given atom is an ion \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Atom.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Atom.\+hxx\item 
+src/Atom.\+cxx\end{DoxyCompactItemize}

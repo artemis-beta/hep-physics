@@ -74,6 +74,8 @@ namespace PHYS
         extern const double l_planck;
         //! Atomic mass unit
         extern const double u;
+        //! Gas Constant
+        extern const double R;
     }
 }
 

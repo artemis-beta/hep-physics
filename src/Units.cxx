@@ -58,8 +58,8 @@ const extern double PHYS::Units::H = Wb/A;
 const extern double PHYS::Units::esu = pow(2.99792458E-9, -1)*C;
 
 const extern double PHYS::Units::K = 1.;
-const extern double PHYS::Units::Celsius = -273.15;
-const extern double PHYS::Units::Fahrenheit = 33.8*Celsius;
+const extern double PHYS::Units::Celsius(const double& kelvin) {return kelvin+273.15;}
+const extern double PHYS::Units::Fahrenheit(const double& kelvin){return 33.8*Celsius(kelvin);}
 
 const extern double PHYS::Units::T = Wb*pow(m, -2);
 const extern double PHYS::Units::G = 1E-4*T;
@@ -83,3 +83,5 @@ const extern double PHYS::Units::Gy = J*pow(kg, -1);
 const extern double PHYS::Units::Sv = J*pow(kg, -1);
 
 const extern double PHYS::Units::kat = 1.;
+
+const extern double PHYS::Units::mol = 1.;

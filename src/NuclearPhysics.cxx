@@ -26,3 +26,14 @@ const double PHYS::fracIsotopesAt(const Isotope* i, const double time)
 {
     return exp(-time/i->getHalfLife());
 }
+
+PHYS::Nucleus& PHYS::Nucleus::operator= (const PHYS::Nucleus& other)
+{
+    _name = other._name;
+    _n_neutrons = other._n_neutrons;
+    _n_protons = other._n_protons;
+    _atomic_mass = other._atomic_mass;
+
+    return *this;
+
+}

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <cmath>
+#include <iostream>
 
 #include "Constants.hxx"
 
@@ -18,10 +19,10 @@ namespace PHYS
     class Nucleus
     {
         private:
-            const std::string _name;
-            const int _n_protons;
-            const int _n_neutrons;
-            const double _atomic_mass;
+            std::string _name;
+            int _n_protons;
+            int _n_neutrons;
+            double _atomic_mass;
         public:
             /*! Create a new nucleus object
             @param name          Symbol/Name of nucleus
@@ -32,9 +33,12 @@ namespace PHYS
                     _name(name), 
                     _n_protons(atomic_number),
                     _n_neutrons(round(atomic_mass)),
-                    _atomic_mass(atomic_mass) {};
+                    _atomic_mass(atomic_mass) 
+                    {
+                        if(_n_protons == 0) throw std::runtime_error("Can not create Nucleus with atomic number 0");
+                        else if(_atomic_mass <= 0) throw std::runtime_error("Can not create Nucleus with 0 or negative atomic mass");
+                    }
 
-            //! Get name of nucleus
             const std::string getName() const {return _name;}
             //! Get number of neutrons @f$N@f$
             const int N() const {return _n_neutrons;}
@@ -46,6 +50,15 @@ namespace PHYS
             const double M() const {return _atomic_mass;}
             //! Get the mass defect for the nucleus
             const double mass_defect() const;
+
+            Nucleus& operator= (const Nucleus& other);
+
+            friend std::ostream& operator<< (std::ostream& o, const Nucleus& n)
+            {
+                o << n.getName() << "[Z:  " << n.Z() << ", A: " << n.M() << "]";
+
+                return o;
+            }
     };
 
     /*! @brief  Isotope Subclass

@@ -25,8 +25,8 @@ Inheritance diagram for P\+H\+YS\+::Nucleus\+:
 \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a143a4bef306cf0de13312556df462b79}{Nucleus}} (const std\+::string name, const int atomic\+\_\+number, const double atomic\+\_\+mass)
 \item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a1a38fb9393f4cda69d6bb80fa4185906}\label{class_p_h_y_s_1_1_nucleus_a1a38fb9393f4cda69d6bb80fa4185906}} 
-const std\+::string \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a1a38fb9393f4cda69d6bb80fa4185906}{get\+Name}} () const
-\begin{DoxyCompactList}\small\item\em Get name of nucleus. \end{DoxyCompactList}\item 
+const std\+::string {\bfseries get\+Name} () const
+\item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a45606d2819bbbcd0e953271badd2bb4f}\label{class_p_h_y_s_1_1_nucleus_a45606d2819bbbcd0e953271badd2bb4f}} 
 const int \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a45606d2819bbbcd0e953271badd2bb4f}{N}} () const
 \begin{DoxyCompactList}\small\item\em Get number of neutrons $N$. \end{DoxyCompactList}\item 
@@ -41,21 +41,30 @@ const double \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_a4d599568309064b553a5ad7
 \begin{DoxyCompactList}\small\item\em Get atomic mass. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_aa45585f13960e14e4dd3b4d0ea13eccd}\label{class_p_h_y_s_1_1_nucleus_aa45585f13960e14e4dd3b4d0ea13eccd}} 
 const double \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus_aa45585f13960e14e4dd3b4d0ea13eccd}{mass\+\_\+defect}} () const
-\begin{DoxyCompactList}\small\item\em Get the mass defect for the nucleus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the mass defect for the nucleus. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_affb2499833dc40a91c7cc5f2ab1a85d9}\label{class_p_h_y_s_1_1_nucleus_affb2499833dc40a91c7cc5f2ab1a85d9}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} \&other)
+\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a22c443f076c97e983f7cad14b1be1bc3}\label{class_p_h_y_s_1_1_nucleus_a22c443f076c97e983f7cad14b1be1bc3}} 
-const std\+::string {\bfseries \+\_\+name}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a80cb9b3a7e6b83f57b1af53cd441edb2}\label{class_p_h_y_s_1_1_nucleus_a80cb9b3a7e6b83f57b1af53cd441edb2}} 
+std\+::string {\bfseries \+\_\+name}
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_abc99f20980d263ead399f9806105ca36}\label{class_p_h_y_s_1_1_nucleus_abc99f20980d263ead399f9806105ca36}} 
-const int {\bfseries \+\_\+n\+\_\+protons}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a92af320243eda1c33a9c1f10e04e3882}\label{class_p_h_y_s_1_1_nucleus_a92af320243eda1c33a9c1f10e04e3882}} 
+int {\bfseries \+\_\+n\+\_\+protons}
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a201135204a5281469e06b3abae902c33}\label{class_p_h_y_s_1_1_nucleus_a201135204a5281469e06b3abae902c33}} 
-const int {\bfseries \+\_\+n\+\_\+neutrons}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_ab5a724174dac546fa0ef8b298e14dfa6}\label{class_p_h_y_s_1_1_nucleus_ab5a724174dac546fa0ef8b298e14dfa6}} 
+int {\bfseries \+\_\+n\+\_\+neutrons}
 \item 
-\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a93f767ee2624f92622f1572cb3015c9c}\label{class_p_h_y_s_1_1_nucleus_a93f767ee2624f92622f1572cb3015c9c}} 
-const double {\bfseries \+\_\+atomic\+\_\+mass}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a1319b2413c3bd4facbb01fab00998722}\label{class_p_h_y_s_1_1_nucleus_a1319b2413c3bd4facbb01fab00998722}} 
+double {\bfseries \+\_\+atomic\+\_\+mass}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_nucleus_a6e06580b332e38c776050c918e41bc91}\label{class_p_h_y_s_1_1_nucleus_a6e06580b332e38c776050c918e41bc91}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&o, const \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} \&n)
 \end{DoxyCompactItemize}
 
 
@@ -76,7 +85,7 @@ M\+IT License
 \end{DoxyCopyright}
 
 
-Definition at line 18 of file Nuclear\+Physics.\+hxx.
+Definition at line 19 of file Nuclear\+Physics.\+hxx.
 
 
 
@@ -98,7 +107,7 @@ Create a new nucleus object
 \end{DoxyParams}
 
 
-Definition at line 31 of file Nuclear\+Physics.\+hxx.
+Definition at line 32 of file Nuclear\+Physics.\+hxx.
 
 
 

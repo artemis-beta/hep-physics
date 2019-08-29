@@ -42,6 +42,9 @@ namespace PHYS
             }
     };
 
+    class Spherical;
+    class Cartesian;
+
     /*! @brief  Cartesian Class
 	@details    Subclass of Vector for Cartesian co-ordinates 
 	@version    0.1.0

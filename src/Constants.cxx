@@ -26,3 +26,5 @@ extern const double PHYS::Constants::exp = 2.718281828459045235;
 extern const double PHYS::Constants::m_planck = pow(PHYS::Constants::hbar*PHYS::Constants::c/PHYS::Constants::G, 0.5);
 extern const double PHYS::Constants::l_planck = pow(PHYS::Constants::hbar*PHYS::Constants::G/pow(PHYS::Constants::c, 3), 0.5);
 extern const double PHYS::Constants::u = 1.66053906660E-27*PHYS::Units::kg;
+extern const double PHYS::Constants::R = 8.31411*PHYS::Units::J*pow(PHYS::Units::K*PHYS::Units::mol, -1);
+    

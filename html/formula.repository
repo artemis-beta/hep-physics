@@ -1,75 +1,76 @@
 \form#0:$ B_c $
 \form#1:$k$
-\form#2:$\gamma$
-\form#3:$g$
-\form#4:$W^{+}$
-\form#5:$Z^0$
-\form#6:$H$
-\form#7:$e^-$
-\form#8:$\mu^-$
-\form#9:$\tau^-$
-\form#10:$ \nu_{e} $
-\form#11:$ \nu_{ \mu } $
-\form#12:$ \nu_{ \tau } $
-\form#13:$ K^{+} $
-\form#14:$ \phi(1020) $
-\form#15:$ \eta $
-\form#16:$ \pi^{+} $
-\form#17:$ \pi^{0} $
-\form#18:$ D^{+} $
-\form#19:$ D^{0} $
-\form#20:$ D_s $
-\form#21:$ B^{+} $
-\form#22:$ B^{0} $
-\form#23:$ B_s $
-\form#24:$ p $
-\form#25:$ n $
-\form#26:$ \Lambda $
-\form#27:$ \Lambda_{b}^{0} $
-\form#28:$ \Sigma^{0} $
-\form#29:$ \Sigma^{+} $
-\form#30:$ \Xi^{0} $
-\form#31:$ \Xi^{+} $
-\form#32:$ \Omega $
-\form#33:$ \Lambda_c $
-\form#34:$\pi$
-\form#35:$ c$
-\form#36:$N_A$
-\form#37:$h$
-\form#38:$\hbar$
-\form#39:$m_e$
-\form#40:$m_p$
-\form#41:$\epsilon_0$
-\form#42:$\mu_0$
-\form#43:$ \alpha$
-\form#44:$r_e$
-\form#45:$r_{Bohr}$
-\form#46:$\sigma_T$
-\form#47:$\mu_B$
-\form#48:$G$
-\form#49:$ k$
-\form#50:$b$
-\form#51:$\sigma$
-\form#52:$\alpha_s$
-\form#53:$ K^{\pm} $
-\form#54:$(x_0, x_1, x_2, x_3)$
-\form#55:$ r = \sqrt{x_0^2-x_1^2-x_2^2-x_3^2} $
-\form#56:$ \frac{\mathrm{BE}}{A\cdot MeV} = a_v - \frac{a_s}{A^{1/3}} - a_c\frac{Z^2}{A^{4/3}}-a_a\frac{(N-Z)^2}{A^{2}} \pm \frac{a_p}{A^{3/2}} $
-\form#57:$t$
-\form#58:$ \frac{N(t)}{N_0} = e^{-t/\lambda}$
-\form#59:$Z$
-\form#60:$N$
-\form#61:$A$
-\form#62:$ Z$
-\form#63:$\lambda$
-\form#64:$ \phi $
-\form#65:$ y = \frac{1}{2}\log{\left(\frac{E+p_z}{E-p_z}\right)} $
-\form#66:$ \eta = -\log{\left(\tan\frac{\theta}{2}\right)} $
-\form#67:$\theta $
-\form#68:$x-z $
-\form#69:$p_T $
-\form#70:$p$
-\form#71:$\beta = \frac{p_i}{E} $
-\form#72:$ c $
-\form#73:$ (x,y,z) $
-\form#74:$\gamma $
+\form#2:$u$
+\form#3:$\gamma$
+\form#4:$g$
+\form#5:$W^{+}$
+\form#6:$Z^0$
+\form#7:$H$
+\form#8:$e^-$
+\form#9:$\mu^-$
+\form#10:$\tau^-$
+\form#11:$ \nu_{e} $
+\form#12:$ \nu_{ \mu } $
+\form#13:$ \nu_{ \tau } $
+\form#14:$ K^{+} $
+\form#15:$ \phi(1020) $
+\form#16:$ \eta $
+\form#17:$ \pi^{+} $
+\form#18:$ \pi^{0} $
+\form#19:$ D^{+} $
+\form#20:$ D^{0} $
+\form#21:$ D_s $
+\form#22:$ B^{+} $
+\form#23:$ B^{0} $
+\form#24:$ B_s $
+\form#25:$ p $
+\form#26:$ n $
+\form#27:$ \Lambda $
+\form#28:$ \Lambda_{b}^{0} $
+\form#29:$ \Sigma^{0} $
+\form#30:$ \Sigma^{+} $
+\form#31:$ \Xi^{0} $
+\form#32:$ \Xi^{+} $
+\form#33:$ \Omega $
+\form#34:$ \Lambda_c $
+\form#35:$\pi$
+\form#36:$ c$
+\form#37:$N_A$
+\form#38:$h$
+\form#39:$\hbar$
+\form#40:$m_e$
+\form#41:$m_p$
+\form#42:$\epsilon_0$
+\form#43:$\mu_0$
+\form#44:$ \alpha$
+\form#45:$r_e$
+\form#46:$r_{Bohr}$
+\form#47:$\sigma_T$
+\form#48:$\mu_B$
+\form#49:$G$
+\form#50:$ k$
+\form#51:$b$
+\form#52:$\sigma$
+\form#53:$\alpha_s$
+\form#54:$ K^{\pm} $
+\form#55:$(x_0, x_1, x_2, x_3)$
+\form#56:$ r = \sqrt{x_0^2-x_1^2-x_2^2-x_3^2} $
+\form#57:$ \frac{\mathrm{BE}}{A\cdot MeV} = a_v - \frac{a_s}{A^{1/3}} - a_c\frac{Z^2}{A^{4/3}}-a_a\frac{(N-Z)^2}{A^{2}} \pm \frac{a_p}{A^{3/2}} $
+\form#58:$t$
+\form#59:$ \frac{N(t)}{N_0} = e^{-t/\lambda}$
+\form#60:$Z$
+\form#61:$N$
+\form#62:$A$
+\form#63:$ Z$
+\form#64:$\lambda$
+\form#65:$ \phi $
+\form#66:$ y = \frac{1}{2}\log{\left(\frac{E+p_z}{E-p_z}\right)} $
+\form#67:$ \eta = -\log{\left(\tan\frac{\theta}{2}\right)} $
+\form#68:$\theta $
+\form#69:$x-z $
+\form#70:$p_T $
+\form#71:$p$
+\form#72:$\beta = \frac{p_i}{E} $
+\form#73:$ c $
+\form#74:$ (x,y,z) $
+\form#75:$\gamma $
