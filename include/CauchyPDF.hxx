@@ -16,7 +16,7 @@ namespace PHYS
 {
     namespace PDF
     {
-        /*! @brief  Cauchy Class
+        /*! @brief  Cauchy PDF Class
         @details    Class representing the Cauchy/Breit-Wigner PDF
         @version    0.1.0
         @author     Kristian Zarebski

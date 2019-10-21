@@ -16,8 +16,8 @@ namespace PHYS
 {
     namespace PDF
     {
-        /*! @brief  Exponential Class
-        @details    Class representing the Cauchy/Breit-Wigner PDF
+        /*! @brief  Exponential PDF Class
+        @details    Class representing the Exponential PDF
         @version    0.1.0
         @author     Kristian Zarebski
         @date 	    last modified 2019-10-21
@@ -27,7 +27,7 @@ namespace PHYS
         {
             public:
                 Exponential(const double lambda) :
-                    ProbabilityDensityFunction("Cauchy", {lambda},_expo_invcdf){}
+                    ProbabilityDensityFunction("Exponential", {lambda},_expo_invcdf){}
         };
     };
 };

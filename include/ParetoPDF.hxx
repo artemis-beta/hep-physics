@@ -15,7 +15,7 @@ namespace PHYS
 {
     namespace PDF
     {
-        /*! @brief  Pareto Class
+        /*! @brief  Pareto PDF Class
         @details    Class representing the Pareto PDF
         @version    0.1.0
         @author     Kristian Zarebski
