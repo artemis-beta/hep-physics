@@ -1,6 +1,6 @@
 #include "PDF.hxx"
 
-const std::vector<double> PHYS::ProbabilityDensityFunction::generate(const int nevts)
+const std::vector<double> PHYS::PDF::ProbabilityDensityFunction::generate(const int nevts)
 {
     std::vector<double> _events;
     for(int i{0}; i < nevts; ++i)

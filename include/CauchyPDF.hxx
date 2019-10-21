@@ -3,13 +3,13 @@
 
 #include "PDF.hxx"
 #include "Constants.hxx"
-#include <math.h>
+#include <cmath>
 
 using namespace PHYS::PDF;
 
-const double _cauchy_cdf(const double x, const Params p)
+const double _cauchy_invcdf(const double x, const Params p)
 {
-    return pow(PHYS::Constants::pi, -1)*atan((x-p[0])/p[1]) + 0.5;
+    return p[1]*tan((x-0.5)*PHYS::Constants::pi)+p[0];
 }
 
 namespace PHYS
@@ -27,7 +27,7 @@ namespace PHYS
         {
             public:
                 Cauchy(const double x0, const double gamma) :
-                    ProbabilityDensityFunction("Cauchy", {x0, gamma},_cauchy_cdf){}
+                    ProbabilityDensityFunction("Cauchy", {x0, gamma},_cauchy_invcdf){}
         };
     };
 };
