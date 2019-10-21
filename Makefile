@@ -1,7 +1,7 @@
 CXX = g++ -std=c++17
 INCLUDE = -I include
 
-ORDERED_OBJ = obj/Units.o obj/Constants.o obj/LorentzVector.o obj/Vector.o obj/Particle.o obj/DecayTable.o obj/CommonParticles.o obj/NuclearPhysics.o obj/Atom.o obj/CommonNuclei.o obj/CommonMolecules.o obj/Thermodynamics.o obj/CommonCompounds.o obj/Hydrocarbons.o obj/ClassicalMechanics.o obj/KplusDecTable.o
+ORDERED_OBJ = obj/Units.o obj/Constants.o obj/LorentzVector.o obj/Vector.o obj/Particle.o obj/DecayTable.o obj/CommonParticles.o obj/NuclearPhysics.o obj/Atom.o obj/CommonNuclei.o obj/CommonMolecules.o obj/Thermodynamics.o obj/CommonCompounds.o obj/Hydrocarbons.o obj/ClassicalMechanics.o obj/KplusDecTable.o obj/PDF.o
 
 
 all:
@@ -14,6 +14,7 @@ all:
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/Mass_on_Spring.cxx -o binaries/Mass_on_Spring
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/GenKplusDec.cxx -o binaries/GenKplusDec
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/SUVAT_Example.cxx -o binaries/SUVAT_Example
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/PDFExample.cxx -o binaries/PDFExample
 
 clean:
 	rm -rf obj/ binaries/

@@ -1,0 +1,104 @@
+\hypertarget{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function}{}\doxysection{P\+H\+YS\+::P\+DF\+::Probability\+Density\+Function Class Reference}
+\label{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function}\index{PHYS::PDF::ProbabilityDensityFunction@{PHYS::PDF::ProbabilityDensityFunction}}
+
+
+\mbox{\hyperlink{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function}{Probability\+Density\+Function}} Class.  
+
+
+
+
+{\ttfamily \#include $<$P\+D\+F.\+hxx$>$}
+
+
+
+Inheritance diagram for P\+H\+YS\+::P\+DF\+::Probability\+Density\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a9a506d487dc8a2e66cc9135284dad366}{Probability\+Density\+Function}} (const std\+::string name, const Params params, const std\+::function$<$ double(double, std\+::vector$<$ double $>$)$>$ inv\+\_\+cdf)
+\item 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a71f4dab4e8235cb85db8006e35e84f84}{generate}} (const int nevts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a9feea74087f517bb711bc3e96cd7f4d4}\label{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a9feea74087f517bb711bc3e96cd7f4d4}} 
+const Params {\bfseries \+\_\+params}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_ab1909373037529874a218f3475874bd3}\label{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_ab1909373037529874a218f3475874bd3}} 
+const std\+::function$<$ double(double, std\+::vector$<$ double $>$)$>$ {\bfseries \+\_\+f}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function}{Probability\+Density\+Function}} Class. 
+
+Class to produce a \mbox{\hyperlink{namespace_p_h_y_s_1_1_p_d_f}{P\+DF}} for generating simulated datasets \begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Kristian Zarebski 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+last modified 2019-\/10-\/21 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+M\+IT License 
+\end{DoxyCopyright}
+
+
+Definition at line 36 of file P\+D\+F.\+hxx.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a9a506d487dc8a2e66cc9135284dad366}\label{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a9a506d487dc8a2e66cc9135284dad366}} 
+\index{PHYS::PDF::ProbabilityDensityFunction@{PHYS::PDF::ProbabilityDensityFunction}!ProbabilityDensityFunction@{ProbabilityDensityFunction}}
+\index{ProbabilityDensityFunction@{ProbabilityDensityFunction}!PHYS::PDF::ProbabilityDensityFunction@{PHYS::PDF::ProbabilityDensityFunction}}
+\doxysubsubsection{\texorpdfstring{ProbabilityDensityFunction()}{ProbabilityDensityFunction()}}
+{\footnotesize\ttfamily P\+H\+Y\+S\+::\+P\+D\+F\+::\+Probability\+Density\+Function\+::\+Probability\+Density\+Function (\begin{DoxyParamCaption}\item[{const std\+::string}]{name,  }\item[{const Params}]{params,  }\item[{const std\+::function$<$ double(double, std\+::vector$<$ double $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new nucleus object 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of \mbox{\hyperlink{namespace_p_h_y_s_1_1_p_d_f}{P\+DF}} \\
+\hline
+{\em params} & List of parameter values as an array of doubles \\
+\hline
+{\em inv\+\_\+cdf} & Inverse C\+DF defined using indices of parameter array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file P\+D\+F.\+hxx.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a71f4dab4e8235cb85db8006e35e84f84}\label{class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function_a71f4dab4e8235cb85db8006e35e84f84}} 
+\index{PHYS::PDF::ProbabilityDensityFunction@{PHYS::PDF::ProbabilityDensityFunction}!generate@{generate}}
+\index{generate@{generate}!PHYS::PDF::ProbabilityDensityFunction@{PHYS::PDF::ProbabilityDensityFunction}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily const std\+::vector$<$ double $>$ P\+H\+Y\+S\+::\+Probability\+Density\+Function\+::generate (\begin{DoxyParamCaption}\item[{const int}]{nevts }\end{DoxyParamCaption})}
+
+Generate values 
+\begin{DoxyParams}{Parameters}
+{\em nevts} & Number of values to generate using \mbox{\hyperlink{namespace_p_h_y_s_1_1_p_d_f}{P\+DF}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file P\+D\+F.\+cxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/P\+D\+F.\+hxx\item 
+src/P\+D\+F.\+cxx\end{DoxyCompactItemize}
