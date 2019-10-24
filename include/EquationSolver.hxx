@@ -13,6 +13,7 @@ namespace PHYS
         private:
             const char _symbol;
         public:
+            const char getSymbol() const{return _symbol;}
             var(const char& symbol) : _symbol(symbol) {}
 
             friend std::ostream& operator<< (std::ostream& os, const var& x)
@@ -37,6 +38,7 @@ namespace PHYS
         private:
             std::map<var, double> _components = std::map<var, double>();
             double _factor = 1;
+            const var* _var_from_char(char c) const;
         public:
             void setFactor(const double factor){_factor=factor;}
             double getFactor() const {return _factor;}
@@ -66,6 +68,22 @@ namespace PHYS
                 {
                     _components[var(x)] = 1.;
                 }
+            }
+
+            const std::map<var, double> getComponents() const {return _components;}
+
+            template <typename T>
+            double Solve(std::map<char, T>& values) const
+            {
+                composite _temp_comp(*this);
+                std::map<char, T> v = std::map<char, T>(values);
+                double _temp = 1;
+                for(auto i : v)
+                {   
+                    const var* xvar = _temp_comp._var_from_char(i.first);
+                    _temp *= pow(i.second, _temp_comp._components[*xvar]);
+                }
+                return _factor*_temp;
             }
 
             friend bool operator< (const composite& first, const composite& other)
@@ -145,6 +163,30 @@ namespace PHYS
             Equation(std::vector<composite> components, double number=0) : 
                 _components(components),
                 _numeric_component(number) {}
+
+            template <typename T>
+            double Solve(std::map<char, T> values) 
+            {
+                double _temp = 0;
+
+                for(auto& i : _components)
+                {
+                    const composite c(i);
+                    _temp += c.Solve(values);
+                }
+                _temp += _numeric_component;
+
+                return _temp;
+            }
+            double Solve(double value) const
+            {
+                Equation _temp(*this);
+                const var xvar_first = _temp.getComponents()[0].getComponents().begin()->first;
+                std::map<char, double> _values = {{xvar_first.getSymbol(), value}};
+                const double solution = _temp.Solve(_values);
+                return solution;
+            }
+            const std::vector<composite> getComponents() const {return _components;}
             
             friend std::ostream& operator<< (std::ostream& os, const Equation& eq)
             {
@@ -235,40 +277,11 @@ namespace PHYS
                 return _temp;
             }
 
-            Equation operator* (int other) const
-            {
-                Equation _temp(*this);
-                for(int i{0}; i<_temp._components.size(); ++i)
-                {
-                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
-                }
+            Equation operator* (int other) const;
+            Equation operator* (double other) const;
 
-                return _temp;
-            }
-
-            Equation operator* (double other) const
-            {
-                Equation _temp(*this);
-                for(int i{0}; i<_temp._components.size(); ++i)
-                {
-                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
-                }
-
-                return _temp;
-            }
-
-            friend Equation operator* (int other, const Equation& eq)
-            {
-                Equation _temp(eq);
-                for(int i{0}; i<_temp._components.size(); ++i)
-                {
-                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
-                }
-
-                return _temp;
-            }
-
-            friend Equation operator* (double other, const Equation& eq)
+            template <typename T>
+            friend Equation operator* (T other, const Equation& eq)
             {
                 Equation _temp(eq);
                 for(int i{0}; i<_temp._components.size(); ++i)
@@ -310,16 +323,6 @@ namespace PHYS
             }
 
         };
-
-    int PHYS::Equation::_find_composite(composite& composite)
-    {
-        for(int i{0}; i<_components.size(); ++i)
-        {
-            if(_components[i] == composite) return i;
-        }
-
-        return -1;
-    }
 
     const Equation X(std::vector<composite>({composite(std::map<char, double>({{'x', 1}}))}));
     const Equation Y(std::vector<composite>({composite(std::map<char, double>({{'y', 1}}))}));
