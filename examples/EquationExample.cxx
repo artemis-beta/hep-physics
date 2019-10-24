@@ -9,6 +9,6 @@ int main()
     Equation eq2 = 4*X+1;
     std::cout << "EQ1: " << eq << std::endl;
     std::cout << "EQ2: " << eq2 << std::endl;
-    std::cout << X*eq2 << std::endl;
+    std::cout << eq*eq2 << std::endl;
     return 0;
 }
