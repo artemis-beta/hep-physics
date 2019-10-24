@@ -39,7 +39,7 @@ namespace PHYS
             double _factor = 1;
         public:
             void setFactor(const double factor){_factor=factor;}
-            double getFactor(){return _factor;}
+            double getFactor() const {return _factor;}
             composite(std::map<var, double> parameters, double factor=1) : 
                 _components(parameters),
                 _factor(factor) {}
@@ -76,7 +76,8 @@ namespace PHYS
             friend std::ostream& operator<< (std::ostream& os, const composite& eq)
             {
                 if(abs(eq._factor) > 1) os << eq._factor;
-                if(eq._factor == 0)
+                else if(eq._factor == -1) os << "-";
+                else if(eq._factor == 0)
                 {
                     return os;
                 }
@@ -149,10 +150,12 @@ namespace PHYS
             {
                 for(int i{0}; i<eq._components.size(); ++i)
                 {
-                    if(i>0) os << " + ";
-                    os << eq._components[i];
+                    const composite f = composite(eq._components[i]);
+                    if(i>0 && f.getFactor() > 0) os << "+";
+                    os << f;
                 }
-                if(abs(eq._numeric_component) > 0) os << " + " << std::to_string(eq._numeric_component);
+                if(eq._numeric_component > 0) os << "+" << std::to_string(eq._numeric_component);
+                else if(eq._numeric_component < 0) os << std::to_string(eq._numeric_component);
 
                 return os;
             }
@@ -198,7 +201,15 @@ namespace PHYS
                     {
                         composite _temp_comp  = j;
                         _temp_comp.setFactor(this->_numeric_component*_temp_comp.getFactor());
-                        _temp._components.push_back(_temp_comp);
+                        const int index = _temp._find_composite(_temp_comp);
+                        if(index >= 0)
+                        {
+                            _temp._components[index].setFactor(_temp._components[index].getFactor()+_temp_comp.getFactor());
+                        }
+                        else
+                        {
+                            _temp._components.push_back(_temp_comp);
+                        }
                     }
                 }
                 if(other._numeric_component != 0)
@@ -207,7 +218,15 @@ namespace PHYS
                     {
                         composite _temp_comp  = i;
                         _temp_comp.setFactor(other._numeric_component*_temp_comp.getFactor());
-                        _temp._components.push_back(_temp_comp);
+                        const int index = _temp._find_composite(_temp_comp);
+                        if(index >= 0)
+                        {
+                            _temp._components[index].setFactor(_temp._components[index].getFactor()+_temp_comp.getFactor());
+                        }
+                        else
+                        {
+                            _temp._components.push_back(_temp_comp);
+                        }
                     }
                 }
             
@@ -260,7 +279,8 @@ namespace PHYS
                 return _temp;
             }
 
-            friend Equation operator+ (int other, Equation eq)
+            template <typename T>
+            friend Equation operator+ (T other, Equation eq)
             {
                 Equation _temp(eq);
                 _temp._numeric_component += other;
@@ -268,7 +288,8 @@ namespace PHYS
                 return _temp;
             }
 
-            friend Equation operator+ (Equation eq, int other)
+            template <typename T>
+            friend Equation operator+ (Equation eq, T other)
             {
                 Equation _temp(eq);
                 _temp._numeric_component += other;
@@ -276,21 +297,18 @@ namespace PHYS
                 return _temp;
             }
 
-            friend Equation operator+ (double other, Equation eq)
+            template <typename T>
+            friend Equation operator- (T other, Equation eq)
             {
-                Equation _temp(eq);
-                _temp._numeric_component += other;
-
-                return _temp;
+                return other + -1*eq;
             }
 
-            friend Equation operator+ (Equation eq, double other)
+            template <typename T>
+            friend Equation operator-(Equation eq, T other)
             {
-                Equation _temp(eq);
-                _temp._numeric_component += other;
-
-                return _temp;
+                return eq + -1*other;
             }
+
         };
 
     int PHYS::Equation::_find_composite(composite& composite)
