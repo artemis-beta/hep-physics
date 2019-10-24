@@ -16,6 +16,7 @@ all:
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/SUVAT_Example.cxx -o binaries/SUVAT_Example
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/PDFExample.cxx -o binaries/PDFExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DataFrameExample.cxx -o binaries/DataFrameExample
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/EquationExample.cxx -o binaries/EquationExample
 
 clean:
 	rm -rf obj/ binaries/
