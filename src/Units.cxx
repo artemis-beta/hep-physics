@@ -25,14 +25,6 @@ const extern double PHYS::Units::ms = 1E-3*sec;
 const extern double PHYS::Units::ns = 1E-9*sec;
 const extern double PHYS::Units::ps = 1E-12*sec;
 
-const extern double PHYS::Units::J = 1.;
-const extern double PHYS::Units::eV = PHYS::Constants::e*J;
-const extern double PHYS::Units::keV = 1E3*eV;
-const extern double PHYS::Units::MeV = 1E6*eV;
-const extern double PHYS::Units::GeV = 1E9*eV;
-const extern double PHYS::Units::TeV = 1E12*eV;
-const extern double PHYS::Units::erg = 1E-7*J;
-
 const extern double PHYS::Units::b = 1E-28*m*m;
 const extern double PHYS::Units::mb = 1E-3*b;
 const extern double PHYS::Units::nb = 1E-9*b;
@@ -85,3 +77,12 @@ const extern double PHYS::Units::Sv = J*pow(kg, -1);
 const extern double PHYS::Units::kat = 1.;
 
 const extern double PHYS::Units::mol = 1.;
+
+
+const extern double PHYS::Units::J = 1.;
+const extern double PHYS::Units::eV = 1.6021766208E-19*J;
+const extern double PHYS::Units::keV = 1E3*eV;
+const extern double PHYS::Units::MeV = 1E6*eV;
+const extern double PHYS::Units::GeV = 1E9*eV;
+const extern double PHYS::Units::TeV = 1E12*eV;
+const extern double PHYS::Units::erg = 1E-7*J;
