@@ -150,7 +150,7 @@ namespace PHYS
                     if(i>0) os << " + ";
                     os << eq._components[i];
                 }
-                if(abs(eq._numeric_component) > 0) os << eq._numeric_component;
+                if(abs(eq._numeric_component) > 0) os << " + " << std::to_string(eq._numeric_component);
 
                 return os;
             }
@@ -188,6 +188,82 @@ namespace PHYS
                         _temp._components[j] *= other._components[i];
                     }
                 }
+
+                return _temp;
+            }
+
+            Equation operator* (int other) const
+            {
+                Equation _temp(*this);
+                for(int i{0}; i<_temp._components.size(); ++i)
+                {
+                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
+                }
+
+                return _temp;
+            }
+
+            Equation operator* (double other) const
+            {
+                Equation _temp(*this);
+                for(int i{0}; i<_temp._components.size(); ++i)
+                {
+                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
+                }
+
+                return _temp;
+            }
+
+            friend Equation operator* (int other, const Equation& eq)
+            {
+                Equation _temp(eq);
+                for(int i{0}; i<_temp._components.size(); ++i)
+                {
+                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
+                }
+
+                return _temp;
+            }
+
+            friend Equation operator* (double other, const Equation& eq)
+            {
+                Equation _temp(eq);
+                for(int i{0}; i<_temp._components.size(); ++i)
+                {
+                    _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
+                }
+
+                return _temp;
+            }
+
+            friend Equation operator+ (int other, Equation eq)
+            {
+                Equation _temp(eq);
+                _temp._numeric_component += other;
+
+                return _temp;
+            }
+
+            friend Equation operator+ (Equation eq, int other)
+            {
+                Equation _temp(eq);
+                _temp._numeric_component += other;
+
+                return _temp;
+            }
+
+            friend Equation operator+ (double other, Equation eq)
+            {
+                Equation _temp(eq);
+                _temp._numeric_component += other;
+
+                return _temp;
+            }
+
+            friend Equation operator+ (Equation eq, double other)
+            {
+                Equation _temp(eq);
+                _temp._numeric_component += other;
 
                 return _temp;
             }
