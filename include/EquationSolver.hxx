@@ -118,6 +118,8 @@ namespace PHYS
                     {
                         _temp._components[i.first] = other._components[i.first];
                     }
+
+                    _temp._factor *= other._factor;
                     
                 }
 
@@ -187,7 +189,29 @@ namespace PHYS
                     {
                         _temp._components[j] *= other._components[i];
                     }
+                
                 }
+
+                if(this->_numeric_component != 0)
+                {
+                    for(auto& j : other._components)
+                    {
+                        composite _temp_comp  = j;
+                        _temp_comp.setFactor(this->_numeric_component*_temp_comp.getFactor());
+                        _temp._components.push_back(_temp_comp);
+                    }
+                }
+                if(other._numeric_component != 0)
+                {
+                    for(auto& i : this->_components)
+                    {
+                        composite _temp_comp  = i;
+                        _temp_comp.setFactor(other._numeric_component*_temp_comp.getFactor());
+                        _temp._components.push_back(_temp_comp);
+                    }
+                }
+            
+                _temp._numeric_component *= other._numeric_component;
 
                 return _temp;
             }
