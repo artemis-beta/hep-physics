@@ -41,7 +41,12 @@ namespace PHYS
             const var* _var_from_char(char c) const;
         public:
             void setFactor(const double factor){_factor=factor;}
+            void setComponent(const var key, const double value)
+            {
+                _components[key] = value;
+            }
             double getFactor() const {return _factor;}
+            composite() {}
             composite(std::map<var, double> parameters, double factor=1) : 
                 _components(parameters),
                 _factor(factor) {}
@@ -103,10 +108,11 @@ namespace PHYS
                 {
                     if(i.second == 0) continue;
                     os << i.first;
-                    if(abs(i.second) > 1)
+                    if(abs(i.second) > 1 || i.second == -1)
                     {
                          os << "^";
-                         os << i.second;
+                         if(i.second < 0) os << "(" << i.second << ")";
+                         else{os << i.second;}
                     }
                 }
                 return os;
@@ -322,7 +328,64 @@ namespace PHYS
                 return eq + -1*other;
             }
 
+            Equation operator/ (Equation other) const
+            {
+                Equation _temp(*this);
+                return _temp*(1./other);
+            }
+
+            template <typename T>
+            friend Equation operator/(T other, Equation eq)
+            {
+                Equation _temp;
+                for(auto& i : eq._components)
+                {
+                    composite _temp_comp;
+                    _temp_comp.setFactor(other/(i.getFactor()*1.0));
+                    for(auto& j : i.getComponents())
+                    {
+                        _temp_comp.setComponent(j.first, -1*j.second);
+                    }
+                    _temp._components.push_back(_temp_comp);
+                }
+                return _temp;
+            }
+
+            template <typename T>
+            friend Equation operator/(Equation eq, T other)
+            {
+                Equation _temp(eq);
+                for(int i{0}; i<eq._components.size(); ++i)
+                {
+                    _temp._components[i].setFactor(eq._components[i].getFactor()/other);
+                }
+
+                return _temp;
+            }
+
+            void operator*=(Equation eq)
+            {
+                (*this) = (*this)*eq;
+            }
+
+            void operator/=(Equation eq)
+            {
+                (*this) = (*this)/eq;
+            }
+
+            void operator+=(Equation eq)
+            {
+                (*this) = (*this)+eq;
+            }
+
+            void operator-=(Equation eq)
+            {
+                (*this) = (*this)+-1*eq;
+            }
+
         };
+
+    Equation pow(const Equation eq, int index);
 
     const Equation X(std::vector<composite>({composite(std::map<char, double>({{'x', 1}}))}));
     const Equation Y(std::vector<composite>({composite(std::map<char, double>({{'y', 1}}))}));
