@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_p_h_y_s_1_1_p_d_f_1_1_probability_density_function.html" title="ProbabilityDensityFunction Class." alt="" coords="5,123,211,161"/>
+<area shape="rect" id="node2" href="$class_p_h_y_s_1_1_p_d_f_1_1_cauchy.html" title="Cauchy PDF Class." alt="" coords="271,5,416,31"/>
+<area shape="rect" id="node3" href="$class_p_h_y_s_1_1_p_d_f_1_1_dagum.html" title="Dagum PDF Class." alt="" coords="273,55,415,80"/>
+<area shape="rect" id="node4" href="$class_p_h_y_s_1_1_p_d_f_1_1_exponential.html" title="Exponential PDF Class." alt="" coords="259,104,428,129"/>
+<area shape="rect" id="node5" href="$class_p_h_y_s_1_1_p_d_f_1_1_geometric.html" title="Geometric PDF Class." alt="" coords="263,153,424,179"/>
+<area shape="rect" id="node6" href="$class_p_h_y_s_1_1_p_d_f_1_1_pareto.html" title="Pareto PDF Class." alt="" coords="274,203,413,228"/>
+<area shape="rect" id="node7" href="$class_p_h_y_s_1_1_p_d_f_1_1_rayleigh.html" title="Rayleigh PDF Class." alt="" coords="268,252,419,277"/>
+</map>

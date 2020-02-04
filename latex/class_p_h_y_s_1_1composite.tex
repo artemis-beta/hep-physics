@@ -1,0 +1,78 @@
+\hypertarget{class_p_h_y_s_1_1composite}{}\doxysection{P\+H\+YS\+::composite Class Reference}
+\label{class_p_h_y_s_1_1composite}\index{PHYS::composite@{PHYS::composite}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a1fe2ea42f3eb7f1c76e044bb9d02397b}\label{class_p_h_y_s_1_1composite_a1fe2ea42f3eb7f1c76e044bb9d02397b}} 
+void {\bfseries set\+Factor} (const double factor)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a4c79c120743cb602c5f7cd0456ec1186}\label{class_p_h_y_s_1_1composite_a4c79c120743cb602c5f7cd0456ec1186}} 
+void {\bfseries set\+Component} (const \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}} key, const double value)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a53c616057b17d2c873fa05dab7fd8260}\label{class_p_h_y_s_1_1composite_a53c616057b17d2c873fa05dab7fd8260}} 
+double {\bfseries get\+Factor} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_ac2034af2d5057019b6078a864775e9bd}\label{class_p_h_y_s_1_1composite_ac2034af2d5057019b6078a864775e9bd}} 
+{\bfseries composite} (std\+::map$<$ \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}}, double $>$ parameters, double factor=1)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_ac174f05d1f878b825b20550a043a2131}\label{class_p_h_y_s_1_1composite_ac174f05d1f878b825b20550a043a2131}} 
+{\bfseries composite} (std\+::map$<$ char, double $>$ parameters, double factor=1)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a9f181780d75abbc17a25bffd1779d629}\label{class_p_h_y_s_1_1composite_a9f181780d75abbc17a25bffd1779d629}} 
+{\bfseries composite} (std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}} $>$ parameters, double factor=1)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a3bfbded147ac6f36e67bc002350f7254}\label{class_p_h_y_s_1_1composite_a3bfbded147ac6f36e67bc002350f7254}} 
+{\bfseries composite} (std\+::vector$<$ char $>$ parameters, double factor=1)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a6cc3fae0cddcd1e3693b7b2dc209b37e}\label{class_p_h_y_s_1_1composite_a6cc3fae0cddcd1e3693b7b2dc209b37e}} 
+const std\+::map$<$ \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}}, double $>$ {\bfseries get\+Components} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a984a5d353d4cb3295e97125f17d6d366}\label{class_p_h_y_s_1_1composite_a984a5d353d4cb3295e97125f17d6d366}} 
+{\footnotesize template$<$typename T $>$ }\\double {\bfseries Solve} (std\+::map$<$ char, T $>$ \&values) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a2b3d27703fcb4d9b60803940ad22f389}\label{class_p_h_y_s_1_1composite_a2b3d27703fcb4d9b60803940ad22f389}} 
+bool {\bfseries operator==} (\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_aa229d10fe1e345f397af29cce45c0b8c}\label{class_p_h_y_s_1_1composite_aa229d10fe1e345f397af29cce45c0b8c}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} {\bfseries operator$\ast$} (\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_ad99c08fd717e9506c33a851f9859f2fe}\label{class_p_h_y_s_1_1composite_ad99c08fd717e9506c33a851f9859f2fe}} 
+void {\bfseries operator$\ast$=} (\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_ad3055780644bf794768bc6fe91067681}\label{class_p_h_y_s_1_1composite_ad3055780644bf794768bc6fe91067681}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}} $\ast$ {\bfseries \+\_\+var\+\_\+from\+\_\+char} (char c) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a03de6c135f3b8a403b39ab04bb6d0260}\label{class_p_h_y_s_1_1composite_a03de6c135f3b8a403b39ab04bb6d0260}} 
+std\+::map$<$ \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}}, double $>$ {\bfseries \+\_\+components} = std\+::map$<$\mbox{\hyperlink{class_p_h_y_s_1_1var}{var}}, double$>$()
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a938a56d018f55febd53b7067a0770281}\label{class_p_h_y_s_1_1composite_a938a56d018f55febd53b7067a0770281}} 
+double {\bfseries \+\_\+factor} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a0f61abdc7cb5e52e24def6d930199f6a}\label{class_p_h_y_s_1_1composite_a0f61abdc7cb5e52e24def6d930199f6a}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&first, const \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1composite_a3640ef6a842deb54049f620335a4e4b0}\label{class_p_h_y_s_1_1composite_a3640ef6a842deb54049f620335a4e4b0}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&eq)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 36 of file Equation\+Solver.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Equation\+Solver.\+hxx\item 
+src/Equation\+Solver.\+cxx\end{DoxyCompactItemize}

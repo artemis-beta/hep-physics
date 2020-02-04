@@ -26,12 +26,14 @@ namespace PHYS
             {
                 return (*const_cast<LorentzVector*>(this))[i];
             }
+            const LorentzVector operator+ (const LorentzVector&);
             //! Output the components of the LorentzVector to the ostream when printing
             friend std::ostream& operator<<(std::ostream& os, const LorentzVector& lv);
             //! Create a new LorentzVector by giving the four values @f$(x_0, x_1, x_2, x_3)@f$
             LorentzVector(double x0, double x1, double x2, double x3);
             //! Returns the magnitude of the vector as @f$ r = \sqrt{x_0^2-x_1^2-x_2^2-x_3^2} @f$
             const double magnitude() const {return pow(x0*x0-x1*x1-x2*x2-x3*x3, 0.5);}
+            const double* asArray() const;
     };
 }
 #endif

@@ -5,9 +5,7 @@ using namespace PHYS;
 
 int main()
 {
-    Equation eq = X/pow(X, 3);
-    std::cout << "F(x) = " << eq << std::endl;
-    double solution = eq.Solve(2.0);
-    std::cout << "F(2) = " << solution << std::endl;
+    Equation eq(X*X+1, 2);
+    std::cout << eq <<std::endl;
     return 0;
 }

@@ -5,6 +5,8 @@
 \item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_constants}{Constants}}
 \item 
+ \mbox{\hyperlink{namespace_p_h_y_s_1_1_data}{Data}}
+\item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_elements}{Elements}}
 \item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_molecules}{Molecules}}
@@ -13,7 +15,9 @@
 \item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_p_d_f}{P\+DF}}
 \item 
- \mbox{\hyperlink{namespace_p_h_y_s_1_1_plotting}{Plotting}}
+ \mbox{\hyperlink{namespace_p_h_y_s_1_1_probability}{Probability}}
+\item 
+ \mbox{\hyperlink{namespace_p_h_y_s_1_1_simulation}{Simulation}}
 \item 
  \mbox{\hyperlink{namespace_p_h_y_s_1_1_units}{Units}}
 \end{DoxyCompactItemize}
@@ -24,12 +28,18 @@ class \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} Class. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_cartesian}{Cartesian}} Class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}}
+\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_container}{Container}}
 \item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Channel Class. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table}{Decay\+Table}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} Table Class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_p_h_y_s_1_1_equation}{Equation}}
+\item 
+class \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}}
+\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_isotope}{Isotope}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_isotope}{Isotope}} Subclass. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_lorentz_vector}{Lorentz\+Vector}}
@@ -47,6 +57,8 @@ class \mbox{\hyperlink{class_p_h_y_s_1_1_spherical}{Spherical}}
 class \mbox{\hyperlink{class_p_h_y_s_1_1_spring}{Spring}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_spring}{Spring}} Class. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_s_u_v_a_t_solver}{S\+U\+V\+A\+T\+Solver}}
+\item 
+class \mbox{\hyperlink{class_p_h_y_s_1_1var}{var}}
 \item 
 class \mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_vector}{Vector}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -79,6 +91,12 @@ bool {\bfseries operator==} (\mbox{\hyperlink{class_p_h_y_s_1_1_atom}{Atom}} con
 \mbox{\Hypertarget{namespace_p_h_y_s_a64624fde7afa971896ad7c4a849f45e3}\label{namespace_p_h_y_s_a64624fde7afa971896ad7c4a849f45e3}} 
 std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, \mbox{\hyperlink{class_p_h_y_s_1_1_decay}{Decay}} \&d)
 \item 
+\mbox{\Hypertarget{namespace_p_h_y_s_aa6a87c2ae295d9a651abca2e28df00b1}\label{namespace_p_h_y_s_aa6a87c2ae295d9a651abca2e28df00b1}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries pow} (const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq, int index)
+\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_ac01a649a61d8126aa32af1b1bb2b04e8}\label{namespace_p_h_y_s_ac01a649a61d8126aa32af1b1bb2b04e8}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries pow} (const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq, double index)
+\item 
 const double \mbox{\hyperlink{namespace_p_h_y_s_aa07b3a8107b63378ff7b9ad579ac24f2}{get\+Binding\+Energy\+Per\+Nucleon}} (const \mbox{\hyperlink{class_p_h_y_s_1_1_nucleus}{Nucleus}} $\ast$n)
 \item 
 const double \mbox{\hyperlink{namespace_p_h_y_s_a750a7959d5e4648758bbc1d8c64d31df}{frac\+Isotopes\+At}} (const \mbox{\hyperlink{class_p_h_y_s_1_1_isotope}{Isotope}} $\ast$i, const double t)
@@ -89,13 +107,22 @@ const double \mbox{\hyperlink{namespace_p_h_y_s_a750a7959d5e4648758bbc1d8c64d31d
 \mbox{\Hypertarget{namespace_p_h_y_s_aeb22ad938efaec345cf05081367c2600}\label{namespace_p_h_y_s_aeb22ad938efaec345cf05081367c2600}} 
 const \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table}{Decay\+Table}} \mbox{\hyperlink{namespace_p_h_y_s_aeb22ad938efaec345cf05081367c2600}{Bc\+Decays}} = gen\+\_\+\+Bc\+Decays()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table}{P\+H\+Y\+S\+::\+Decay\+Table}} of all decays of the $ B_c $ meson. The {\ttfamily gen\+\_\+\+Bc\+Decays} function generates all the relevant channels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_ad3d0c040b16d59e083694fbd747c6494}\label{namespace_p_h_y_s_ad3d0c040b16d59e083694fbd747c6494}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries X} (std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} $>$(\{\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}}(std\+::map$<$ char, double $>$(\{\{ \textquotesingle{}x\textquotesingle{}, 1\}\}))\}))
+\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_a79e79caa09f3345795e4b0a1cac11d0e}\label{namespace_p_h_y_s_a79e79caa09f3345795e4b0a1cac11d0e}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries Y} (std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} $>$(\{\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}}(std\+::map$<$ char, double $>$(\{\{ \textquotesingle{}y\textquotesingle{}, 1\}\}))\}))
+\item 
+\mbox{\Hypertarget{namespace_p_h_y_s_adb38433d90ea90b7e99ba26b3dd5d2d4}\label{namespace_p_h_y_s_adb38433d90ea90b7e99ba26b3dd5d2d4}} 
+const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} \mbox{\hyperlink{namespace_p_h_y_s_adb38433d90ea90b7e99ba26b3dd5d2d4}{Z}} (std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} $>$(\{\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}}(std\+::map$<$ char, double $>$(\{\{ \textquotesingle{}z\textquotesingle{}, 1\}\}))\}))
+\begin{DoxyCompactList}\small\item\em Z Boson, $Z^0$. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{namespace_p_h_y_s_aea2c5c97f2cec3fa4e37e062794ee143}\label{namespace_p_h_y_s_aea2c5c97f2cec3fa4e37e062794ee143}} 
 const \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table}{Decay\+Table}} \mbox{\hyperlink{namespace_p_h_y_s_aea2c5c97f2cec3fa4e37e062794ee143}{Kplus\+Decays}} = gen\+\_\+\+Kplus\+Decays()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_p_h_y_s_1_1_decay_table}{Decay\+Table}} of all decays of the $ K^{\pm} $ meson. The {\ttfamily gen\+\_\+\+Kplus\+Decay} function generates all the relevant channels. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-The \mbox{\hyperlink{namespace_p_h_y_s}{P\+H\+YS}} namespace contains all currently accepted particles within the standard model and beyond. The masses and data are taken from the \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} Data Group listings \cite{PDGlist}. \begin{DoxyWarning}{Warning}
+The \mbox{\hyperlink{namespace_p_h_y_s}{P\+H\+YS}} namespace contains all currently accepted particles within the standard model and beyond. The masses and data are taken from the \mbox{\hyperlink{class_p_h_y_s_1_1_particle}{Particle}} \mbox{\hyperlink{namespace_p_h_y_s_1_1_data}{Data}} Group listings \cite{PDGlist}. \begin{DoxyWarning}{Warning}
 It is recommend you do not use the namespace within the script as there is a high probability of accidental overwriting. Instead use the particles as P\+H\+Y\+S\+::\+Particles\+::particle
 \end{DoxyWarning}
 \begin{DoxyAuthor}{Author}

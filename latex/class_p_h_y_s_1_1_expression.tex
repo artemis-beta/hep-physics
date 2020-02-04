@@ -1,0 +1,114 @@
+\hypertarget{class_p_h_y_s_1_1_expression}{}\doxysection{P\+H\+YS\+::Expression Class Reference}
+\label{class_p_h_y_s_1_1_expression}\index{PHYS::Expression@{PHYS::Expression}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a7790693c17ff40e6043e5210fae7d564}\label{class_p_h_y_s_1_1_expression_a7790693c17ff40e6043e5210fae7d564}} 
+{\bfseries Expression} (std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} $>$ components, double number=0)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_aa34e7224d3a52cf2cca8b2a587992773}\label{class_p_h_y_s_1_1_expression_aa34e7224d3a52cf2cca8b2a587992773}} 
+{\footnotesize template$<$typename T $>$ }\\double {\bfseries Solve} (std\+::map$<$ char, T $>$ values)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ae5b24589b31d63c9ee4c826d70d0314f}\label{class_p_h_y_s_1_1_expression_ae5b24589b31d63c9ee4c826d70d0314f}} 
+double {\bfseries Solve} (double value) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a7ba35417a27ff7ec52f692d57cdc96aa}\label{class_p_h_y_s_1_1_expression_a7ba35417a27ff7ec52f692d57cdc96aa}} 
+const std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} $>$ {\bfseries get\+Components} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a93ccf92bfee24e9767d5a01f2fd8e263}\label{class_p_h_y_s_1_1_expression_a93ccf92bfee24e9767d5a01f2fd8e263}} 
+const double {\bfseries get\+Numeric\+Component} () const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a4af9c05f805480989ca4a7e19b7dff15}\label{class_p_h_y_s_1_1_expression_a4af9c05f805480989ca4a7e19b7dff15}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator+} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a7ba1986a74ed2262553b04431ecc570c}\label{class_p_h_y_s_1_1_expression_a7ba1986a74ed2262553b04431ecc570c}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator$\ast$} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a3925f4683ed06e8ac2a31fb8ff1a5c23}\label{class_p_h_y_s_1_1_expression_a3925f4683ed06e8ac2a31fb8ff1a5c23}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator$\ast$} (int other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a588b7eb5473d56df5b487fd2dad9b375}\label{class_p_h_y_s_1_1_expression_a588b7eb5473d56df5b487fd2dad9b375}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator$\ast$} (double other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a7641cb57a9084567ae50f4406f23d892}\label{class_p_h_y_s_1_1_expression_a7641cb57a9084567ae50f4406f23d892}} 
+\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator/} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} other) const
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a8e8bb7976f0e1cf41d06d8923d4664e4}\label{class_p_h_y_s_1_1_expression_a8e8bb7976f0e1cf41d06d8923d4664e4}} 
+void {\bfseries operator$\ast$=} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ac5ec35dbf5e21496aab2b51abd33dc7f}\label{class_p_h_y_s_1_1_expression_ac5ec35dbf5e21496aab2b51abd33dc7f}} 
+void {\bfseries operator/=} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ac246061f7e7f58df7974707dcbf87b3f}\label{class_p_h_y_s_1_1_expression_ac246061f7e7f58df7974707dcbf87b3f}} 
+void {\bfseries operator+=} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a3a5f6f2d59b819bfd4d67b7ed80a883d}\label{class_p_h_y_s_1_1_expression_a3a5f6f2d59b819bfd4d67b7ed80a883d}} 
+void {\bfseries operator-\/=} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ad3dc2081f00a6de09088fe524eafbd1e}\label{class_p_h_y_s_1_1_expression_ad3dc2081f00a6de09088fe524eafbd1e}} 
+void {\bfseries operator$\ast$=} (double other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_adedeeab1c153d6a3fac0ce11264f3dc3}\label{class_p_h_y_s_1_1_expression_adedeeab1c153d6a3fac0ce11264f3dc3}} 
+void {\bfseries operator/=} (double other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a3d8096a781f1afdbdb39660c005228f0}\label{class_p_h_y_s_1_1_expression_a3d8096a781f1afdbdb39660c005228f0}} 
+void {\bfseries operator+=} (double other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a8179aaf2d32083f19e1e045b00b02b44}\label{class_p_h_y_s_1_1_expression_a8179aaf2d32083f19e1e045b00b02b44}} 
+void {\bfseries operator-\/=} (double other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a5de032f74d5064748b0da1870f5ebe34}\label{class_p_h_y_s_1_1_expression_a5de032f74d5064748b0da1870f5ebe34}} 
+int {\bfseries \+\_\+find\+\_\+composite} (\mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_adca428b0c90f1d7ce3ca1d605bc15848}\label{class_p_h_y_s_1_1_expression_adca428b0c90f1d7ce3ca1d605bc15848}} 
+std\+::vector$<$ \mbox{\hyperlink{class_p_h_y_s_1_1composite}{composite}} $>$ {\bfseries \+\_\+components} = \{\}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a8d3f81ea616f755696afb940aafb364a}\label{class_p_h_y_s_1_1_expression_a8d3f81ea616f755696afb940aafb364a}} 
+double {\bfseries \+\_\+numeric\+\_\+component} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a6b580150fdc038bbfe3fc4d0dbadd4a4}\label{class_p_h_y_s_1_1_expression_a6b580150fdc038bbfe3fc4d0dbadd4a4}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} \&eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ae8055ddd14f45736d953bc0a5291e27a}\label{class_p_h_y_s_1_1_expression_ae8055ddd14f45736d953bc0a5291e27a}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator$\ast$} (T other, const \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} \&eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a6274eba235b946088d321bc3d00e5b86}\label{class_p_h_y_s_1_1_expression_a6274eba235b946088d321bc3d00e5b86}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator+} (T other, \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a6741a2ac130c321e285ec8bbe7c10f7e}\label{class_p_h_y_s_1_1_expression_a6741a2ac130c321e285ec8bbe7c10f7e}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator+} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq, T other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ad768e4b77c458c0e8f511480a31b3d81}\label{class_p_h_y_s_1_1_expression_ad768e4b77c458c0e8f511480a31b3d81}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator-\/} (T other, \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_ab34b1b27742fc719299c116bd1a75ef2}\label{class_p_h_y_s_1_1_expression_ab34b1b27742fc719299c116bd1a75ef2}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator-\/} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq, T other)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a6e0e2881a4f38472eb3d871e185e7e7d}\label{class_p_h_y_s_1_1_expression_a6e0e2881a4f38472eb3d871e185e7e7d}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator/} (T other, \mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq)
+\item 
+\mbox{\Hypertarget{class_p_h_y_s_1_1_expression_a2e4a3f7cced2b52f21a59b782e258581}\label{class_p_h_y_s_1_1_expression_a2e4a3f7cced2b52f21a59b782e258581}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} {\bfseries operator/} (\mbox{\hyperlink{class_p_h_y_s_1_1_expression}{Expression}} eq, T other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 161 of file Equation\+Solver.\+hxx.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Equation\+Solver.\+hxx\item 
+src/Equation\+Solver.\+cxx\end{DoxyCompactItemize}

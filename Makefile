@@ -1,7 +1,11 @@
 CXX = g++ -std=c++17
 INCLUDE = -I include
 
-ORDERED_OBJ = obj/Units.o obj/Constants.o obj/LorentzVector.o obj/Vector.o obj/Particle.o obj/DecayTable.o obj/CommonParticles.o obj/NuclearPhysics.o obj/Atom.o obj/CommonNuclei.o obj/CommonMolecules.o obj/Thermodynamics.o obj/CommonCompounds.o obj/Hydrocarbons.o obj/ClassicalMechanics.o obj/KplusDecTable.o obj/PDF.o obj/DataFrame.o obj/EquationSolver.o
+ORDERED_OBJ = obj/Units.o obj/Constants.o obj/LorentzVector.o obj/Vector.o \
+			  obj/Particle.o obj/DecayTable.o obj/CommonParticles.o obj/NuclearPhysics.o \
+			  obj/Atom.o obj/CommonNuclei.o obj/CommonMolecules.o obj/Thermodynamics.o \
+			  obj/CommonCompounds.o obj/Hydrocarbons.o obj/ClassicalMechanics.o \
+			  obj/KplusDecTable.o obj/PDF.o obj/DataFrame.o obj/EquationSolver.o
 
 
 all:
@@ -17,6 +21,8 @@ all:
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/PDFExample.cxx -o binaries/PDFExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DataFrameExample.cxx -o binaries/DataFrameExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/EquationExample.cxx -o binaries/EquationExample
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DynamicArrayExample.cxx -o binaries/DynamicArrayExample
+	#$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/ParticleGun.cxx -o binaries/ParticleGun
 
 clean:
 	rm -rf obj/ binaries/

@@ -79,18 +79,18 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_p_h_y_s.html">PHYS</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">namespace </span>Plotting</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">namespace </span>Data</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">typedef</span> std::vector&lt;double&gt; Bins;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_plotting_1_1_histogram.html">   31</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_p_h_y_s_1_1_plotting_1_1_histogram.html">Histogram</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_p_h_y_s_1_1_data_1_1_histogram.html">   31</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_p_h_y_s_1_1_data_1_1_histogram.html">Histogram</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                Bins _bins;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                std::vector&lt;int&gt; _entries;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <a class="code" href="class_p_h_y_s_1_1_plotting_1_1_histogram.html">Histogram</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> nbins, <span class="keyword">const</span> <span class="keywordtype">double</span> x_low, <span class="keyword">const</span> <span class="keywordtype">double</span> x_high);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="class_p_h_y_s_1_1_plotting_1_1_histogram.html">Histogram</a>(<span class="keyword">const</span> Bins bins) : _bins(bins)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <a class="code" href="class_p_h_y_s_1_1_data_1_1_histogram.html">Histogram</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> nbins, <span class="keyword">const</span> <span class="keywordtype">double</span> x_low, <span class="keyword">const</span> <span class="keywordtype">double</span> x_high);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="class_p_h_y_s_1_1_data_1_1_histogram.html">Histogram</a>(<span class="keyword">const</span> Bins bins) : _bins(bins)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i{0}; i&lt;bins.size(); ++i) _entries.push_back(0);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
@@ -101,7 +101,7 @@ $(function() {
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;PHYS::Plotting::Histogram::Histogram(<span class="keyword">const</span> <span class="keywordtype">int</span> nbins, <span class="keyword">const</span> <span class="keywordtype">double</span> x_low, <span class="keyword">const</span> <span class="keywordtype">double</span> x_high)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;PHYS::Data::Histogram::Histogram(<span class="keyword">const</span> <span class="keywordtype">int</span> nbins, <span class="keyword">const</span> <span class="keywordtype">double</span> x_low, <span class="keyword">const</span> <span class="keywordtype">double</span> x_high)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> interval = (x_high-x_low)/nbins;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
@@ -113,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> PHYS::Plotting::Histogram::Fill(<span class="keyword">const</span> T&amp; value)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> PHYS::Data::Histogram::Fill(<span class="keyword">const</span> T&amp; value)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> _val = static_cast&lt;double&gt;(value);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i{0}; i&lt;_bins.size()-1; ++i)</div>
@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> PHYS::Plotting::Histogram::consolePlot()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> PHYS::Data::Histogram::consolePlot()</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i{0}; i&lt;_bins.size(); ++i)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
@@ -136,8 +136,8 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_p_h_y_s_1_1_plotting_1_1_histogram_html"><div class="ttname"><a href="class_p_h_y_s_1_1_plotting_1_1_histogram.html">PHYS::Plotting::Histogram</a></div><div class="ttdoc">Histogram Class.</div><div class="ttdef"><b>Definition:</b> <a href="_histogram_8hxx_source.html#l00031">Histogram.hxx:31</a></div></div>
-<div class="ttc" id="anamespace_p_h_y_s_html"><div class="ttname"><a href="namespace_p_h_y_s.html">PHYS</a></div><div class="ttdef"><b>Definition:</b> <a href="_atom_8hxx_source.html#l00007">Atom.hxx:7</a></div></div>
+<div class="ttc" id="aclass_p_h_y_s_1_1_data_1_1_histogram_html"><div class="ttname"><a href="class_p_h_y_s_1_1_data_1_1_histogram.html">PHYS::Data::Histogram</a></div><div class="ttdoc">Histogram Class.</div><div class="ttdef"><b>Definition:</b> <a href="_histogram_8hxx_source.html#l00031">Histogram.hxx:31</a></div></div>
+<div class="ttc" id="anamespace_p_h_y_s_html"><div class="ttname"><a href="namespace_p_h_y_s.html">PHYS</a></div><div class="ttdef"><b>Definition:</b> <a href="_array_8hxx_source.html#l00006">Array.hxx:6</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

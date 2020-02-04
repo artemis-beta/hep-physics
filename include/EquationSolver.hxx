@@ -158,15 +158,15 @@ namespace PHYS
 
     };
 
-    class Equation
+    class Expression
     {
         private:
             std::vector<composite> _components = {};
             double _numeric_component = 0;
             int _find_composite(composite&);
         public:
-            Equation(){}
-            Equation(std::vector<composite> components, double number=0) : 
+            Expression(){}
+            Expression(std::vector<composite> components, double number=0) : 
                 _components(components),
                 _numeric_component(number) {}
 
@@ -186,15 +186,16 @@ namespace PHYS
             }
             double Solve(double value) const
             {
-                Equation _temp(*this);
+                Expression _temp(*this);
                 const var xvar_first = _temp.getComponents()[0].getComponents().begin()->first;
                 std::map<char, double> _values = {{xvar_first.getSymbol(), value}};
                 const double solution = _temp.Solve(_values);
                 return solution;
             }
             const std::vector<composite> getComponents() const {return _components;}
+            const double getNumericComponent() const {return _numeric_component;}
             
-            friend std::ostream& operator<< (std::ostream& os, const Equation& eq)
+            friend std::ostream& operator<< (std::ostream& os, const Expression& eq)
             {
                 for(int i{0}; i<eq._components.size(); ++i)
                 {
@@ -208,9 +209,9 @@ namespace PHYS
                 return os;
             }
 
-            Equation operator+ (Equation other) const
+            Expression operator+ (Expression other) const
             {
-                Equation eq_tmp(*this);
+                Expression eq_tmp(*this);
                 // Need to check that a composite matching 'other' does not already exist first
                 for(auto& c : other._components)
                 {
@@ -230,9 +231,9 @@ namespace PHYS
 
             }
 
-            Equation operator* (Equation other) const
+            Expression operator* (Expression other) const
             {
-                Equation _temp(*this);
+                Expression _temp(*this);
 
                 for(unsigned int i {0}; i<other._components.size(); ++i)
                 {
@@ -283,13 +284,13 @@ namespace PHYS
                 return _temp;
             }
 
-            Equation operator* (int other) const;
-            Equation operator* (double other) const;
+            Expression operator* (int other) const;
+            Expression operator* (double other) const;
 
             template <typename T>
-            friend Equation operator* (T other, const Equation& eq)
+            friend Expression operator* (T other, const Expression& eq)
             {
-                Equation _temp(eq);
+                Expression _temp(eq);
                 for(int i{0}; i<_temp._components.size(); ++i)
                 {
                     _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
@@ -299,45 +300,45 @@ namespace PHYS
             }
 
             template <typename T>
-            friend Equation operator+ (T other, Equation eq)
+            friend Expression operator+ (T other, Expression eq)
             {
-                Equation _temp(eq);
+                Expression _temp(eq);
                 _temp._numeric_component += other;
 
                 return _temp;
             }
 
             template <typename T>
-            friend Equation operator+ (Equation eq, T other)
+            friend Expression operator+ (Expression eq, T other)
             {
-                Equation _temp(eq);
+                Expression _temp(eq);
                 _temp._numeric_component += other;
 
                 return _temp;
             }
 
             template <typename T>
-            friend Equation operator- (T other, Equation eq)
+            friend Expression operator- (T other, Expression eq)
             {
                 return other + -1*eq;
             }
 
             template <typename T>
-            friend Equation operator-(Equation eq, T other)
+            friend Expression operator-(Expression eq, T other)
             {
                 return eq + -1*other;
             }
 
-            Equation operator/ (Equation other) const
+            Expression operator/ (Expression other) const
             {
-                Equation _temp(*this);
+                Expression _temp(*this);
                 return _temp*(1./other);
             }
 
             template <typename T>
-            friend Equation operator/(T other, Equation eq)
+            friend Expression operator/(T other, Expression eq)
             {
-                Equation _temp;
+                Expression _temp;
                 for(auto& i : eq._components)
                 {
                     composite _temp_comp;
@@ -352,9 +353,9 @@ namespace PHYS
             }
 
             template <typename T>
-            friend Equation operator/(Equation eq, T other)
+            friend Expression operator/(Expression eq, T other)
             {
-                Equation _temp(eq);
+                Expression _temp(eq);
                 for(int i{0}; i<eq._components.size(); ++i)
                 {
                     _temp._components[i].setFactor(eq._components[i].getFactor()/other);
@@ -363,33 +364,81 @@ namespace PHYS
                 return _temp;
             }
 
-            void operator*=(Equation eq)
+            void operator*=(Expression eq)
             {
                 (*this) = (*this)*eq;
             }
 
-            void operator/=(Equation eq)
+            void operator/=(Expression eq)
             {
                 (*this) = (*this)/eq;
             }
 
-            void operator+=(Equation eq)
+            void operator+=(Expression eq)
             {
                 (*this) = (*this)+eq;
             }
 
-            void operator-=(Equation eq)
+            void operator-=(Expression eq)
             {
                 (*this) = (*this)+-1*eq;
             }
 
+            void operator*=(double other)
+            {
+                (*this) = (*this)*other;
+            }
+
+            void operator/=(double other)
+            {
+                (*this) = (*this)/other;
+            }
+
+            void operator+=(double other)
+            {
+                (*this) = (*this)+other;
+            }
+
+            void operator-=(double other)
+            {
+                (*this) = (*this)+-1*other;
+            }
+
         };
 
-    Equation pow(const Equation eq, int index);
+    Expression pow(const Expression eq, int index);
+    Expression pow(const Expression eq, double index);
 
-    const Equation X(std::vector<composite>({composite(std::map<char, double>({{'x', 1}}))}));
-    const Equation Y(std::vector<composite>({composite(std::map<char, double>({{'y', 1}}))}));
-    const Equation Z(std::vector<composite>({composite(std::map<char, double>({{'z', 1}}))}));
+    class Equation
+    {
+        private:
+            Expression _exp;
+            double _equals;
+            void _simplify(const Expression, const double);
+        public:
+            Equation(const Expression exp, const double is_equal_to, bool simplify=true) :
+                _exp(exp), _equals(is_equal_to)
+            {
+                if(simplify) _simplify(exp, is_equal_to);
+            }
+
+            const double getEqualsTo() const {return _equals;}
+            const Expression getExpression() const {return _exp;}
+            
+            friend std::ostream& operator<< (std::ostream& os, const Equation& eq)
+            {
+                os << eq.getExpression();
+                os << " = ";
+                os << eq.getEqualsTo();
+
+                return os;
+            }
+        
+    };
+
+    const Expression X(std::vector<composite>({composite(std::map<char, double>({{'x', 1}}))}));
+    const Expression Y(std::vector<composite>({composite(std::map<char, double>({{'y', 1}}))}));
+    const Expression Z(std::vector<composite>({composite(std::map<char, double>({{'z', 1}}))}));
 };
 
 #endif
