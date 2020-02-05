@@ -1,0 +1,13 @@
+version: 2
+jobs:
+    build:
+       docker:
+               - image: circleci/ubuntu:latest
+       steps: 
+         - checkout
+         - run:
+              name: Build Examples
+              command: make
+         - run:
+              name: Run Executables
+              command: ./test_binaries

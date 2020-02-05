@@ -13,6 +13,7 @@ double simpleCDF(const double x)
 
 int main()
 {
+    std::cout << "Generating Exponential Data..." << std::endl;
     Histogram * histo = new Histogram(10,0,10);
     Exponential* pdf = new Exponential(0.8);
     std::vector<double> vals = pdf->generate(100);
@@ -20,6 +21,8 @@ int main()
     {
         histo->Fill(val);
     }
+
+    std::cout << "HISTOGRAM\n\n" << std::endl;
 
     histo->consolePlot();
 
