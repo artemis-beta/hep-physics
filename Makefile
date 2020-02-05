@@ -18,7 +18,7 @@ all:
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/Mass_on_Spring.cxx -o binaries/Mass_on_Spring
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/GenKplusDec.cxx -o binaries/GenKplusDec
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/SUVAT_Example.cxx -o binaries/SUVAT_Example
-	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/PDFExample.cxx -o binaries/PDFExample
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DataFromPDFExample.cxx -o binaries/DataFromPDFExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DataFrameExample.cxx -o binaries/DataFrameExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/EquationExample.cxx -o binaries/EquationExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DynamicArrayExample.cxx -o binaries/DynamicArrayExample
