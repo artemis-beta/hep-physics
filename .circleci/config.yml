@@ -7,7 +7,7 @@ jobs:
          - checkout
          - run:
                 name: Install Requirements
-                command: apt install -y build-essential
+                command: apt update && apt install -y build-essential
          - run:
               name: Build Examples
               command: make
