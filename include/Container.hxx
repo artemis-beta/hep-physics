@@ -20,7 +20,7 @@ namespace PHYS
         class Container
         {
             public:
-                T* _container {};
+                T* _container = nullptr;
                 void _set_element(const int& index, const T& value)
                 {
                     if(index < 0 || index >= _size) throw std::invalid_argument("Index "+std::to_string(index)+" out of range.");
@@ -80,12 +80,12 @@ namespace PHYS
                     }
 
                 }
-                Container(const Container& other) : 
-                    _container(new T[other.size()]), _size(other.size()), _label(other._label), _type_label(other._type_label), _dynamic(other._dynamic)
+                Container(const Container& other, std::string label="") : 
+                    _container(new T[other.size()]), _size(other.size()), _label((label != "") ? label : other._label), _type_label(other._type_label), _dynamic(other._dynamic)
                 {
                     std::copy(other._container, other._container+other.size(), _container);
                 }
-                ~Container() { delete[] _container; }
+                ~Container() {delete[] _container;}
 
                 iterator begin() { return iterator(_container); }
                 iterator end() { return iterator(_container+size()); }
@@ -184,6 +184,7 @@ template<typename T>
 const PHYS::Data::Container<T> PHYS::Data::Container<T>::operator+ (const PHYS::Data::Container<T>& other) const
 {
     PHYS::Data::Container<T> _temp(*this);
+    _temp._label = "";
     _temp += other;
     return _temp;
 }
@@ -223,14 +224,10 @@ PHYS::Data::Container<T>& PHYS::Data::Container<T>::operator+= (const PHYS::Data
 {
     if(other.size() != size()) throw std::runtime_error("Cannot add "+_type_label+"s with different lengths");
 
-    T _temp_array[size()];
-
     for(unsigned int i{0}; i < size(); ++i)
     {
-        _temp_array[i] = this->operator[](i) + other[i];
+        this->_container[i] += other[i];
     }
-
-    std::copy(_temp_array, _temp_array+size(), this->_container);
 
     return *this;
 }
@@ -240,14 +237,10 @@ PHYS::Data::Container<T>& PHYS::Data::Container<T>::operator-= (const PHYS::Data
 {
     if(other.size() != size()) throw std::runtime_error("Cannot add "+_type_label+"s with different lengths");
 
-    T _temp_array[size()];
-
     for(unsigned int i{0}; i < size(); ++i)
     {
-        _temp_array[i] = this->operator()[i] - other[i];
+        this->_container[i] -= other[i];
     }
-
-    std::copy(_temp_array, _temp_array+size(), this->_container);
 
     return *this;
 }
@@ -255,12 +248,10 @@ PHYS::Data::Container<T>& PHYS::Data::Container<T>::operator-= (const PHYS::Data
 template<typename T>
 PHYS::Data::Container<T> PHYS::Data::Container<T>::operator-() const
 {
-    const PHYS::Data::Container<T> _self(*this);
-    PHYS::Data::Container<T> _temp(size(), "", _type_label, _dynamic);
-
-    for(unsigned int i{0}; i < _self.size(); ++i)
+    PHYS::Data::Container<T> _temp(*this);
+    for(unsigned int i{0}; i < size(); ++i)
     {
-        _temp._set_element(i, -_self[i]);
+        _temp._container[i] = -this->_container[i];
     }
 
     return _temp;
@@ -269,7 +260,13 @@ PHYS::Data::Container<T> PHYS::Data::Container<T>::operator-() const
 template<typename T>
 PHYS::Data::Container<T> PHYS::Data::Container<T>::operator+() const
 {
-    return *this;
+    PHYS::Data::Container<T> _temp(*this);
+    for(unsigned int i{0}; i < size(); ++i)
+    {
+        _temp._container[i] = this->_container[i];
+    }
+
+    return _temp;
 }
 
 template<typename T>
@@ -293,6 +290,7 @@ template<typename T>
 const PHYS::Data::Container<T> PHYS::Data::Container<T>::operator- (const PHYS::Data::Container<T>& other) const
 {
     PHYS::Data::Container<T> _temp(*this);
+    _temp._label = "";
     _temp -= other;
     return _temp;
 }

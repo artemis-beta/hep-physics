@@ -27,6 +27,8 @@ namespace PHYS
                     Container<T>(size, label, "DynamicArray", true) {}
                 DynamicArray(const std::initializer_list<T>& elements, const std::string label="") :
                     Container<T>(elements, label, "DynamicArray", true) {}
+                DynamicArray(Container<T>& other, std::string label="") : 
+                    Container<T>(other, label) {}
                 void push_back(const T&);
                 void pop_back();
                 void pop_front();
@@ -37,55 +39,52 @@ namespace PHYS
 template<typename T>
 void PHYS::Data::DynamicArray<T>::push_back(const T& value)
 {
-    int log_counter = 0;
-    std::cout << log_counter++ << std::endl;
     const int _current_size = this->size();
-    std::cout << log_counter++ << std::endl;
-    T _temp_container[_current_size+1];
-    std::cout << log_counter++ << std::endl;
-    for(unsigned int i{0}; i < _current_size; ++i)
-    {
-        std::cout << log_counter++ << std::endl;
-        _temp_container[i] = this->operator[](i);
-    }
-    std::cout << log_counter++ << std::endl;
+    T* _temp_container = new T[_current_size+1];
     if(_current_size < 1) _temp_container[0] = value;
     else
     {
-        
         _temp_container[_current_size] = value;
     }
-    std::cout << log_counter++ << std::endl;
-
-    std::copy(_temp_container, _temp_container+_current_size+1, this->_container);
-    this->_size = _current_size+1;
-
-    if(this->size() != _current_size+1) throw std::runtime_error("Could not resize array during push_back");
+    for(unsigned int i{0}; i < _current_size; ++i)
+    {
+        _temp_container[i] = this->operator[](i);
+    }
+    delete[] this->_container;
+    this->_container = _temp_container;
+    this->_size = _current_size+1;    
 }
 
 template<typename T>
 void PHYS::Data::DynamicArray<T>::pop_back()
 {
     const int _current_size = this->size();
-    T _temp_container[_current_size-1];
-    
-    std::copy(_temp_container, _temp_container+_current_size-1, this->_container);
-    this->_size = _current_size-1;
+    T*  _temp_container = new T[_current_size-1];
+    for(unsigned int i{0}; i < _current_size-1; ++i)
+    {
+        _temp_container[i] = this->operator[](i);
+    }
+    if(_current_size < 1) throw std::runtime_error("Array is of size 0, pop_back failed");
 
-    if(this->size() != _current_size-1) throw std::runtime_error("Could not resize array during pop_back");
+    delete[] this->_container;
+    this->_container = _temp_container;
+    this->_size = _current_size-1;
 }
 
 template<typename T>
 void PHYS::Data::DynamicArray<T>::pop_front()
 {
     const int _current_size = this->size();
-    T _temp_container[_current_size-1];
-    for(unsigned int i{1}; i < _current_size; ++i) _temp_container[i-1] = this->operator[](i);
+    T*  _temp_container = new T[_current_size-1];
+    for(unsigned int i{1}; i < _current_size; ++i)
+    {
+        _temp_container[i-1] = this->operator[](i);
+    }
+    if(_current_size < 1) throw std::runtime_error("Array is of size 0, pop_front failed");
 
-    std::copy(_temp_container, _temp_container+_current_size-1, this->_container);
+    delete[] this->_container;
+    this->_container = _temp_container;
     this->_size = _current_size-1;
-
-    if(this->size() != _current_size-1) throw std::runtime_error("Could not resize array during push_back");
 }
 
 #endif

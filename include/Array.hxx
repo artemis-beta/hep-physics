@@ -24,6 +24,8 @@ namespace PHYS
                     Container<T>(size, label, "Array") {}
                 Array(const std::initializer_list<T>& elements, const std::string label="") :
                     Container<T>(elements, label, "Array") {}
+                Array(Container<T>& other, std::string label="") : 
+                    Container<T>(other, label) {}
         };
     };
 };
