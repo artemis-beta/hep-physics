@@ -3,5 +3,6 @@
 echo "Testing Physics Library Executables..."
 for exe in ./binaries/*; do
 	echo "Running Binary '$exe'..."
-	./binaries/$exe
+	$exe
+done
 echo "Testing Complete."

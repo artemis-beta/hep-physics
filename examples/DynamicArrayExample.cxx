@@ -36,14 +36,5 @@ int main()
 
     std::cout << b+a << std::endl;
 
-    std::cout << "TEST MEM HANDLING: " << std::endl;
-
-    DynamicArray<double> c(a, "c");
-
-    c *= 5;
-
-    std::cout << a << std::endl;
-    std::cout << c << std::endl;
-
     return 0;
 }

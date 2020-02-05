@@ -65,13 +65,9 @@ void PHYS::Equation::_simplify(const Expression exp, const double is_equal_to)
     {
         if(_exp.getComponents()[0].getComponents().size() == 1)
         {
-            std::cout << "GAMOODE" << std::endl;
             const double exponent = _exp.getComponents()[0].getComponents().begin()->second;
-            std::cout << "YAZA" << std::endl;
             _exp /= pow(_exp, 1./exponent);
-            std::cout << "CMA" << std::endl;
             _equals /= std::pow(_equals, 1./exponent);
         }
-        std::cout << "URE" << std::endl;
     }
 }
