@@ -9,5 +9,8 @@ jobs:
               name: Build Examples
               command: make
          - run:
+                name: Install Requirements
+                command: apt install -y build-essential
+         - run:
               name: Run Executables
               command: ./test_binaries
