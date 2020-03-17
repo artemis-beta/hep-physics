@@ -21,6 +21,10 @@ const extern double PHYS::Units::t = 1E3*kg;
 const extern double PHYS::Units::g = 1E-3*kg;
 
 const extern double PHYS::Units::sec = 1.;
+const extern double PHYS::Units::min = 60*sec;
+const extern double PHYS::Units::hr = 60*min;
+const extern double PHYS::Units::day = 24*hr;
+const extern double PHYS::Units::yr = 365.25*day;
 const extern double PHYS::Units::ms = 1E-3*sec;
 const extern double PHYS::Units::ns = 1E-9*sec;
 const extern double PHYS::Units::ps = 1E-12*sec;

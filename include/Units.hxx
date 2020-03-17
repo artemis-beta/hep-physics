@@ -39,6 +39,10 @@ namespace PHYS
         const extern double g;
 
         const extern double sec;
+        const extern double yr;
+        const extern double day;
+        const extern double hr;
+        const extern double min;
         const extern double ms;
         const extern double ns;
         const extern double ps;
