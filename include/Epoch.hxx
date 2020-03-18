@@ -89,6 +89,12 @@ namespace PHYS
             {
                 return Date(t1._ndays+t2._ndays);
             }
+
+            friend std::ostream& operator<< (std::ostream& os, const Date d)
+            {
+                os << d.toString("YYYY-mm-DD");
+                return os;
+            }
         };
 
         class DateTime
