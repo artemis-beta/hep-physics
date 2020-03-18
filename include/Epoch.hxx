@@ -63,15 +63,32 @@ namespace PHYS
             December
         };
 
+        const int getDaysInMonth(month m, bool leap_year=false);
+
         class Date
         {
             private:
-                int _day = 0;
-                int _month = 0;
-                int _year = 0;
+                int _ndays = 0;
             public:
                 Date(){};
+                Date(const int& ndays) : _ndays(ndays) {}
+                Date(const Date& other) :
+                    _ndays(other._ndays) {}
+                Date operator++();
+                Date operator--();
+                int getNDays() const {return _ndays;}
+                void addDays(const int& ndays) {_ndays += ndays;}
                 std::string toString(const std::string& pattern) const;
+
+            friend Date operator-(const Date& t1, const Date& t2)
+            {
+                return Date(t1._ndays-t2._ndays);
+            }
+
+            friend Date operator+(const Date& t1, const Date& t2)
+            {
+                return Date(t1._ndays+t2._ndays);
+            }
         };
 
         class DateTime
@@ -81,6 +98,8 @@ namespace PHYS
                 Time _time;
             public:
                 DateTime(){};
+                DateTime(const Date& date, const Time& time) :
+                    _date(date), _time(time) {}
                 Time time() const {return _time;}
                 Date date() const {return _date;}
                 void setDate(Date& date) {_date = date;}
@@ -91,6 +110,8 @@ namespace PHYS
                 os << "DateTime(" << t._date.toString("YYYY-mm-DD") << ", " << t._time.toString("HH:MM:SS") << ")";
                 return os;
             }
+
+            
         };       
         DateTime fromString(const std::string& time_str, const std::string& pattern);
     };

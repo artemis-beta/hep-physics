@@ -14,4 +14,7 @@ int main(int argc, char** argv)
     std::cout << time.time().toString("HH:MM:SS") << std::endl;
 
     std::cout << "5s + 3hrs = " << Time(5*sec)+Time(3*hr) << std::endl;
+
+    DateTime _test =  fromString("01-01-1993", "DD-mm-YYYY");
+    std::cout << _test << std::endl;
 }
