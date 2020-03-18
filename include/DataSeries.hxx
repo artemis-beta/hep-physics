@@ -2,12 +2,20 @@
 #define __DATASERIES_HXX__
 
 #include "DynamicArray.hxx"
+#include "Correlation.hxx"
 #include <iostream>
 
 namespace PHYS
 {
     namespace Data
     {
+        enum class CorrelationMethod
+        {
+            Pearson,
+            Kendall,
+            Spearman,
+            Callable
+        };
         template<typename index_type, typename data_type>
         class DataSeries
         {
@@ -35,6 +43,8 @@ namespace PHYS
                 void Print();
                 
                 DataSeries<index_type, data_type> append(const DataSeries& other);
+                DataSeries<index_type, data_type> cumsum() const;
+                double corr(const DataSeries<index_type, data_type>& other, CorrelationMethod method=CorrelationMethod::Pearson) const;
 
                 DynamicArray<index_type> getIndex() const {return _index;}
 
@@ -59,6 +69,18 @@ namespace PHYS
         };
     };
 };
+
+template<typename index_type, typename data_type>
+PHYS::Data::DataSeries<index_type, data_type> PHYS::Data::DataSeries<index_type, data_type>::cumsum() const
+{
+    PHYS::Data::DataSeries<index_type, data_type> _temp(*this);
+    for(int i{1}; i < _temp.size(); ++i)
+    {
+        _temp._data._container[i] = _temp._data._container[i]+_temp._data._container[i-1];
+    }
+
+    return _temp;
+}
 
 template<typename index_type, typename data_type>
 data_type PHYS::Data::DataSeries<index_type, data_type>::operator[] (const int& i) const
@@ -111,6 +133,13 @@ PHYS::Data::DataSeries<index_type, data_type> PHYS::Data::DataSeries<index_type,
     }
 
     return _temp;
+}
+
+template<typename index_type, typename data_type>
+double PHYS::Data::DataSeries<index_type, data_type>::corr(const DataSeries<index_type, data_type>& other, PHYS::Data::CorrelationMethod method) const
+{
+    if(method == CorrelationMethod::Pearson) return PHYS::Statistics::PearsonCorrelation(_data, other._data);
+    return -1;
 }
 
 #endif

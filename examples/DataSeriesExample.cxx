@@ -13,6 +13,8 @@ int main(int argc, char** argv)
 	std::cout << a << std::endl;
 	std::cout << "Series 'B': \n";
 	std::cout << b << std::endl;
+	std::cout << "A, B Correlation (Pearson): \n";
+	std::cout << a.corr(b) << std::endl;
 	std::cout << "Append 'B' to 'A':\n";
 
 	a = a.append(b);
@@ -34,6 +36,9 @@ int main(int argc, char** argv)
 	DataSeries<Time, int> d({0,2,3,4,5}, Time(1), fromString("10:00", "HH:MM").time());
 
 	d.Print();
+
+	std::cout << "Cumulative: \n";
+	std::cout << d.cumsum() << std::endl;
 
 	return 0;
 }
