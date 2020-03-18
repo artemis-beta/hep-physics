@@ -81,9 +81,9 @@ namespace PHYS
 
                 }
                 Container(const Container& other, std::string label="") : 
-                    _container(new T[other.size()]), _size(other.size()), _label((label != "") ? label : other._label), _type_label(other._type_label), _dynamic(other._dynamic)
+                    _container(other._size ? new T[other._size] : nullptr), _size(other._size), _label((label != "") ? label : other._label), _type_label(other._type_label), _dynamic(other._dynamic)
                 {
-                    std::copy(other._container, other._container+other.size(), _container);
+                    if(_container) std::copy(other._container, other._container+_size, _container);
                 }
                 ~Container() {delete[] _container;}
 
@@ -95,7 +95,7 @@ namespace PHYS
                 Container operator+() const;
                 Container& operator++();
                 Container& operator--();
-                const Container operator=(const Container& other);
+                const Container& operator=(Container other);
                 const Container operator+ (const Container& other) const;
                 const Container operator- (const Container& other) const;
                 const Container operator* (const T& other) const;
@@ -159,12 +159,13 @@ const PHYS::Data::Container<T> PHYS::Data::Container<T>::operator* (const T& oth
 }
 
 template<typename T>
-const PHYS::Data::Container<T> PHYS::Data::Container<T>::operator=(const PHYS::Data::Container<T> &rhs)
+const PHYS::Data::Container<T>& PHYS::Data::Container<T>::operator=(PHYS::Data::Container<T> other)
 {
-    this->_container = rhs._container;
-    this->_label = rhs._label;
-    this->_type_label = rhs._type_label;
-    this->_dynamic = rhs._dynamic;
+    std::swap(_container, other._container);
+    std::swap(_size, other._size);
+    std::swap(_label, other._label);
+    std::swap(_type_label, other._type_label);
+    std::swap(_dynamic, other._dynamic);
 
     return *this;
 }

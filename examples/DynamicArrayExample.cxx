@@ -36,5 +36,10 @@ int main()
 
     std::cout << b+a << std::endl;
 
+    std::cout << "c = a: " << std::endl;
+    DynamicArray<double> c = {10,20,30,40};
+    c = a;
+    std::cout << c << std::endl;
+
     return 0;
 }

@@ -29,6 +29,7 @@ namespace PHYS
                     Container<T>(elements, label, "DynamicArray", true) {}
                 DynamicArray(Container<T>& other, std::string label="") : 
                     Container<T>(other, label) {}
+
                 void push_back(const T&);
                 void pop_back();
                 void pop_front();
@@ -41,7 +42,10 @@ void PHYS::Data::DynamicArray<T>::push_back(const T& value)
 {
     const int _current_size = this->size();
     T* _temp_container = new T[_current_size+1];
-    if(_current_size < 1) _temp_container[0] = value;
+    if(_current_size < 1)
+    {
+        _temp_container[0] = value;
+    }
     else
     {
         _temp_container[_current_size] = value;
