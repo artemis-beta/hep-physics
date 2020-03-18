@@ -16,6 +16,7 @@ namespace PHYS
                 int _nsecs = 0;
             public:
                 Time(){};
+                Time(const int& nsecs) : _nsecs(nsecs) {}
                 void addMSecs(const int& msecs);
                 void addSecs(const int& secs);
                 void addMins(const int& mins);
@@ -24,10 +25,24 @@ namespace PHYS
                 void addYears(const int& years);
                 int nSecs() const {return _nsecs;}
                 std::string toString(const std::string& pattern) const;
+                Time& operator++();
+                Time& operator--();
+                Time operator+() const {return Time(_nsecs);}
+                Time operator-() const {return Time(-_nsecs);}
+            
+            friend Time operator+ (const Time& t1, const Time& t2)
+            {
+                return Time(t1.nSecs() + t2.nSecs());
+            }
+
+            friend Time operator- (const Time& t1, const Time& t2)
+            {
+                return Time(t1.nSecs() - t2.nSecs());
+            }
 
             friend std::ostream& operator<< (std::ostream& os, const Time t)
             {
-                os << "Time(" << t._nsecs << "s)";
+                os << t.toString("HH:MM:SS");
                 return os;
             }
         };
@@ -80,5 +95,6 @@ namespace PHYS
         DateTime fromString(const std::string& time_str, const std::string& pattern);
     };
 };
+
 
 #endif

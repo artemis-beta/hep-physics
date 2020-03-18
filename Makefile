@@ -5,7 +5,7 @@ ORDERED_OBJ = obj/Units.o obj/Constants.o obj/LorentzVector.o obj/Vector.o \
 			  obj/Particle.o obj/DecayTable.o obj/CommonParticles.o obj/NuclearPhysics.o \
 			  obj/Atom.o obj/CommonNuclei.o obj/CommonMolecules.o obj/Thermodynamics.o \
 			  obj/CommonCompounds.o obj/Hydrocarbons.o obj/ClassicalMechanics.o \
-			  obj/KplusDecTable.o obj/PDF.o obj/EquationSolver.o
+			  obj/KplusDecTable.o obj/PDF.o obj/EquationSolver.o obj/Epoch.o
 
 
 all:
@@ -22,6 +22,8 @@ all:
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DataFrameExample.cxx -o binaries/DataFrameExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/EquationExample.cxx -o binaries/EquationExample
 	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DynamicArrayExample.cxx -o binaries/DynamicArrayExample
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/DataSeriesExample.cxx -o binaries/DataSeriesExample
+	$(CXX) $(INCLUDE) $(ORDERED_OBJ) examples/ChronoExample.cxx -o binaries/ChronoExample
 
 clean:
 	rm -rf obj/ binaries/

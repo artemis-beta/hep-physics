@@ -2,9 +2,9 @@
 
 std::string PHYS::Chrono::Time::toString(const std::string& pattern) const
 {
-    std::string _out_str = "";
+    std::string _out_str = (_nsecs < 0) ? "-" : "";
     int index = 0;
-    int _temp_time = _nsecs;
+    int _temp_time = abs(_nsecs);
     while(index < pattern.size())
     {
         if(pattern[index] == 'H')
@@ -147,4 +147,16 @@ PHYS::Chrono::DateTime PHYS::Chrono::fromString(const std::string& time_str, con
     _output.setTime(_temp);
 
     return _output;
+}
+
+PHYS::Chrono::Time& PHYS::Chrono::Time::operator++()
+{
+    _nsecs++;
+    return *this;
+}
+
+PHYS::Chrono::Time& PHYS::Chrono::Time::operator--()
+{
+    _nsecs--;
+    return *this;
 }

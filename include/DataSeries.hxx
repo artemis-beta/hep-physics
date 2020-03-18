@@ -12,25 +12,29 @@ namespace PHYS
         class DataSeries
         {
             private:
+                const index_type _index_interval, _start;
                 DynamicArray<index_type> _index = {};
                 DynamicArray<data_type> _data = {};
             public:
-                DataSeries<index_type, data_type>(){};
-                DataSeries<index_type, data_type>(const std::initializer_list<data_type>&);
-                DataSeries<index_type, data_type>(const DataSeries<index_type, data_type>& other) :
-                    _data(other._data), _index(other._index) {}
+                DataSeries<index_type, data_type>(index_type interval = index_type(1), index_type start_point = index_type(0)) : _index_interval(interval), _start(start_point) {};
+                DataSeries<index_type, data_type>(const std::initializer_list<data_type>&, index_type interval = index_type(1), index_type start_point = index_type(0));
+                DataSeries<index_type, data_type>(const DataSeries<index_type, data_type>& other, index_type interval = index_type(1), index_type start_point = index_type(0)) :
+                    _index_interval(interval), _start(start_point), _data(other._data), _index(other._index) {}
                 data_type operator[] (const int&) const;
                 DataSeries<index_type, data_type>& operator= (DataSeries<index_type, data_type>);
-                void push_back(const data_type& data_entry, const index_type index=-1)
+                void push_back(const data_type& data_entry)
                 {
                     _data.push_back(data_entry);
                     
-                    _index.push_back((index == -1) ? _index.size() : index);
+                    index_type _current = (_index.size() < 1) ? index_type(_start-index_type(_index_interval)) : _index[_index.size()-1];
+                    _index.push_back(_current+_index_interval);
                 }
 
                 int size() const {return _index.size();}
 
                 void Print();
+                
+                DataSeries<index_type, data_type> append(const DataSeries& other);
 
                 DynamicArray<index_type> getIndex() const {return _index;}
 
@@ -63,7 +67,8 @@ data_type PHYS::Data::DataSeries<index_type, data_type>::operator[] (const int& 
 }
 
 template<typename index_type, typename data_type>
-PHYS::Data::DataSeries<index_type, data_type>::DataSeries(const std::initializer_list<data_type>& elements)
+PHYS::Data::DataSeries<index_type, data_type>::DataSeries(const std::initializer_list<data_type>& elements, index_type interval, index_type start_point) : 
+    _index_interval(interval), _start(start_point)
 {
     for(auto& element : elements)
     {
@@ -92,6 +97,20 @@ PHYS::Data::DataSeries<index_type, data_type>& PHYS::Data::DataSeries<index_type
     std::swap(_index, other._index);
     std::swap(_data, other._data);
     return *this;
+}
+
+template<typename index_type, typename data_type>
+PHYS::Data::DataSeries<index_type, data_type> PHYS::Data::DataSeries<index_type,data_type>::append(const PHYS::Data::DataSeries<index_type, data_type>& other)
+{
+    DataSeries<index_type, data_type> _temp(*this);
+    for(int i{0}; i < other._index.size(); ++i)
+    {
+        _temp._data.push_back(other._data[i]);
+        index_type _current = _temp._index[_temp._index.size()-1];
+        _temp._index.push_back(_current+other._index_interval);
+    }
+
+    return _temp;
 }
 
 #endif
