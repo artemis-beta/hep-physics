@@ -105,6 +105,7 @@ namespace PHYS
                 Container& operator-= (const Container& other);
                 const Container dot(const Container& other) const;
                 const T& operator[] (const int&) const;
+                T& operator[] (const int&);
                 const int size() const {return _size;}
                 const bool empty() const {return _size <= 0;}
                 const bool fixed() const {return !_dynamic;}
@@ -172,6 +173,17 @@ const PHYS::Data::Container<T>& PHYS::Data::Container<T>::operator=(PHYS::Data::
 
 template<typename T>
 const T& PHYS::Data::Container<T>::operator[](const int &index) const
+{
+    if(size() < 1) throw std::runtime_error("Cannot Access Elements of array of size < 1");
+    if (index < 0 || index > size()-1)
+    {
+        throw std::out_of_range("Invalid array index '" + std::to_string(index) + "' specified, must be positive and within Container size range [0,"+std::to_string(size())+"]");
+    }
+    return _container[index];
+}
+
+template<typename T>
+T& PHYS::Data::Container<T>::operator[](const int &index)
 {
     if(size() < 1) throw std::runtime_error("Cannot Access Elements of array of size < 1");
     if (index < 0 || index > size()-1)

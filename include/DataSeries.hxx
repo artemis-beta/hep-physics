@@ -48,9 +48,11 @@ namespace PHYS
                 DataSeries<index_type, data_type> append(const DataSeries& other);
                 DataSeries<index_type, data_type> cumsum() const;
                 DataSeries<index_type, data_type> sort_byvalue() const;
+                DataSeries<index_type, data_type> reverse() const;
                 double corr(const DataSeries<index_type, data_type>& other, CorrelationMethod method=CorrelationMethod::Pearson) const;
 
                 DynamicArray<index_type> getIndex() const {return _index;}
+                DynamicArray<index_type> getValues() const {return _data;}
 
                 friend std::ostream& operator<< (std::ostream& o, const DataSeries& d)
                 {
@@ -150,6 +152,7 @@ template<typename index_type, typename data_type>
 double PHYS::Data::DataSeries<index_type, data_type>::corr(const DataSeries<index_type, data_type>& other, PHYS::Data::CorrelationMethod method) const
 {
     if(method == CorrelationMethod::Pearson) return PHYS::Statistics::PearsonCorrelation(_data, other._data);
+    else if(method == CorrelationMethod::Spearman) return PHYS::Statistics::SpearmanRankCorrelation(_data, other._data);
     return -1;
 }
 
@@ -172,6 +175,27 @@ void PHYS::Data::DataSeries<index_type, data_type>::insert(const index_type& pos
         for(int i{0}; i < _data.size(); ++i) _index.push_back(i);
     }
 
+}
+
+template<typename index_type, typename data_type>
+PHYS::Data::DataSeries<index_type, data_type> PHYS::Data::DataSeries<index_type, data_type>::reverse() const
+{
+    PHYS::Data::DataSeries<index_type, data_type> _temp;
+
+    for(int i{0}; i < size(); ++i)
+    {
+        const int index = size()-1-i;
+        _temp._data.push_back(_data[index]);
+        _temp._index.push_back(_index[index]);
+    }
+
+    if(*typeid(index_type).name() == 'i')
+    {
+        _temp._index = DynamicArray<index_type>();
+        for(int i{0}; i < _temp._data.size(); ++i) _temp._index.push_back(i);
+    }
+
+    return _temp;
 }
 
 template<typename index_type, typename data_type>

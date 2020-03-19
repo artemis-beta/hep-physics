@@ -34,6 +34,8 @@ namespace PHYS
                 void pop_back();
                 void pop_front();
                 void insert(const int&, const T&);
+                DynamicArray<T> zeros(const int&) const;
+                DynamicArray<T> sequence(const T& start, const T& stop, int n_steps=-1) const;
         };
     };
 };
@@ -107,6 +109,31 @@ void PHYS::Data::DynamicArray<T>::insert(const int& position, const T& value)
 
     std::swap(this->_size, _new_size);
     std::swap(this->_container, _temp._container);
+}
+
+template<typename T>
+PHYS::Data::DynamicArray<T> PHYS::Data::DynamicArray<T>::sequence(const T& start, const T& stop, int nsteps) const
+{
+    nsteps = (nsteps == -1) ? int(stop)-int(start) : nsteps;
+    nsteps = (nsteps == 0) ? 100 : nsteps;
+    const T _interval = int((int(stop)-int(start))/nsteps);
+    PHYS::Data::DynamicArray<T> _temp;
+    T _index = start;
+    while(_index <= stop)
+    {
+        _temp.push_back(_index);
+        _index = _index +  _interval;
+    }
+
+    return _temp;
+}
+
+template<typename T>
+PHYS::Data::DynamicArray<T> PHYS::Data::DynamicArray<T>::zeros(const int& size) const
+{
+    PHYS::Data::DynamicArray<T> _temp;
+    for(int i{0}; i < size; ++i) _temp.push_back(T(0));
+    return _temp;
 }
 
 #endif
