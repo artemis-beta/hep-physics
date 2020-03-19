@@ -24,6 +24,11 @@ namespace PHYS
                 void addDays(const int& days);
                 void addYears(const int& years);
                 int nSecs() const {return _nsecs;}
+                bool operator< (const Time& other) const {return _nsecs < other._nsecs;}
+                bool operator> (const Time& other) const {return _nsecs > other._nsecs;}
+                bool operator== (const Time& other) const {return _nsecs == other._nsecs;}
+                template<typename T>
+                operator T() const {return T(_nsecs);}
                 std::string toString(const std::string& pattern) const;
                 Time& operator++();
                 Time& operator--();
@@ -76,9 +81,14 @@ namespace PHYS
                     _ndays(other._ndays) {}
                 Date operator++();
                 Date operator--();
+                bool operator< (const Date& other) const {return _ndays < other._ndays;}
+                bool operator> (const Date& other) const {return _ndays > other._ndays;}
+                bool operator== (const Date& other) const {return _ndays == other._ndays;}
                 int getNDays() const {return _ndays;}
                 void addDays(const int& ndays) {_ndays += ndays;}
                 std::string toString(const std::string& pattern) const;
+                template<typename T>
+                operator T() const {return T(_ndays);}
 
             friend Date operator-(const Date& t1, const Date& t2)
             {

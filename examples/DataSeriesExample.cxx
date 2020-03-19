@@ -11,10 +11,15 @@ int main(int argc, char** argv)
 
 	std::cout << "Series 'A': \n";
 	std::cout << a << std::endl;
+	std::cout << "Add '6' to 'A': \n";
+	a.insert(2, 6);
+	std::cout << a << std::endl;
 	std::cout << "Series 'B': \n";
 	std::cout << b << std::endl;
 	std::cout << "A, B Correlation (Pearson): \n";
 	std::cout << a.corr(b) << std::endl;
+	std::cout << "Sorted 'A': \n";
+	std::cout << a.sort_byvalue() << std::endl;
 	std::cout << "Append 'B' to 'A':\n";
 
 	a = a.append(b);

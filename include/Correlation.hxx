@@ -11,6 +11,9 @@ namespace PHYS
     {
         template<typename T>
         const double PearsonCorrelation(const PHYS::Data::DynamicArray<T>& item1, const PHYS::Data::DynamicArray<T>& item2, const int n_obs=-1);
+
+        template<typename T>
+        const PHYS::Data::DynamicArray<double> SpearmanRanked(PHYS::Data::DynamicArray<T>& array);
     };
 };
 
@@ -38,6 +41,12 @@ const double PHYS::Statistics::PearsonCorrelation(const PHYS::Data::DynamicArray
     const double _denominator = sqrt(_limit*_xx-pow(_x,2))*sqrt(_limit*_yy-pow(_y,2));
 
     return _numerator/_denominator;
+}
+
+template<typename T>
+const PHYS::Data::DynamicArray<double> SpearmanRanked(PHYS::Data::DynamicArray<T>& array)
+{
+    
 }
 
 #endif

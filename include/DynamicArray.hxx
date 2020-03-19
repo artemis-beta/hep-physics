@@ -33,6 +33,7 @@ namespace PHYS
                 void push_back(const T&);
                 void pop_back();
                 void pop_front();
+                void insert(const int&, const T&);
         };
     };
 };
@@ -89,6 +90,23 @@ void PHYS::Data::DynamicArray<T>::pop_front()
     delete[] this->_container;
     this->_container = _temp_container;
     this->_size = _current_size-1;
+}
+
+template<typename T>
+void PHYS::Data::DynamicArray<T>::insert(const int& position, const T& value)
+{
+    PHYS::Data::DynamicArray<T> _temp;
+
+    for(int i{0}; i < this->size(); ++i)
+    {
+        if(i == position) _temp.push_back(value);
+        _temp.push_back(this->operator[](i));
+    }
+
+    int _new_size = this->size()+1;
+
+    std::swap(this->_size, _new_size);
+    std::swap(this->_container, _temp._container);
 }
 
 #endif
