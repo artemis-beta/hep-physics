@@ -19,14 +19,8 @@ const double& PHYS::LorentzVector::operator[] (size_t i)
     }
 }
 
-std::ostream& operator<<(std::ostream& os, const PHYS::LorentzVector& lv)
+const PHYS::LorentzVector PHYS::LorentzVector::operator+ (const PHYS::LorentzVector& other) const
 {
-    os << "<" << lv[0] << ",";
-    os << lv[1] << ",";
-    os << lv[2] << ",";
-    os << lv[3] << ",";
-    os << "LorentzVector('double')>" << std::endl;
-
-    return os;
+    return PHYS::LorentzVector(x0+other.x0, x1+other.x1, x2+other.x2, x3+other.x3);
 }
 

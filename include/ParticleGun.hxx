@@ -32,11 +32,17 @@ namespace PHYS
                 PHYS::LorentzVector _calculate_vector(const std::vector<double>);
             public:
                 ParticleGun(const PHYS::Particle* particle) : _particle(particle) {}
-                ParticleGun(const PHYS::Particle*, double, double, double);
+                ParticleGun(const PHYS::Particle* p, double x1, double x2, double x3) :
+                    _gun_momentum(PHYS::LorentzVector(0, x1, x2, x3)), _particle(p) {}
                 const PHYS::LorentzVector getFourVector() const {return _gun_momentum;}
                 const PHYS::Particle* getParticle() const {return _particle;}
 
-                friend std::ostream& operator<< (std::ostream& o, const ParticleGun& p);
+                friend std::ostream& operator<< (std::ostream& o, const ParticleGun& p)
+                {
+                    o << "ParticleGun(";
+                    o << "particle='" << *p._particle << "')";
+                    return o;
+                }
         };
     }
 }
