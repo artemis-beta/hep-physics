@@ -1,6 +1,6 @@
 #include "EquationSolver.hxx"
 
-const PHYS::var* PHYS::composite::_var_from_char(char c) const
+const PHYS::Algebra::var* PHYS::Algebra::composite::_var_from_char(std::string c) const
 {
     for(auto& i : _components)
     {
@@ -12,9 +12,9 @@ const PHYS::var* PHYS::composite::_var_from_char(char c) const
 
     return nullptr;
 }
-PHYS::Expression PHYS::Expression::operator* (int other) const
+PHYS::Algebra::Expression PHYS::Algebra::Expression::operator* (int other) const
 {
-    PHYS::Expression _temp(*this);
+    PHYS::Algebra::Expression _temp(*this);
     for(int i{0}; i<_temp._components.size(); ++i)
     {
         _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
@@ -23,9 +23,9 @@ PHYS::Expression PHYS::Expression::operator* (int other) const
     return _temp;
 }
 
-PHYS::Expression PHYS::Expression::operator* (double other) const
+PHYS::Algebra::Expression PHYS::Algebra::Expression::operator* (double other) const
 {
-    PHYS::Expression _temp(*this);
+    PHYS::Algebra::Expression _temp(*this);
     for(int i{0}; i<_temp._components.size(); ++i)
     {
         _temp._components[i].setFactor(_temp._components[i].getFactor()*other);
@@ -34,7 +34,7 @@ PHYS::Expression PHYS::Expression::operator* (double other) const
     return _temp;
 }
 
-int PHYS::Expression::_find_composite(composite& composite)
+int PHYS::Algebra::Expression::_find_composite(PHYS::Algebra::composite& composite)
 {
     for(int i{0}; i<_components.size(); ++i)
     {
@@ -44,20 +44,23 @@ int PHYS::Expression::_find_composite(composite& composite)
     return -1;
 }
 
-PHYS::Expression PHYS::pow(const PHYS::Expression eq, int index)
+template<typename T>
+PHYS::Algebra::Expression PHYS::Algebra::Pow(const PHYS::Algebra::Expression& eq, const T& index)
 {
-    PHYS::Expression _temp(eq);
+    PHYS::Algebra::Expression _temp(eq);
     for(unsigned int i{0}; i<index-1; ++i) _temp *= eq;
     return _temp;
 }
 
-PHYS::Expression PHYS::pow(const PHYS::Expression eq, double index)
+template<typename T>
+PHYS::Algebra::Expression PHYS::Algebra::Pow(PHYS::Algebra::Expression& eq, const T& index)
 {
-    PHYS::Expression _temp = pow(eq, int(index));
-    const double remainder = int(index);
+    PHYS::Algebra::Expression _temp(eq);
+    for(unsigned int i{0}; i<index-1; ++i) _temp *= eq;
+    return _temp;
 }
 
-void PHYS::Equation::_simplify(const Expression exp, const double is_equal_to)
+void PHYS::Algebra::Equation::_simplify(const PHYS::Algebra::Expression exp, const double is_equal_to)
 {
     _exp = exp - exp.getNumericComponent();
     _equals = is_equal_to+exp.getNumericComponent();
@@ -66,8 +69,44 @@ void PHYS::Equation::_simplify(const Expression exp, const double is_equal_to)
         if(_exp.getComponents()[0].getComponents().size() == 1)
         {
             const double exponent = _exp.getComponents()[0].getComponents().begin()->second;
-            _exp /= pow(_exp, 1./exponent);
+            _exp /= PHYS::Algebra::Pow(_exp, 1./exponent);
             _equals /= std::pow(_equals, 1./exponent);
         }
     }
 }
+
+PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::composite& comp)
+{
+    PHYS::Algebra::Expression _temp;
+    for(auto& part : comp.getComponents())
+    {
+        PHYS::Algebra::composite _temp_comp;
+        _temp_comp.setComponent(part.first, part.second-1);
+        _temp_comp.setFactor(comp.getFactor()*part.second);
+        for(auto& part2 : comp.getComponents())
+        {
+            if(part.first == part2.first) continue;
+            _temp_comp *= composite({{part2.first, part2.second}});
+        }
+    }
+
+    return _temp;
+}
+
+PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::Expression& e)
+{
+    PHYS::Algebra::Expression _temp;
+
+    for(auto& comp : e.getComponents())
+    {
+        _temp += Derivative(comp);
+    } 
+
+    return _temp;
+}
+
+PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::Expo& e)
+{
+    return PHYS::Algebra::Derivative(e.getExponent())*e;
+}
+
