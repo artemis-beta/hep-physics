@@ -42,7 +42,7 @@ jobs:
             
             - name: Run Unit Tests
               run: |
-                   ./tests/bin/PhysicsLib-unit_tests
+                   ./tests/bin/PhysicsLib_unit-tests
                    if [ $? -eq 0 ]; then
                         echo "Unit tests completed successfully"
                         exit 0
