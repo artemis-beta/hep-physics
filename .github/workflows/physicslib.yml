@@ -1,0 +1,52 @@
+name: Physics Library
+
+on: [ push ]
+
+jobs:
+    build:
+        name: ${{ matrix.os }} (${{ matrix.config.compiler }})
+        runs-on: ${{ matrix.os }}
+        strategy:
+            fail-fast: false
+            matrix:
+                    os: ['ubuntu-latest', 'macos-latest']
+                    config: [{
+                                compiler: gcc,
+                                compilerpp: g++
+                            },
+                            {
+                                compiler: clang,
+                                compilerpp: clang++
+                            }
+                            ]
+    
+        steps:
+            - uses: actions/checkout@v2
+            
+            - name: Install Boost (Ubuntu)
+              run: sudo apt-get install libboost-all-dev -y
+              if: matrix.os == 'ubuntu-latest'
+            
+            - name: Install Boost (Mac)
+              run: |
+                   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                   brew install boost
+              if: matrix.os == 'macos-latest'
+            
+            - name: Compile
+              run: |
+                   mkdir build
+                   cd build
+                   cmake ..
+                   make
+            
+            - name: Run Unit Tests
+              run: |
+                   ./tests/bin/PhysicsLib-unit_tests
+                   if [ $? -eq 0 ]; then
+                        echo "Unit tests completed successfully"
+                        exit 0
+                   else
+                       echo "Unit tests failed"
+                       exit 1
+                   fi

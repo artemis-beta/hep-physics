@@ -11,7 +11,9 @@ file( GLOB_RECURSE SRCS src/*.cxx )
 
 add_library( ${PROJECT_NAME} SHARED ${SRCS} )
 
-target_include_directories( ${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include )
+target_link_libraries( ${PROJECT_NAME} ${Boost_LIBRARIES} ${LIBS} )
+target_include_directories( ${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include
+       			    ${PROJECT_NAME} PUBLIC ${Boost_INCLUDE_DIRS} )
 
 add_subdirectory( examples )
 add_subdirectory( tests )
