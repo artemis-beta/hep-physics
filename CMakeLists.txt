@@ -14,3 +14,4 @@ add_library( ${PROJECT_NAME} SHARED ${SRCS} )
 target_include_directories( ${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include )
 
 add_subdirectory( examples )
+add_subdirectory( tests )

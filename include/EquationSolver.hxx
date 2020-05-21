@@ -101,9 +101,11 @@ namespace PHYS
                 std::string toString() const
                 {
                     std::string _out_str = "";
+		    const int int_factor = static_cast<int>(_factor);
                     if(abs(_factor) > 1)
 		    {
-			    _out_str += std::to_string((_factor == floorf(_factor)) ? static_cast<int>(_factor) : _factor);
+			if(floorf(_factor) == _factor) _out_str += std::to_string(int_factor);
+			else _out_str += std::to_string(_factor);
 		    }
                     else if(_factor == -1)
                     {
@@ -131,10 +133,7 @@ namespace PHYS
 		            }
                             else
 			    {
-				    if(floorf(i.second) == i.second)
-			            {
-					    _out_str += std::to_string(int_index);
-			            }
+				    if(floorf(i.second) == i.second) _out_str += std::to_string(int_index);
 				    else _out_str += std::to_string(i.second);
 			    }
                         }
@@ -492,12 +491,20 @@ namespace PHYS
 
                 const double getEqualsTo() const {return _equals;}
                 const Expression getExpression() const {return _exp;}
+		std::string toString() const
+		{
+
+			std::string _out_str = getExpression().toString() + " = ";
+			const int int_equals_to = static_cast<int>(getEqualsTo());
+			if(floorf(getEqualsTo()) == getEqualsTo()) _out_str += std::to_string(int_equals_to);
+			else _out_str += std::to_string(getEqualsTo());
+
+			return _out_str;
+		}
                 
                 friend std::ostream& operator<< (std::ostream& os, const Equation& eq)
                 {
-                    os << eq.getExpression();
-                    os << " = ";
-                    os << eq.getEqualsTo();
+                    os << eq.toString();
 
                     return os;
                 }
