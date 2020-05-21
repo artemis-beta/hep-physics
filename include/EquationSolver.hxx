@@ -101,21 +101,42 @@ namespace PHYS
                 std::string toString() const
                 {
                     std::string _out_str = "";
-                    if(abs(_factor) > 1) _out_str += std::to_string(_factor);
-                    else if(_factor == -1) _out_str += "-";
+                    if(abs(_factor) > 1)
+		    {
+			    _out_str += std::to_string((_factor == floorf(_factor)) ? static_cast<int>(_factor) : _factor);
+		    }
+                    else if(_factor == -1)
+                    {
+			    _out_str += "-";
+	            }
                     else if(_factor == 0)
                     {
                         return _out_str;
                     }
                     for(auto& i : _components)
                     {
-                        if(i.second == 0) continue;
+			const int int_index = static_cast<int>(i.second);
+                        if(i.second == 0)
+		        {
+				continue;
+			}
                         _out_str += i.first.getSymbol();
                         if(abs(i.second) > 1 || i.second == -1)
                         {
                             _out_str += "^";
-                            if(i.second < 0) _out_str += "(" + std::to_string(i.second) + ")";
-                            else{_out_str += std::to_string(i.second);}
+                            if(i.second < 0)
+			    {
+				    if(floorf(i.second) == i.second) _out_str += "(" + std::to_string(int_index) + ")";
+				    else _out_str += "(" + std::to_string(i.second) + ")";
+		            }
+                            else
+			    {
+				    if(floorf(i.second) == i.second)
+			            {
+					    _out_str += std::to_string(int_index);
+			            }
+				    else _out_str += std::to_string(i.second);
+			    }
                         }
                     }
                     return _out_str;
@@ -123,7 +144,8 @@ namespace PHYS
 
                 friend std::ostream& operator<< (std::ostream& os, const composite& eq)
                 {
-                    return toString();
+                    os <<  eq.toString();
+		    return os;
                 }
 
                 bool operator== (composite& other) const
@@ -138,21 +160,21 @@ namespace PHYS
                     return true;
                 }
 
-                composite operator* (const composite& other) const
+                composite operator* (const composite& other)
                 {
-                    composite _temp(*this);
+                    composite _temp(*this), _temp_other(other);
                     for(auto& i : other._components)
                     {
                         if(_temp._components.find(i.first) != _temp._components.end())
                         {
-                            _temp._components[i.first] += other._components[i.first];
+                            _temp._components[i.first] += _temp_other._components[i.first];
                         }
                         else
                         {
-                            _temp._components[i.first] = other._components[i.first];
+                            _temp._components[i.first] = _temp_other._components[i.first];
                         }
 
-                        _temp._factor *= other._factor;
+                        _temp._factor *= _temp_other._factor;
                         
                     }
 
@@ -186,8 +208,8 @@ namespace PHYS
 
                     for(auto& i : _components)
                     {
-                        const composite c(i);
-                        _temp += c.Solve(values);
+			    Expression _component({composite(i)});
+                        _temp += _component.Solve(values);
                     }
                     _temp += _numeric_component;
 
@@ -210,7 +232,7 @@ namespace PHYS
                     {
                         const composite f = composite(_components[i]);
                         if(i>0 && f.getFactor() > 0) _out_str += "+";
-                        _out_str += f.toString;
+                        _out_str += f.toString();
                     }
                     if(_numeric_component > 0) _out_str +=  "+" + std::to_string(_numeric_component);
                     else if(_numeric_component < 0) _out_str += std::to_string(_numeric_component);
@@ -224,6 +246,7 @@ namespace PHYS
                 friend std::ostream& operator<< (std::ostream& os, const Expression& eq)
                 {
                     os << eq.toString();                    
+		    return os;
                 }
 
                 Expression operator+ (Expression other) const
@@ -337,13 +360,19 @@ namespace PHYS
                 template <typename T>
                 friend Expression operator- (T other, Expression eq)
                 {
-                    return other + -1*eq;
+                    Expression _temp(eq);
+                    _temp._numeric_component = other - _temp._numeric_component;
+
+                    return _temp;
                 }
 
                 template <typename T>
                 friend Expression operator-(Expression eq, T other)
                 {
-                    return eq + -1*other;
+                    Expression _temp(eq);
+                    _temp._numeric_component -= other;
+
+                    return _temp;
                 }
 
                 Expression operator/ (Expression other) const
@@ -432,9 +461,9 @@ namespace PHYS
 
                 friend std::ostream& operator<< (std::ostream& os, const Expo& exp)
                 {
-                    os << _symbol;
+                    os << exp.getSymbol();
                     os << "(";
-                    os << _exponent;
+                    os << exp.getExponent();
                     os << ")";
                     return os;
                 }
@@ -443,7 +472,7 @@ namespace PHYS
 
                 friend Expression operator* (const Expression& e, const Expo& expo)
                 {
-                    return e*(*this);
+                    return e*expo;
                 }
                 
         };
@@ -475,15 +504,15 @@ namespace PHYS
             
         };
         
-        Expression& Derivative(const composite& comp);
-        Expression& Derivative(const Expo& eq);
-        Expression& Derivative(const Expression& eq);
+        Expression Derivative(const composite& comp);
+        Expression Derivative(const Expo& eq);
+        Expression Derivative(const Expression& eq);
 
         template<typename T>
-        Expression& Pow(const Expression& eq, const T& index);
+        Expression Pow(const Expression& eq, const T& index);
 
         template<typename T>
-        Expression& Pow(Expression& eq, const T& index);
+        Expression Pow(Expression& eq, const T& index);
 
 
         const Expression X(std::vector<composite>({composite(std::map<std::string, double>({{"x", 1}}))}));

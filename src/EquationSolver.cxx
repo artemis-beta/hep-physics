@@ -63,21 +63,12 @@ PHYS::Algebra::Expression PHYS::Algebra::Pow(PHYS::Algebra::Expression& eq, cons
 void PHYS::Algebra::Equation::_simplify(const PHYS::Algebra::Expression exp, const double is_equal_to)
 {
     _exp = exp - exp.getNumericComponent();
-    _equals = is_equal_to+exp.getNumericComponent();
-    if(_exp.getComponents().size() == 1)
-    {
-        if(_exp.getComponents()[0].getComponents().size() == 1)
-        {
-            const double exponent = _exp.getComponents()[0].getComponents().begin()->second;
-            _exp /= PHYS::Algebra::Pow(_exp, 1./exponent);
-            _equals /= std::pow(_equals, 1./exponent);
-        }
-    }
+    _equals = is_equal_to-exp.getNumericComponent();
 }
 
-PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::composite& comp)
+PHYS::Algebra::Expression PHYS::Algebra::Derivative(const PHYS::Algebra::composite& comp)
 {
-    PHYS::Algebra::Expression _temp;
+    std::vector<composite> _composites = {};
     for(auto& part : comp.getComponents())
     {
         PHYS::Algebra::composite _temp_comp;
@@ -88,12 +79,14 @@ PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::compos
             if(part.first == part2.first) continue;
             _temp_comp *= composite({{part2.first, part2.second}});
         }
+
+	_composites.push_back(_temp_comp);
     }
 
-    return _temp;
+    return PHYS::Algebra::Expression(_composites);
 }
 
-PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::Expression& e)
+PHYS::Algebra::Expression PHYS::Algebra::Derivative(const PHYS::Algebra::Expression& e)
 {
     PHYS::Algebra::Expression _temp;
 
@@ -105,7 +98,7 @@ PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::Expres
     return _temp;
 }
 
-PHYS::Algebra::Expression& PHYS::Algebra::Derivative(const PHYS::Algebra::Expo& e)
+PHYS::Algebra::Expression PHYS::Algebra::Derivative(const PHYS::Algebra::Expo& e)
 {
     return PHYS::Algebra::Derivative(e.getExponent())*e;
 }

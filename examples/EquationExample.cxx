@@ -1,7 +1,7 @@
 #include "EquationSolver.hxx"
 #include <iostream>
 
-using namespace PHYS;
+using namespace PHYS::Algebra;
 
 int main()
 {

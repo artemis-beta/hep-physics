@@ -26,10 +26,7 @@ namespace PHYS
             */
             Atom(const PHYS::Nucleus& n) :
                 _nucleus(n),
-                _n_electrons(n.Z()) 
-                {
-                    if(n.Z() == 0) throw std::runtime_error("Cannot create Atom from Nucleus with atomic number 0");
-                }
+                _n_electrons(n.Z()) {}
             /*! Add/Remove electrons to the atom making it an ion
             @param n_electrons Can be positive or negative integer for adding/removing electrons
             @returns void*/

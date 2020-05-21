@@ -35,8 +35,8 @@ namespace PHYS
                     _n_neutrons(round(atomic_mass)),
                     _atomic_mass(atomic_mass) 
                     {
-                        if(_n_protons == 0) throw std::runtime_error("Can not create Nucleus with atomic number 0");
-                        else if(_atomic_mass <= 0) throw std::runtime_error("Can not create Nucleus with 0 or negative atomic mass");
+                        if(_n_protons == 0) throw std::runtime_error("Cannot create Nucleus with atomic number 0");
+                        else if(_atomic_mass <= 0) throw std::runtime_error("Cannot create Nucleus with 0 or negative atomic mass");
                     }
 
             const std::string getName() const {return _name;}
