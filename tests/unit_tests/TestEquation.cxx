@@ -4,14 +4,13 @@
 #include <random>
 #include "boost/format.hpp"
 
-std::random_device rd;     // only used once to initialise (seed) engine
-std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
-std::uniform_int_distribution<int> uni(2,9);
-
 using namespace PHYS::Algebra;
 
 TEST(TestEquation, TestSimplify)
 {
+	std::random_device rd;
+	std::mt19937 rng(rd());
+	std::uniform_int_distribution<int> uni(2,9);
 	const int n_trials = 10;
 	for(int i{0}; i < n_trials; ++i)
 	{

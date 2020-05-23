@@ -17,6 +17,12 @@ namespace PHYS
             public:
                 Time(){};
                 Time(const int& nsecs) : _nsecs(nsecs) {}
+                Time(const int& hours, const int& minutes, const int& seconds=0)
+                {
+                    _nsecs += seconds*Units::sec;
+                    _nsecs += minutes*Units::min;
+                    _nsecs += hours*Units::hr;
+                }
                 void addMSecs(const int& msecs);
                 void addSecs(const int& secs);
                 void addMins(const int& mins);

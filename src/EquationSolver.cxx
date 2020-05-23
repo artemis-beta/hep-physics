@@ -1,5 +1,60 @@
 #include "EquationSolver.hxx"
 
+template <typename T>
+double PHYS::Algebra::composite::Solve(std::map<char, T>& values) const
+{
+    composite _temp_comp(*this);
+    std::map<char, T> v = std::map<char, T>(values);
+    double _temp = 1;
+    for(auto i : v)
+    {   
+        const var* xvar = _temp_comp._var_from_char(i.first);
+        _temp *= pow(i.second, _temp_comp._components[*xvar]);
+    }
+    return _factor*_temp;
+}
+
+std::string PHYS::Algebra::composite::toString() const
+{
+    std::string _out_str = "";
+    const int int_factor = static_cast<int>(_factor);
+    if(abs(_factor) > 1)
+    {
+        if(floorf(_factor) == _factor) _out_str += std::to_string(int_factor);
+        else _out_str += std::to_string(_factor);
+    }
+    else if(_factor == -1)
+    {
+        _out_str += "-";
+    }
+    else if(_factor == 0)
+    {
+        return _out_str;
+    }
+    for(auto& i : _components)
+    {
+        const int int_index = static_cast<int>(i.second);
+        if(i.second == 0) continue;
+        _out_str += i.first.getSymbol();
+        if(abs(i.second) > 1 || i.second == -1)
+        {
+            _out_str += "^";
+            if(i.second < 0)
+            {
+                if(floorf(i.second) == i.second) _out_str += "(" + std::to_string(int_index) + ")";
+                else _out_str += "(" + std::to_string(i.second) + ")";
+            }
+            else
+            {
+                if(floorf(i.second) == i.second) _out_str += std::to_string(int_index);
+                else _out_str += std::to_string(i.second);
+            }
+        }
+    }
+
+    return _out_str;
+    
+}
 const PHYS::Algebra::var* PHYS::Algebra::composite::_var_from_char(std::string c) const
 {
     for(auto& i : _components)
